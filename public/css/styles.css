@@ -1,0 +1,90 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+/*----------------------Header -----------------------*/
+header{
+    background-color: #0f140d;
+}
+.title {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+.title a {
+    font-family: montserrat;
+    font-size: 22px;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 5px 15px;
+}
+/*-----------------------main --------------------*/
+
+.grupo_1 {
+    background-color: #dfdfdf;
+    width: 380px;
+}
+.prode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.partido {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 1px solid #000000;
+   
+}
+.equipo_1 {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+
+}
+.equipo_2 {
+display: flex;
+align-items: center;
+flex-direction: row-reverse;
+margin-left: 10px;
+}
+.equipo_1 img, .equipo_2 img{
+    margin: 5px;
+}
+input[type=number]{
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+}
+.equipo_1 p, .equipo_2 p {
+    margin: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+.titulo_grupo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 26px;
+}
+.resultados {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main_partidos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.descripcion_partido {
+    width: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
