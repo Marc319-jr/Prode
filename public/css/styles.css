@@ -1,4 +1,4 @@
-html, body {
+* {
     padding: 0;
     margin: 0;
 }
@@ -27,13 +27,12 @@ header{
     background-color: #dfdfdf;
     width: 380px;
     margin-top: 50px;
-    padding: 30px 0px;
+    padding: 20px 0px;
+    margin-bottom: 30px;
 }
 .prode {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 .partido {
     display: flex;
@@ -59,8 +58,8 @@ margin-left: 10px;
     margin: 5px;
 }
 input[type=number]{
-    width: 10px;
-    height: 10px;
+    width: 30px;
+    height: 20px;
     margin: 5px;
 }
 .equipo_1 p, .equipo_2 p {
@@ -73,8 +72,8 @@ input[type=number]{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-align: center;
-    margin-top: 0px;
     font-size: 26px;
+    margin-bottom: 10px;
 }
 .resultados {
     display: flex;
@@ -85,6 +84,7 @@ input[type=number]{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin:0px;
 }
 .descripcion_partido {
     width: 100px;
@@ -97,10 +97,35 @@ input[type=number]{
 .primer_partido {
     border-top: 1px solid #000000;
 } 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 
-
-
-
+input[type=submit] {
+    background: #73ae20;
+    border: 1px solid #73ae20;
+    display: inline-block;
+    padding: 9px 28px;
+    font-size: 13px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-family: "Montserrat";
+    font-weight: bold;
+    color: #ffffff;
+    width: 121px;
+    height: 38px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.prode {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
 
 /*-------------------Login y Register-----------------*/
 
