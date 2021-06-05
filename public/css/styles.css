@@ -5,6 +5,9 @@ html, body {
 /*----------------------Header -----------------------*/
 header{
     background-color: #0f140d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .title {
     display: flex;
@@ -94,3 +97,72 @@ input[type=number]{
 .primer_partido {
     border-top: 1px solid #000000;
 } 
+
+
+
+
+
+/*-------------------Login y Register-----------------*/
+
+
+body .register{
+    display: flex;
+}
+
+
+
+body .register .foto img{
+    height: 100vh;
+    width: 45vw;
+}
+
+body  .register .formulario{
+    margin: auto;
+    padding: 130px;
+    border-radius: 25px;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+body .register .formulario a {
+    align-self: center;
+    position: relative;
+    top: -40px;
+}
+
+
+body .register .formulario form{
+    display: flex;
+    flex-direction: column;
+}
+
+body .register .formulario form input{
+    height: 35px;
+    width: 250px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+body .register .formulario form .botones{
+    margin: auto;
+}
+
+body .register .formulario form button{
+    height: 35px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px 0;
+    padding: 5px;
+    background-color: green;
+}
+
+
+body .register .formulario form a{
+    margin-top: 40px;
+}
+

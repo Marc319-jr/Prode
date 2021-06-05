@@ -17,9 +17,11 @@ app.set('view engine', 'ejs');
 
 //rutas
 const indexRouter = require('./routes/index');
-
+const userRouter = require('./routes/user');
+ 
 
 app.use('/' , indexRouter)
+app.use('/user', userRouter);
 
 app.listen(PORT, () => {
     console.log('Servidor corriendo en el puerto ' + PORT)
