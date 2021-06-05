@@ -23,6 +23,8 @@ header{
 .grupo_1 {
     background-color: #dfdfdf;
     width: 380px;
+    margin-top: 50px;
+    padding: 30px 0px;
 }
 .prode {
     display: flex;
@@ -68,6 +70,7 @@ input[type=number]{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-align: center;
+    margin-top: 0px;
     font-size: 26px;
 }
 .resultados {
@@ -88,3 +91,6 @@ input[type=number]{
     margin-top: 0px;
     font-family: 'Montserrat', sans-serif;
 }
+.primer_partido {
+    border-top: 1px solid #000000;
+} 
