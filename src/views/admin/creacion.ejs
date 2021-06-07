@@ -6,9 +6,10 @@
 <body>
     <%- include('../partials/header')  %>
     <main>
-        <h1>Crea tu prode</h1>
         <br>
-        <form class = "creacion" action = "/prode/crear" method="POST">
+        <form id ="crearProde" action = "/prode/crear" method="POST">
+            <h1>Crea tu prode</h1>
+            <div class = "creacion">
             <label for="nombre">Nombre del prode</label>
             <input type="text" name="nombre">
             <br>
@@ -42,6 +43,7 @@
             <br>
             <button type="reset">Resetear</button>
             <button type = "submit">Crear</button>
+            </div>
         </form>
 
     </main>

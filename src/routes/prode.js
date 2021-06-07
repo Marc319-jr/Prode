@@ -7,7 +7,7 @@ const path = require('path');
 let multer = require('multer');
 let storage = multer.diskStorage({
     destination: (req,file,cb) => {
-        cb(null,path.join(__dirname, '/../../public/image/equipos'))
+        cb(null,path.join(__dirname, '/../../public/image/equipos/'))
     },
     filename: (req,file,callback) => {
         const newFileName = 'Bandera-' + Date.now() + path.extname(file.originalname);
@@ -22,7 +22,7 @@ router.get('/' , controller.prode)
 
 
 router.post('/crear' , controller.crear);
-router.post('/crearEquipos' ,fileUpload.array('photos' , 12) , controller.crearEquipos);
+router.post('/crearEquipos' ,fileUpload.single('bandera') , controller.crearEquipos);
 
 
 
