@@ -12,5 +12,12 @@
   "teamnum": "2",
   "groupnum": "2",
   "usernum": "2"
+ },
+ {
+  "id": 3,
+  "nombre": "pedro",
+  "teamnum": "5",
+  "groupnum": "2",
+  "usernum": "10"
  }
 ]
