@@ -1,0 +1,48 @@
+<head>
+<%- include('../partials/head')  %>
+<title>Administrar</title> 
+</head>
+
+<body>
+    <%- include('../partials/header')  %>
+    <main>
+        <h1>Crea tu prode</h1>
+        <br>
+        <form class = "creacion" action = "/prode/crear" method="POST">
+            <label for="nombre">Nombre del prode</label>
+            <input type="text" name="nombre">
+            <br>
+            <br>
+            <label for="teamnum">Numero de equipos:</label>
+            <select name = "teamnum">
+                <option>Select a number</option>
+                <% for( let i = 1; i <=20 ; i++ ) { %>
+                    <option><%=i%></option>
+                <% } %>
+            </select>
+            <br>
+            <br>
+            <label for="groupnum">Numero de grupos</label>
+            <select name = "groupnum">
+                <option>Select a number</option>
+                <% for( let i = 1; i < 5; i++)  { %>     
+                    <option><%= i%></option>
+                <% } %>
+            </select>
+            <br>
+            <br>
+            <label for="usernum">Numero de participantes</label>
+            <select name = "usernum">
+                <option>Select a number</option>
+                <% for( let i = 1; i < 20; i++)  { %>     
+                    <option><%= i%></option>
+                <% } %>
+            </select>
+            <br>
+            <br>
+            <button type="reset">Resetear</button>
+            <button type = "submit">Crear</button>
+        </form>
+
+    </main>
+</body>
