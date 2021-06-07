@@ -1,0 +1,31 @@
+<head>
+<%- include('../partials/head')  %> 
+<title>Equipos</title>
+</head>
+
+<body>
+    <%- include('../partials/header')  %> 
+    <main>
+        <h1 id ="titulo">Crear equipos</h1>
+        <form action = "/prode/crearEquipos?id=<%=prode.id%>"  enctype="multipart/form-data" class="equiposForm" method="POST">
+            <div class = "crearEquipos">
+        <% for( let i = 0; i < prode.groupnum; i++ ) { %>
+            <div class = "grupo">
+                <h2>Grupo numero: <%=i+1%> </h2>
+                <% for( let j = 0; j < (prode.teamnum /2); j++ ) { %>
+                    <div class = "equipo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name = "nombre">
+                        <label for="bandera">Seleccione la bandera</label>
+                        <input type="file" name = "bandera"> 
+                    </div>
+                <% } %>
+            </div>
+        <% } %>
+    </div>
+        <button type="submit">Crear</button>
+        
+        </form>
+
+    </main>
+</body>

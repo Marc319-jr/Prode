@@ -228,3 +228,56 @@ body .register .formulario form a{
     margin-top: 40px;
 }
 
+/*-------------------------------creacion de un Prode por------------------------*/
+
+#titulo{
+    text-align: center;
+    margin: 50px;
+}
+
+.equiposForm{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: green;
+    padding: 10px;
+    margin: 20px;
+}
+
+.crearEquipos{
+    display: flex;
+    margin: 20px;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.grupo{
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(230,230,230);
+    border:1px solid black;
+    flex-grow: inherit;
+    flex: 1 2 50%
+}
+
+.equipo{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 60px;
+}
+
+.equiposForm button{
+    padding: 5px;
+    margin: auto;
+    text-align: center;
+    width: 100px;
+}
+
+
+
+
+
