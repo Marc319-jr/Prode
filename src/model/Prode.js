@@ -26,19 +26,21 @@ const Prode = {
         let allProdes = this.findAll();
         let newProde = {
             id: this.generateId(),
-            ...prode
+            ...prode,
+            equipos: []
         }
         allProdes.push(newProde);
         fs.writeFileSync(this.filename ,JSON.stringify(allProdes, null,' '))
         return newProde
     },
 
-    equipos: function(equipos){
+    equipos: function(equipo){
         let allProdes = this.findAll()
-        allProdes.forEach(element => {
-            element.equipos = equipos;    
-        });
-        
+        allProdes[equipo.prodeId-1].equipos.push(equipo);
+        console.log(allProdes);
+        fs.writeFileSync(this.filename ,JSON.stringify(allProdes, null,' '))
+        return true
+
 
     }
 }
