@@ -155,15 +155,84 @@ input[type=submit] {
     align-items: center;
     justify-content: center;
     width: 400px;
-    margin-top: 50px;
+    height: 200px;
 }
 .partido_proximo {
     display: flex;
 }
 .main_1 {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    background-color: #145614;
+}
+.puesto_actual {
+    display: flex;
+    flex-direction: column;
+    background-color: #ececec;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+}
+.fila_puesto {
+    display: flex;
     justify-content: center;
 }
+.puesto {
+    font-size: 64px;
+}
+.tabla_input{
+    width: 300px !important;
+    background-color: #020A40!important;
+    border: 1px solid #020A40!important;
+}
+.boton_prode{
+    background-color: #020A40!important;
+    border: 1px solid #020A40!important;
+}
+table{
+    width:500px;
+    margin:0 auto;
+    color:white;
+    text-align:center;
+  }
+  tr{
+    cursor:pointer;
+  }
+  .destacado{
+    font-family:'Montserrat';
+    font-weight:bold;
+    font-size: 22px;
+    background-color:#0D6859;
+  }
+  .fondo1{
+    background-color:#7AB318;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    color: #000000;
+  }
+  .fondo1:hover{
+    color:black;
+    background-color:#00aa00;
+  }
+  .fondo2{
+     background-color:#A0C55E;
+     font-size: 18px;
+    font-family: 'Montserrat';
+    color: #000000;
+  }
+  .fondo2:hover{
+    color:black;
+    background-color:#007700;
+  }
+  .tabla {
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0F3E76;
+  }
 /*-------------------Login y Register-----------------*/
 
 

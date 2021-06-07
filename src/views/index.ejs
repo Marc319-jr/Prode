@@ -8,13 +8,13 @@
     <header>
         <div class="title">
             <a href="/"><img src="/Imagenes/logo/logo.png" alt="Logo" width="100px"></a>
-            <a href="">
+            <a href="#main_1">
                 Home
             </a>
-            <a href="">
+            <a href="#prode">
                 Mi prode
             </a>
-            <a href="">
+            <a href="#tabla">
                 Tabla de posiciones
             </a>
         </div>
@@ -25,7 +25,7 @@
         </div>
     </header>
     <main>
-        <div class="main_1">
+        <div class="main_1" id="#main_1">
             <div class="proximo_partido">
                 <p class="titulo_proximo_partido">PROXIMO PARTIDO:</p>
                 <p class="descripcion_proximo_partido">
@@ -35,17 +35,33 @@
                     <div class="equipo_1">
                         <img src="/Imagenes/brasil.png" alt="" height="60px" width="60px">
                         <p class="p_proximo_partido">Bra</p>
-                        <input type="number">
                     </div>
+                    <a href="#prode">
+                        <input class="boton_prode" type="submit" value="Ir al Prode">
+                    </a>
                     <div class="equipo_2">
                         <img src="/Imagenes/venezuela.png" alt="" height="60px" width="60px">
                         <p class="p_proximo_partido">Ven</p>
-                        <input type="number">
                     </div>
                 </div>
             </div>
+            <div class="puesto_actual">
+                <div class="fila_puesto">
+                    <p class="p_proximo_partido"> Tu puesto es:</p>
+                    <p class="puesto">7º</p>
+                </div>
+                <div class="fila_puesto">
+                    <p class="p_proximo_partido">puntos:</p>
+                    <p class="p_proximo_partido">9 puntos</p>
+                </div>
+                <div>
+                    <a href="#tabla">
+                        <input class="tabla_input" type="submit" value="Ir a la tabla de posiciones">
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="prode">
+        <div class="prode" id="prode">
             <div class="grupo_1">
                 <p class="titulo_grupo">  GRUPO 1:</p>
                 <form class="main_partidos">
@@ -379,7 +395,61 @@
                 </form>
             </div>
         </div>
+        <div class="tabla" id="tabla">
+            <table cellspacing="0" cellpadding="0">
+                <tr class="destacado">
+                  <td>Puesto</td>
+                  <td>Nombre</td>
+                  <td>Puntos</td>
+                </tr>
+                <tr class="fondo1">
+                    <td>1º</td>
+                  <td>
+                    Pepito
+                  </td>
+                  <td>17</td>
+                  
+                </tr>
+                <tr class="fondo2">
+                    <td>2º</td>
+                    <td>
+                      Menguito
+                    </td>
+                    <td>14</td>
+                </tr>
+                <tr class="fondo1">
+                    <td>3º</td>
+                    <td>
+                      Pedro
+                    </td>
+                    <td>12</td>
+                </tr>
+                <tr class="fondo2">
+                    <td>4º</td>
+                    <td>
+                      Marce
+                    </td>
+                    <td>10</td>
+                </tr>
+              </table>
+        </div>
 
     </main>
 </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('a[href^="#"]').click(function() {
+      var destino = $(this.hash);
+      if (destino.length == 0) {
+        destino = $('a[name="' + this.hash.substr(1) + '"]');
+      }
+      if (destino.length == 0) {
+        destino = $('html');
+      }
+      $('html, body').animate({ scrollTop: destino.offset().top }, 2000);
+      return false;
+    });
+  });
+</script>
 </html>
