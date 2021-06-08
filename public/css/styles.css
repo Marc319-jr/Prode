@@ -25,7 +25,7 @@ header{
 
 .grupo_1 {
     background-color: #ececec;
-    width: 380px;
+    width: 35vw;
     margin-top: 50px;
     padding: 20px 0px;
     margin-bottom: 30px;
@@ -143,8 +143,9 @@ input[type=submit] {
 .titulo_proximo_partido {
     margin-right: 10px;
     margin-left: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     margin-top: 0px;
+    text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
 }
@@ -154,7 +155,7 @@ input[type=submit] {
     background-color: #ececec;
     align-items: center;
     justify-content: center;
-    width: 400px;
+    width: 30vw;
     height: 200px;
 }
 .partido_proximo {
@@ -172,7 +173,8 @@ input[type=submit] {
     flex-direction: column;
     background-color: #ececec;
     align-items: center;
-    width: 400px;
+    width: 30vw;
+    justify-content: center;
     height: 200px;
 }
 .fila_puesto {
@@ -184,7 +186,7 @@ input[type=submit] {
     font-size: 64px;
 }
 .tabla_input{
-    width: 300px !important;
+    width: 100% !important;
     background-color: #020A40!important;
     border: 1px solid #020A40!important;
 }
@@ -193,12 +195,12 @@ input[type=submit] {
     border: 1px solid #020A40!important;
 }
 table{
-    width:500px;
+    width:50vw;
     margin:0 auto;
     color:white;
     text-align:center;
   }
-  tr{
+tr{
     cursor:pointer;
   }
   .destacado{
@@ -228,13 +230,65 @@ table{
       justify-content: center;
       background-color: #0F3E76;
   }
+@media (max-width: 1200px) {
+     .titulo_proximo_partido{
+         font-size: 20px;
+     }
+     .descripcion_proximo_partido {
+         font-size: 16px;
+     }
+     .p_proximo_partido{
+         display: none;
+     }
+  }
+  @media (max-width: 850px){
+      .descripcion_partido{
+          display: none;
+      }
+      .bandera_prox {
+          display: none;
+      }
+      .p_proximo_partido{
+          display: inline-block;
+          font-size: 12px;
+      }
+  }
+  @media (max-width: 650px){
+    .puesto_actual{
+        width: 80vw;
+    }
+    .bandera_prox {
+        display: unset;
+    }
+    .proximo_partido{
+        width: 80vw;
+    }
+    .grupo_1{
+        width: 80vw;
+    }
+   .prode{
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+   }
+   .main_1{
+       flex-direction: column;
+    }
+  }
+  @media (max-width: 400px){
+    .bandera_prox {
+        display: none;
+    }
+    table{
+        width: 100vw;
+    }
+  }
 /*-------------------Login y Register-----------------*/
 
 
 body .register{
     display: flex;
 }
-
 
 
 body .register .foto img{
