@@ -165,7 +165,7 @@ input[type=submit] {
     justify-content: space-around;
     align-items: center;
     height: 500px;
-    background-color: #145614;
+    background-color: #0a3c0a;
 }
 .puesto_actual {
     display: flex;
@@ -178,6 +178,7 @@ input[type=submit] {
 .fila_puesto {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .puesto {
     font-size: 64px;
@@ -207,25 +208,19 @@ table{
     background-color:#0D6859;
   }
   .fondo1{
-    background-color:#7AB318;
+    background-color:#73ae20;
     font-size: 18px;
     font-family: 'Montserrat';
     color: #000000;
   }
-  .fondo1:hover{
-    color:black;
-    background-color:#00aa00;
-  }
+  
   .fondo2{
      background-color:#A0C55E;
      font-size: 18px;
     font-family: 'Montserrat';
     color: #000000;
   }
-  .fondo2:hover{
-    color:black;
-    background-color:#007700;
-  }
+
   .tabla {
       height: 400px;
       display: flex;
