@@ -68,5 +68,35 @@
     ]
    }
   ]
+ },
+ {
+  "id": 2,
+  "nombre": "test",
+  "cantequipos": "2",
+  "cantgrupos": "2",
+  "grupos": [
+   {
+    "id": 1,
+    "cantequipos": 1,
+    "equipos": [
+     {
+      "nombre": "Marce",
+      "bandera": "default",
+      "id": "1"
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "cantequipos": 1,
+    "equipos": [
+     {
+      "nombre": "Ale",
+      "bandera": "default",
+      "id": "1"
+     }
+    ]
+   }
+  ]
  }
 ]

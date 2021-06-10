@@ -28,7 +28,9 @@ const controller = {
     },
 
     administrar: (req,res) => {
-        res.send("Que pasa way")
+        let prodes = Prode.findAll();
+        let prode = prodes[req.query.prodeId]
+        res.render('../src/views/admin/partidos' , {'prode' : prode})
     }
 
 }
