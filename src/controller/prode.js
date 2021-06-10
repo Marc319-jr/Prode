@@ -50,8 +50,8 @@ const controller = {
         prodes[numeroProde] = prode;
         Prode.save(prodes)
         let nuevoProdes = Prode.findAll()
-        res.send(nuevoProdes) 
-
+        let prodeAmandar = nuevoProdes[numeroProde]
+        res.render('../src/views/admin/partidos' , {'prode' : prodeAmandar})
     }
 
 }
