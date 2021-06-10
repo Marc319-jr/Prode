@@ -12,16 +12,26 @@
             <% for( let i = 0; i < prode.cantgrupos; i++ ) { %>
                 <div class = "grupo">
                     <% for( let j = 0; j < prode.cantequipos; j++ ) { %>
-                        <form method="POST" action="/prode/crearPartido" class="partido">
+                        <form method="POST" action="/prode/crearPartido?prode=<%=prode.id %> &grupo=<%=i+1%>&partido=<%=j+1%>" class="partido">
                             <div class="equipo">
+                                <h2>grupo: <%=i+1%> partido: <%= j+1  %></h2>
+                                <br>
                                 <div class = "partido">
-                            <select>
-                                <option value="">Sellecione equipo</option>
-                                <option>grupo: <%=i+1%> partido: <%= j+1  %>  </option>
+                            <select  name = "local">
+                                <option>Equipo 1</option>
+                                <% for( let k = 0; k < prode.grupos[i].cantequipos; k++ ) { %>
+                                    <option> <%=prode.grupos[i].equipos[k].nombre  %> </option>
+                                <% } %>
+
                             </select>
                             <h4>VS</h4>
-                            <select>
-                                <option value="">Selecione equipo</option>
+                            <select name = "vivistante">
+                                <option >Equipo 2</option>
+                                <% for( let k = 0; k < prode.grupos[i].cantequipos; k++ ) { %>
+                                    <option> <%=prode.grupos[i].equipos[k].nombre  %> </option>
+                                
+                                <% } %>
+
                             </select>
                                 </div>
                                 <br>
@@ -29,7 +39,10 @@
                             <input type="text" name = "estadio">
                             <label for="fecha">Fecha:</label>
                             <input type="date" name  ="fecha">
+                            <label for ="hora">Horario:</label>
+                            <input type="time" name = "hora">
                             <button type="submit">Crear</button>
+                          
                             </div>
                         </form>
                     <% } %>
