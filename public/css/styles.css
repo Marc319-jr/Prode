@@ -405,6 +405,11 @@ body .register .formulario form a{
     border: 1px solid black;
     padding: 20px;
     margin: 60px;
+    justify-self: center;
+    text-align: center;
+    align-items: center;
+    background-color: green;
+    justify-content: space-between;
 }
 
 .equiposForm button{
@@ -412,6 +417,13 @@ body .register .formulario form a{
     margin: auto;
     text-align: center;
     width: 100px;
+}
+
+#siguiente{
+    position: relative;
+    right: -94%;
+    padding: 10px;
+   
 }
 
 

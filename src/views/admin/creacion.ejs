@@ -43,8 +43,27 @@
             <br>
             <button type="reset">Resetear</button>
             <button type = "submit">Crear</button>
-            </div>
+            </div>    
+         
+             <% if (prodes!= "") { %>
+                <h2>Tus prodes:</h2>
+                <div class = "prodes">
+                    <% for( let i = 0; i < prodes.length; i++ ) { %>
+                        <article class ="prode">
+                            <a href="#">
+                            <h1>prode numero <%=i+1  %> </h1>
+                            </a>
+                        </article>
+                    <% } %>
+    
+                </div>
+               
+             
+            <% } %>
         </form>
+
+   
+    
 
     </main>
 </body>

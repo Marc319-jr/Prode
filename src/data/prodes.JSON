@@ -1,59 +1,69 @@
 [
  {
   "id": 1,
-  "nombre": "Ale",
-  "cantequipos": "8",
+  "nombre": "Copa America 2021",
+  "cantequipos": "10",
   "cantgrupos": "2",
   "grupos": [
    {
     "id": 1,
-    "cantequipos": 4,
+    "cantequipos": 5,
     "equipos": [
      {
-      "id": 1,
-      "nombre": "",
-      "bandera": ""
+      "nombre": "Brasil",
+      "bandera": "Bandera-1623311382902.png",
+      "id": "1"
      },
      {
-      "id": 2,
-      "nombre": "",
-      "bandera": ""
+      "nombre": "Venezuela",
+      "bandera": "Bandera-1623311390701.png",
+      "id": "2"
      },
      {
-      "id": 3,
-      "nombre": "",
-      "bandera": ""
+      "nombre": "Peru",
+      "bandera": "Bandera-1623311398267.png",
+      "id": "3"
      },
      {
-      "id": 4,
-      "nombre": "",
-      "bandera": ""
+      "nombre": "Ecuador",
+      "bandera": "Bandera-1623311406060.jpg",
+      "id": "4"
+     },
+     {
+      "nombre": "Colombia",
+      "bandera": "Bandera-1623311419181.png",
+      "id": "5"
      }
     ]
    },
    {
     "id": 2,
-    "cantequipos": 4,
+    "cantequipos": 5,
     "equipos": [
      {
-      "id": 1,
-      "nombre": "",
-      "bandera": ""
+      "nombre": "Argentina",
+      "bandera": "Bandera-1623311436959.png",
+      "id": "1"
      },
      {
-      "id": 2,
-      "nombre": "",
-      "bandera": ""
+      "nombre": "Chile",
+      "bandera": "Bandera-1623311446597.png",
+      "id": "2"
      },
      {
-      "id": 3,
-      "nombre": "",
-      "bandera": ""
+      "nombre": "Paraguay",
+      "bandera": "Bandera-1623311455487.png",
+      "id": "3"
      },
      {
-      "id": 4,
-      "nombre": "",
-      "bandera": ""
+      "nombre": "Bolivia",
+      "bandera": "Bandera-1623311465567.png",
+      "id": "4"
+     },
+     {
+      "nombre": "Uruguay",
+      "bandera": "Bandera-1623311479501.jpg",
+      "id": "5"
      }
     ]
    }

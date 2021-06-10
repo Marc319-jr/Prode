@@ -63,14 +63,13 @@ const Prode = {
         return newProde
     },
 
-    equipos: function(equipo){
-        let allProdes = this.findAll()
-        allProdes[equipo.prodeId-1].equipos.push(equipo);
-        console.log(allProdes);
+    createTeams: function(equipo,prode,grupo,numero){
+        let allProdes = this.findAll();
+        equipo.id = numero
+        allProdes[prode-1].grupos[grupo-1].equipos[numero-1] = equipo
         fs.writeFileSync(this.filename ,JSON.stringify(allProdes, null,' '))
-        return true
-
-
+        return  allProdes[prode-1]
+        
     }
 }
 
