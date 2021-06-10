@@ -22,12 +22,41 @@ const Prode = {
 
     },
 
+    teamsCreate: function(number){
+        let array = [];
+        for(let i =0;i<number;i++)
+        {
+            array.push({
+                id: i+1,
+                nombre: '',
+                bandera:''
+            })
+        }
+        return array
+    },
+
+
+    gruposCreate: function(numeroGr, numeroTe){
+        let array = [];
+        for(let i = 0;i<numeroGr;i++)
+        {
+            array.push({
+                id: i+1,
+                cantequipos: numeroTe/numeroGr,
+                equipos: this.teamsCreate(numeroTe/numeroGr)
+            })
+        }
+        return array
+    },
+
     create: function(prode){
         let allProdes = this.findAll();
         let newProde = {
             id: this.generateId(),
-            ...prode,
-            equipos: []
+            nombre:prode.nombre,
+            cantequipos: prode.teamnum,
+            cantgrupos: prode.groupnum, 
+            grupos: this.gruposCreate(prode.groupnum, prode.teamnum)
         }
         allProdes.push(newProde);
         fs.writeFileSync(this.filename ,JSON.stringify(allProdes, null,' '))
@@ -44,6 +73,7 @@ const Prode = {
 
     }
 }
+
 
 
 module.exports = Prode;

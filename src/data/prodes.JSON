@@ -1,0 +1,62 @@
+[
+ {
+  "id": 1,
+  "nombre": "Ale",
+  "cantequipos": "8",
+  "cantgrupos": "2",
+  "grupos": [
+   {
+    "id": 1,
+    "cantequipos": 4,
+    "equipos": [
+     {
+      "id": 1,
+      "nombre": "",
+      "bandera": ""
+     },
+     {
+      "id": 2,
+      "nombre": "",
+      "bandera": ""
+     },
+     {
+      "id": 3,
+      "nombre": "",
+      "bandera": ""
+     },
+     {
+      "id": 4,
+      "nombre": "",
+      "bandera": ""
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "cantequipos": 4,
+    "equipos": [
+     {
+      "id": 1,
+      "nombre": "",
+      "bandera": ""
+     },
+     {
+      "id": 2,
+      "nombre": "",
+      "bandera": ""
+     },
+     {
+      "id": 3,
+      "nombre": "",
+      "bandera": ""
+     },
+     {
+      "id": 4,
+      "nombre": "",
+      "bandera": ""
+     }
+    ]
+   }
+  ]
+ }
+]
