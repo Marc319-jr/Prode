@@ -2,6 +2,9 @@
 <head>
 <%- include('./partials/head') %>
 <title>Prode</title>
+<link rel="stylesheet" type="text/css" href="css/jquery.countdown.css"> 
+<script type="text/javascript" src="js/jquery.plugin.js"></script> 
+<script type="text/javascript" src="js/jquery.countdown.js"></script>
 </head>
 
 <body>
@@ -9,8 +12,9 @@
     <main>
         
         <div class="main_1" id="#main_1">
+           
             <div class="proximo_partido">
-                <div class="powr-countdown-timer" id="c744f9a6_1623357780"></div><script src="https://www.powr.io/powr.js?platform=html"></script>
+                <div class="powr-countdown-timer" id="c744f9a6_1623357780"></div><script src="https://www.powr.io/powr.js?platform=jquery"></script>
                 <p class="titulo_proximo_partido">PROXIMO PARTIDO:</p>
                 <p class="descripcion_proximo_partido">
                     Dom, 13/06-18Hs
@@ -26,7 +30,6 @@
                     <div class="equipo_2">
                         <img src="/Imagenes/venezuela.png" alt="" height="60px" width="60px" class="bandera_prox">
                         <p class="p_proximo_partido">Ven</p>
-
                     </div>
                 </div>
 
@@ -422,6 +425,7 @@
 
     </main>
 </body>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
