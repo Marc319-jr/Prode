@@ -9,6 +9,11 @@ const Prode = {
     findAll: function(){
         return this.getData();
     },
+    
+    save: function(prodes){
+        fs.writeFileSync(this.filename ,JSON.stringify(prodes, null,' '))
+        return true
+    },
 
     generateId: function(){
         let allProdes = this.findAll();
@@ -43,7 +48,9 @@ const Prode = {
             array.push({
                 id: i+1,
                 cantequipos: numeroTe/numeroGr,
-                equipos: this.teamsCreate(numeroTe/numeroGr)
+                equipos: this.teamsCreate(numeroTe/numeroGr),
+                partidos: []
+
             })
         }
         return array
@@ -69,7 +76,9 @@ const Prode = {
         allProdes[prode-1].grupos[grupo-1].equipos[numero-1] = equipo
         fs.writeFileSync(this.filename ,JSON.stringify(allProdes, null,' '))
         return  allProdes[prode-1]
-        
+    },
+    createMatch: function(partido){
+
     }
 }
 

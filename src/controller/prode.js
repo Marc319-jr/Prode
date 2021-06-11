@@ -31,6 +31,27 @@ const controller = {
         let prodes = Prode.findAll();
         let prode = prodes[req.query.prodeId]
         res.render('../src/views/admin/partidos' , {'prode' : prode})
+    },
+
+    crearPartido: (req,res) => {
+        let numeroProde = (req.query.prode-1);
+        let numeroGrupo = (req.query.grupo-1);
+        let numeroPartido = (req.query.partido-1);
+        let partido = {
+            numeroGrupo,
+            numeroPartido,
+            numeroProde,
+            ...req.body
+        }
+        console.log("creando en el prode: " + (numeroProde+1) + " en el grupo: " + (numeroGrupo+1) + " el partido: " + (numeroPartido+1));
+        let prodes = Prode.findAll();
+        let prode = prodes[numeroProde];
+        prode.grupos[numeroGrupo].partidos.push(partido)
+        prodes[numeroProde] = prode;
+        Prode.save(prodes)
+        let nuevoProdes = Prode.findAll()
+        let prodeAmandar = nuevoProdes[numeroProde]
+        res.render('../src/views/admin/partidos' , {'prode' : prodeAmandar})
     }
 
 }
