@@ -22,13 +22,16 @@ header{
     margin: 5px 15px;
 }
 /*-----------------------main --------------------*/
-
+#editMe.design_{
+    display: none !important;
+}
 .grupo_1 {
     background-color: #ececec;
     width: 35vw;
     margin-top: 50px;
     padding: 20px 0px;
     margin-bottom: 30px;
+    max-width: 450px;
 }
 .prode {
     display: flex;
@@ -156,7 +159,7 @@ input[type=submit] {
     align-items: center;
     justify-content: center;
     width: 30vw;
-    height: 200px;
+    height: 300px;
 }
 .partido_proximo {
     display: flex;
@@ -175,7 +178,7 @@ input[type=submit] {
     align-items: center;
     width: 30vw;
     justify-content: center;
-    height: 200px;
+    height: 300px;
 }
 .fila_puesto {
     display: flex;
