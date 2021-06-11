@@ -1,0 +1,22 @@
+<head>
+<%- include('../partials/head')  %> 
+<title>Create user</title>
+</head>
+
+<body>
+    <%- include('../partials/header')  %> 
+    <main>
+        <div class="crearUsuario">
+            <h1>Crear participante</h1>
+            <form action="/user/guardar" method="POST" class = "formUser">
+            <label for="username">Nomre</label>
+            <input type="text" name = "username">
+            <label for ="ganador">Posible campeon</label>
+            <input type="text" name = "ganador">
+            <button type="submit">guardar</button>
+            </form>
+            
+        </div>
+        
+    </main>
+</body>

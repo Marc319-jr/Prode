@@ -430,6 +430,21 @@ body .register .formulario form a{
 }
 
 
+#crearProde .usuariosProde{
+    background-color: blue;
+    margin: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+#crearProde .usuariosProde a{
+    color: white;
+    text-decoration: none;
+}
+
+
 
 /********************creacion de partidos********************/
 
@@ -456,3 +471,34 @@ body .register .formulario form a{
 
 
 
+
+
+/************************************Creacion de participante********************/
+
+    .crearUsuario{
+        margin: 20px 50px;
+        padding: 20px;
+        background-color: green;
+        border: 1px solid black;
+        border-radius: 25px;
+    }
+
+    .crearUsuario h1{
+        text-align: center;
+        margin: 20px;
+    }
+
+    .crearUsuario .formUser{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        max-width: 400px;
+        padding: 20px;
+        border:1px solid black;
+        background-color: rgb(230,230,230);
+    }
+
+    .crearUsuario .formUser button{
+        width: 100px;
+        margin: 10px auto;
+    }
