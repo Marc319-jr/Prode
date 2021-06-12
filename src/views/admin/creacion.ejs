@@ -43,7 +43,28 @@
             <br>
             <button type="reset">Resetear</button>
             <button type = "submit">Crear</button>
-            </div>
+            </div>    
+         
+             <% if (prodes!= "") { %>
+                <h2>Tus prodes:</h2>
+                <div class = "prodes">
+                    <% for( let i = 0; i < prodes.length; i++ ) { %>
+                        <article class ="prode">
+                            <a href="/prode/administrar?prodeId=<%=i%> ">
+                            <h1>prode numero <%=i+1  %> </h1>
+                            </a>
+                        </article>
+                    <% } %>
+    
+               
+             
+            <% } %>
+                        
+                    <div class="usuariosProde">
+                        <a href="/user/create">+ Crear Usuario +</a>
+                    </div>
+                </div>
+          
         </form>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>
@@ -73,5 +94,10 @@
                     closeMenu($(".menu_mobile_bt"));
                 });
             </script>
+      
+
+   
+    
+
     </main>
 </body>

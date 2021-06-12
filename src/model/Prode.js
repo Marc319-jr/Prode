@@ -9,6 +9,11 @@ const Prode = {
     findAll: function(){
         return this.getData();
     },
+    
+    save: function(prodes){
+        fs.writeFileSync(this.filename ,JSON.stringify(prodes, null,' '))
+        return true
+    },
 
     generateId: function(){
         let allProdes = this.findAll();
@@ -22,28 +27,61 @@ const Prode = {
 
     },
 
+    teamsCreate: function(number){
+        let array = [];
+        for(let i =0;i<number;i++)
+        {
+            array.push({
+                id: i+1,
+                nombre: '',
+                bandera:''
+            })
+        }
+        return array
+    },
+
+
+    gruposCreate: function(numeroGr, numeroTe){
+        let array = [];
+        for(let i = 0;i<numeroGr;i++)
+        {
+            array.push({
+                id: i+1,
+                cantequipos: numeroTe/numeroGr,
+                equipos: this.teamsCreate(numeroTe/numeroGr),
+                partidos: []
+
+            })
+        }
+        return array
+    },
+
     create: function(prode){
         let allProdes = this.findAll();
         let newProde = {
             id: this.generateId(),
-            ...prode,
-            equipos: []
+            nombre:prode.nombre,
+            cantequipos: prode.teamnum,
+            cantgrupos: prode.groupnum, 
+            grupos: this.gruposCreate(prode.groupnum, prode.teamnum)
         }
         allProdes.push(newProde);
         fs.writeFileSync(this.filename ,JSON.stringify(allProdes, null,' '))
         return newProde
     },
 
-    equipos: function(equipo){
-        let allProdes = this.findAll()
-        allProdes[equipo.prodeId-1].equipos.push(equipo);
-        console.log(allProdes);
+    createTeams: function(equipo,prode,grupo,numero){
+        let allProdes = this.findAll();
+        equipo.id = numero
+        allProdes[prode-1].grupos[grupo-1].equipos[numero-1] = equipo
         fs.writeFileSync(this.filename ,JSON.stringify(allProdes, null,' '))
-        return true
-
+        return  allProdes[prode-1]
+    },
+    createMatch: function(partido){
 
     }
 }
+
 
 
 module.exports = Prode;

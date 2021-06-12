@@ -65,14 +65,16 @@ header img {
     }
 }
 /*-----------------------main --------------------*/
-
+#editMe.design_{
+    display: none !important;
+}
 .grupo_1 {
     background-color: #ececec;
     width: 35vw;
     margin-top: 50px;
     padding: 20px 0px;
     margin-bottom: 30px;
-    max-width: 400px;
+    max-width: 450px;
 }
 .prode {
     display: flex;
@@ -200,7 +202,7 @@ input[type=submit] {
     align-items: center;
     justify-content: center;
     width: 30vw;
-    height: 200px;
+    height: 300px;
 }
 .partido_proximo {
     display: flex;
@@ -219,7 +221,7 @@ input[type=submit] {
     align-items: center;
     width: 30vw;
     justify-content: center;
-    height: 200px;
+    height: 300px;
 }
 .fila_puesto {
     display: flex;
@@ -451,6 +453,11 @@ body .register .formulario form a{
     border: 1px solid black;
     padding: 20px;
     margin: 60px;
+    justify-self: center;
+    text-align: center;
+    align-items: center;
+    background-color: green;
+    justify-content: space-between;
 }
 
 .equiposForm button{
@@ -460,7 +467,83 @@ body .register .formulario form a{
     width: 100px;
 }
 
+#siguiente{
+    position: relative;
+    right: -94%;
+    padding: 10px;
+   
+}
+
+
+#crearProde .usuariosProde{
+    background-color: blue;
+    margin: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+#crearProde .usuariosProde a{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/********************creacion de partidos********************/
+
+#partido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: green;
+    padding: 10px;
+    border: 1px solid black;   
+    margin: 15px;
+}
+
+#partido h1{
+    padding: 5px;
+}
+
+#partido .equipos{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
 
 
 
 
+
+/************************************Creacion de participante********************/
+
+    .crearUsuario{
+        margin: 20px 50px;
+        padding: 20px;
+        background-color: green;
+        border: 1px solid black;
+        border-radius: 25px;
+    }
+
+    .crearUsuario h1{
+        text-align: center;
+        margin: 20px;
+    }
+
+    .crearUsuario .formUser{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        max-width: 400px;
+        padding: 20px;
+        border:1px solid black;
+        background-color: rgb(230,230,230);
+    }
+
+    .crearUsuario .formUser button{
+        width: 100px;
+        margin: 10px auto;
+    }

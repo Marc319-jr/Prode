@@ -2,6 +2,9 @@
 <head>
 <%- include('./partials/head') %>
 <title>Prode</title>
+<link rel="stylesheet" type="text/css" href="css/jquery.countdown.css"> 
+<script type="text/javascript" src="js/jquery.plugin.js"></script> 
+<script type="text/javascript" src="js/jquery.countdown.js"></script>
 </head>
 
 <body>
@@ -32,8 +35,11 @@
         </div>
     </header>
     <main>
+        
         <div class="main_1" id="#main_1">
+           
             <div class="proximo_partido">
+                <div class="powr-countdown-timer" id="c744f9a6_1623357780"></div><script src="https://www.powr.io/powr.js?platform=jquery"></script>
                 <p class="titulo_proximo_partido">PROXIMO PARTIDO:</p>
                 <div id="countdown" class="row justify-content-center align-items-center">
                 </div>
@@ -48,9 +54,9 @@
                     <div class="equipo_2">
                         <img src="/Imagenes/venezuela.png" alt="" height="60px" width="60px" class="bandera_prox">
                         <p class="p_proximo_partido">Ven</p>
-
                     </div>
                 </div>
+
             </div>
             <div class="puesto_actual">
                 <div class="fila_puesto">

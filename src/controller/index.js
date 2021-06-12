@@ -1,7 +1,10 @@
+const Prode = require('../model/Prode')
 const controller = { 
 
     index: (req,res) => {
-        res.render('../src/views/index');
+        let prodes = Prode.findAll();
+        let prode  = prodes[0];
+        res.render('../src/views/index' , {'prode' : prode});
     }
 }
 

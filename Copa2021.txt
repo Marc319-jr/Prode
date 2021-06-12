@@ -272,37 +272,5 @@
     ]
    }
   ]
- },
- {
-  "id": 2,
-  "nombre": "Dante",
-  "cantequipos": "2",
-  "cantgrupos": "2",
-  "grupos": [
-   {
-    "id": 1,
-    "cantequipos": 1,
-    "equipos": [
-     {
-      "nombre": "Dante",
-      "bandera": "Bandera-1623453385800.jpeg",
-      "id": "1"
-     }
-    ],
-    "partidos": []
-   },
-   {
-    "id": 2,
-    "cantequipos": 1,
-    "equipos": [
-     {
-      "nombre": "MARCE",
-      "bandera": "Bandera-1623453393689.jpeg",
-      "id": "1"
-     }
-    ],
-    "partidos": []
-   }
-  ]
  }
 ]
