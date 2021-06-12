@@ -44,7 +44,11 @@
       "visitante": "Venezuela",
       "estadio": "?",
       "fecha": "2021-06-13",
-      "hora": "18:00"
+      "hora": "18:00",
+      "resultado": [
+       0,
+       0
+      ]
      },
      {
       "numeroGrupo": 0,
@@ -54,7 +58,11 @@
       "visitante": "Ecuador",
       "estadio": "?",
       "fecha": "2021-06-13",
-      "hora": "21:00"
+      "hora": "21:00",
+      "resultado": [
+       0,
+       0
+      ]
      },
      {
       "numeroGrupo": 0,
@@ -64,7 +72,11 @@
       "visitante": "Venezuela",
       "estadio": "?",
       "fecha": "2021-06-17",
-      "hora": "18:00"
+      "hora": "18:00",
+      "resultado": [
+       0,
+       0
+      ]
      },
      {
       "numeroGrupo": 0,
@@ -74,7 +86,11 @@
       "visitante": "Brasil",
       "estadio": "?",
       "fecha": "2021-06-17",
-      "hora": "21:00"
+      "hora": "21:00",
+      "resultado": [
+       0,
+       0
+      ]
      },
      {
       "numeroGrupo": 0,
@@ -84,7 +100,11 @@
       "visitante": "Venezuela",
       "estadio": "?",
       "fecha": "2021-06-20",
-      "hora": "18:00"
+      "hora": "18:00",
+      "resultado": [
+       0,
+       0
+      ]
      },
      {
       "numeroGrupo": 0,
@@ -94,7 +114,11 @@
       "visitante": "Peru",
       "estadio": "?",
       "fecha": "2021-06-20",
-      "hora": "21:00"
+      "hora": "21:00",
+      "resultado": [
+       0,
+       0
+      ]
      },
      {
       "numeroGrupo": 0,
@@ -104,7 +128,11 @@
       "visitante": "Peru",
       "estadio": "?",
       "fecha": "2021-06-23",
-      "hora": "18:00"
+      "hora": "18:00",
+      "resultado": [
+       0,
+       0
+      ]
      },
      {
       "numeroGrupo": 0,
@@ -114,7 +142,11 @@
       "visitante": "Colombia",
       "estadio": "?",
       "fecha": "2021-06-24",
-      "hora": "22:00"
+      "hora": "22:00",
+      "resultado": [
+       0,
+       0
+      ]
      },
      {
       "numeroGrupo": 0,
@@ -124,7 +156,11 @@
       "visitante": "Peru",
       "estadio": "?",
       "fecha": "2021-06-27",
-      "hora": "18:00"
+      "hora": "18:00",
+      "resultado": [
+       0,
+       0
+      ]
      },
      {
       "numeroGrupo": 0,
@@ -134,7 +170,11 @@
       "visitante": "Brasil",
       "estadio": "?",
       "fecha": "2021-06-28",
-      "hora": "22:00"
+      "hora": "22:00",
+      "resultado": [
+       0,
+       0
+      ]
      }
     ]
    },
@@ -177,7 +217,11 @@
       "visitante": "Chile",
       "estadio": "?",
       "fecha": "2021-06-14",
-      "hora": "18:00"
+      "hora": "18:00",
+      "resultado": [
+       0,
+       0
+      ]
      },
      {
       "numeroGrupo": 1,
@@ -187,7 +231,11 @@
       "visitante": "Bolivia",
       "estadio": "?",
       "fecha": "2021-06-14",
-      "hora": "21:00"
+      "hora": "21:00",
+      "resultado": [
+       0,
+       0
+      ]
      },
      {
       "numeroGrupo": 1,
@@ -197,7 +245,11 @@
       "visitante": "Bolivia",
       "estadio": "?",
       "fecha": "2021-06-18",
-      "hora": "18:00"
+      "hora": "18:00",
+      "resultado": [
+       0,
+       0
+      ]
      },
      {
       "numeroGrupo": 1,
@@ -207,7 +259,11 @@
       "visitante": "Uruguay",
       "estadio": "?",
       "fecha": "2021-06-21",
-      "hora": "18:00"
+      "hora": "18:00",
+      "resultado": [
+       0,
+       0
+      ]
      },
      {
       "numeroGrupo": 1,
@@ -217,7 +273,11 @@
       "visitante": "Chile",
       "estadio": "?",
       "fecha": "2021-06-21",
-      "hora": "18:00"
+      "hora": "18:00",
+      "resultado": [
+       0,
+       0
+      ]
      },
      {
       "numeroGrupo": 1,
@@ -227,7 +287,11 @@
       "visitante": "Paraguay",
       "estadio": "?",
       "fecha": "2021-06-21",
-      "hora": "21:00"
+      "hora": "21:00",
+      "resultado": [
+       0,
+       0
+      ]
      },
      {
       "numeroGrupo": 1,
@@ -237,7 +301,11 @@
       "visitante": "Uruguay",
       "estadio": "?",
       "fecha": "2021-06-24",
-      "hora": "18:00"
+      "hora": "18:00",
+      "resultado": [
+       0,
+       0
+      ]
      },
      {
       "numeroGrupo": 1,
@@ -247,7 +315,11 @@
       "visitante": "Paraguay",
       "estadio": "?",
       "fecha": "2021-06-24",
-      "hora": "21:00"
+      "hora": "21:00",
+      "resultado": [
+       0,
+       0
+      ]
      },
      {
       "numeroGrupo": 1,
@@ -257,7 +329,11 @@
       "visitante": "Argentina",
       "estadio": "?",
       "fecha": "2021-06-28",
-      "hora": "21:00"
+      "hora": "21:00",
+      "resultado": [
+       0,
+       0
+      ]
      },
      {
       "numeroGrupo": 1,
@@ -267,42 +343,15 @@
       "visitante": "Paraguay",
       "estadio": "?",
       "fecha": "2021-06-28",
-      "hora": "21:00"
+      "hora": "21:00",
+      "resultado": [
+       0,
+       0
+      ]
      }
     ]
    }
   ]
- },
- {
-  "id": 2,
-  "nombre": "Dante",
-  "cantequipos": "2",
-  "cantgrupos": "2",
-  "grupos": [
-   {
-    "id": 1,
-    "cantequipos": 1,
-    "equipos": [
-     {
-      "nombre": "Dante",
-      "bandera": "Bandera-1623453385800.jpeg",
-      "id": "1"
-     }
-    ],
-    "partidos": []
-   },
-   {
-    "id": 2,
-    "cantequipos": 1,
-    "equipos": [
-     {
-      "nombre": "MARCE",
-      "bandera": "Bandera-1623453393689.jpeg",
-      "id": "1"
-     }
-    ],
-    "partidos": []
-   }
-  ]
  }
+
 ]

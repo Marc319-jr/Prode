@@ -521,8 +521,8 @@ body .register .formulario form a{
 /************************************Creacion de participante********************/
 
     .crearUsuario{
-        margin: 20px 50px;
-        padding: 20px;
+        margin: 100px 300px;
+        padding: 60px;
         background-color: green;
         border: 1px solid black;
         border-radius: 25px;

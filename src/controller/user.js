@@ -13,7 +13,16 @@ const controller = {
         res.render('../src/views/user/reglas');
     }, 
     create: (req,res) => {
-        res.render("../src/views/user/create");
+        let prodes = Prode.findAll();
+        res.render("../src/views/user/create" , {'prodes' : prodes});
+    },
+    save: (req,res) => {
+        let user = User.create(req.body);
+        let prodes = Prode.findAll();
+        res.render('../src/views/user/resultados', {'participante' : user , 'prodes': prodes});
+    },
+    createResultados: (req,res) => {
+        res.send("hola")
     }
 }
 

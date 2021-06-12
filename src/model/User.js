@@ -32,12 +32,18 @@ const User ={
         let allUsers = this.findAll();
         let newUser = {
             id: this.generateId(),
-
+            ...user,
+            puntos: 0,
+            resultados: []
         }
         allUsers.push(newUser);
         fs.writeFileSync(this.filename ,JSON.stringify(allUsers, null,' '))
-        return newProde
+        return newUser
     },
+    createPartidos: function(userid){
+        let allUsers = this.findAll();
+        let partidos = []
+    }
  
 }
 

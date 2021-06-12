@@ -1,1 +1,12 @@
-[]
+[
+ {
+  "id": 1,
+  "username": "Marce",
+  "prode": "0",
+  "ganador": "Venezuela",
+  "goleador": "Messio",
+  "frase": "Aguante el prode y JavaScript",
+  "puntos": 0,
+  "resultados": []
+ }
+]
