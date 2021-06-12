@@ -1,0 +1,108 @@
+<head>
+    <!DOCTYPE html>
+    <html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href ="/css/styles.css"  rel = "stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css ">
+    <title>Prode</title>
+    <link href ="/css/reglas.css"  rel = "stylesheet">
+
+    </head>
+    
+    <body>
+        <header>
+            <a href="/"><img src="/Imagenes/logo/Logo_copa.png" alt="Logo" width="100px"></a>
+            <div class="menu_mobile_bt">
+                <div class="mbt_line"></div>
+                <div class="mbt_line"></div>
+                <div class="mbt_line"></div>
+            </div>
+            <div class="menu_over">
+                <div class="menu_desplegable">
+                    <div class="title">
+                        <a href="/#prode">
+                            Mi prode
+                        </a>
+                        <a href="/#tabla">
+                            Tabla de posiciones
+                        </a>
+                        <a href="/prode">Administrar</a>
+                        <a href="/user/reglas">
+                            Reglas
+                        </a>
+                        <a href="/user/login">Login
+                        </a>
+                        <a href = "/user/register">Register</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="reglas">
+            <p class="p_reglas">
+                Reglas de nuestro prode
+            </p>
+            <section>
+                <ul id="ul_reglas">
+                    <li>
+                        Cada participante debere entragar los resultados de cada una de las rondas correspondientes 1 hora antes de que comience el primer partido, en caso de pasarse de dicho horario, solo contaran los partidos en los cuales el lapso para que empiece sea menor a 1 hora.
+
+                    </li>
+                    <li>
+                        los PRODE seran enviados a traves de un excel a Pedro o a Marce.
+                    </li>
+                    <li>
+                        Dentro de la fase de grupos cada Resultado Pleno(Ganador/empate y resultado identico), vale 3 puntos
+                    </li>
+                    <li>
+                        Durante todo el PRODE cada vez que se acierte ganador/empate, sin acertar PLENO, valdra 1 punto.
+                    </li>
+                    <li>
+                        los Plenos a partir de Cuartos de final sumaran 4 puntos
+                    </li>
+                    <li>
+                       En la final un Pleno Valdra 5 puntos
+                    </li>
+                    <li>
+                        A partir de Cuartos de final, si el partido termina en empate, aunque no se acierte el ganador, pero si se acierta el empate, valdra 1 punto
+                    </li>
+                    <li>Mientras que si se acierta PLENO empate pero no el ganador, se obtendran por unica vez 2 puntos</li>
+                </ul>
+            </section>
+        </main>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('a[href^="#"]').click(function() {
+      var destino = $(this.hash);
+      if (destino.length == 0) {
+        destino = $('a[name="' + this.hash.substr(1) + '"]');
+      }
+      if (destino.length == 0) {
+        destino = $('html');
+      }
+      $('html, body').animate({ scrollTop: destino.offset().top }, 2000);
+      return false;
+    });
+  });
+  </script>
+  <script>
+
+      $(document).ready(function(){
+          $(".menu_mobile_bt").click(function(){
+              $(".menu_over").slideToggle();
+            });
+        });
+        $( window ).resize(function() {
+            setMenuDisplay();
+            closeMenu($(".menu_mobile_bt"));
+        });
+    </script>
+    </body>
+
+            

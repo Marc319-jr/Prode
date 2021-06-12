@@ -6,29 +6,37 @@
 
 <body>
     <header>
-        <div class="title">
-            <a href="/"><img src="/Imagenes/logo/logo.png" alt="Logo" width="100px"></a>
-            <a href="#prode">
-                Mi prode
-            </a>
-            <a href="#tabla">
-                Tabla de posiciones
-            </a>
-            <a href="/prode">Administrar</a>
+        <a href="/"><img src="/Imagenes/logo/Logo_copa.png" alt="Logo" width="100px"></a>
+        <div class="menu_mobile_bt">
+            <div class="mbt_line"></div>
+            <div class="mbt_line"></div>
+            <div class="mbt_line"></div>
         </div>
-        <div class = "title">
-            <a href="/user/login">Login
-            </a>
-            <a href = "/user/register">Register</a>
+        <div class="menu_over">
+            <div class="menu_desplegable">
+                <div class="title">
+                    <a href="#prode">
+                        Mi prode
+                    </a>
+                    <a href="#tabla">
+                        Tabla de posiciones
+                    </a>
+                    <a href="/prode">Administrar</a>
+                    <a href="/user/reglas">
+                        Reglas
+                    </a>
+                    <a href="/user/login">Login
+                    </a>
+                    <a href = "/user/register">Register</a>
+            </div>
         </div>
     </header>
     <main>
         <div class="main_1" id="#main_1">
             <div class="proximo_partido">
                 <p class="titulo_proximo_partido">PROXIMO PARTIDO:</p>
-                <p class="descripcion_proximo_partido">
-                    Dom, 13/06-18Hs
-                </p>
+                <div id="countdown" class="row justify-content-center align-items-center">
+                </div>
                 <div class="partido_proximo">
                     <div class="equipo_1">
                         <img src="/Imagenes/brasil.png" alt="" height="60px" width="60px" class="bandera_prox">
@@ -435,6 +443,7 @@
 
     </main>
 </body>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
@@ -450,5 +459,17 @@ $(document).ready(function() {
       return false;
     });
   });
-</script>
+  </script>
+  <script>
+
+      $(document).ready(function(){
+          $(".menu_mobile_bt").click(function(){
+              $(".menu_over").slideToggle();
+            });
+        });
+        $( window ).resize(function() {
+            setMenuDisplay();
+            closeMenu($(".menu_mobile_bt"));
+        });
+    </script>
 </html>

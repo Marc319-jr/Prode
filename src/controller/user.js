@@ -6,6 +6,9 @@ const controller = {
 
     register: (req,res) => {
         res.render('../src/views/user/register');
+    },
+    reglas: (req,res) => {
+        res.render('../src/views/user/reglas');
     }
 }
 
