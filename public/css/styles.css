@@ -1,18 +1,26 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'montserrat', sans-serif;
 }
 /*----------------------Header -----------------------*/
 header{
     background-color: #0f140d;
     display: flex;
+    align-items: center;
     flex-direction: row;
     justify-content: space-between;
+    max-height: 130px ;
+}
+header img {
+    padding: 10px;
+    margin-left: 10px;
 }
 .title {
     display: flex;
     align-items: center;
     margin-left: 40px;
+    margin-right: 40px;
 }
 .title a {
     font-family: montserrat;
@@ -20,6 +28,41 @@ header{
     color: #ffffff;
     text-decoration: none;
     margin: 5px 15px;
+}
+.menu_mobile_bt{ display: none; width: 23px; height: auto; padding: 10px 0px 10px 0px; }
+.menu_mobile_bt .mbt_line{
+	margin: 4px 0px 4px 0px;
+	width: 100%;
+	height: 3px;
+
+	background-color: #019bb6;
+	cursor: pointer;
+}
+@media only screen and (max-width: 1000px) {
+    .menu_over {
+        display: none;
+        width: 100%;
+        height: 230px;
+
+
+    }
+    .menu_desplegable {
+        background-color: #0f140d;;
+		padding: 0px;
+        display: flex;
+        flex-direction: column;
+        top: 125px;
+        left: 0px;
+		position: absolute;
+		z-index: 1000;
+        color: #000;
+        width: 100%;
+        height: 250px;
+    }
+    .menu_mobile_bt{ display: block; margin-right: 2%;}
+    .title{
+        flex-direction: column;
+    }
 }
 /*-----------------------main --------------------*/
 
@@ -29,6 +72,7 @@ header{
     margin-top: 50px;
     padding: 20px 0px;
     margin-bottom: 30px;
+    max-width: 400px;
 }
 .prode {
     display: flex;
@@ -230,6 +274,8 @@ tr{
       justify-content: center;
       background-color: #0F3E76;
   }
+
+  
 @media (max-width: 1200px) {
      .titulo_proximo_partido{
          font-size: 20px;
@@ -349,10 +395,10 @@ body .register .formulario form a{
 /*-------------------------------creacion de un Prode por------------------------*/
 
 #crearProde{
-    background-color: green;
-    background-color: green;
+    background-color: #0F3E76;
+    background-color: #0F3E76;
     padding: 120px;
-    margin: 40px 400px;
+    margin: 40px 40px;
     border: 1px solid black;
     border-radius: 25px;
     text-align: center;
@@ -377,7 +423,7 @@ body .register .formulario form a{
     flex-direction: column;
     border: 1px solid black;
     border-radius: 20px;
-    background-color: green;
+    background-color: #0F3E76;
     padding: 10px;
     margin: 20px;
 }
