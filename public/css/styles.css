@@ -456,7 +456,7 @@ body .register .formulario form a{
     justify-self: center;
     text-align: center;
     align-items: center;
-    background-color: green;
+    background-color: #0F3E76;
     justify-content: space-between;
 }
 
@@ -476,7 +476,7 @@ body .register .formulario form a{
 
 
 #crearProde .usuariosProde{
-    background-color: blue;
+    background-color: #0F3E76;
     margin: 30px;
     border: 1px solid black;
     border-radius: 10px;
@@ -498,7 +498,7 @@ body .register .formulario form a{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-color: green;
+    background-color: #0F3E76;
     padding: 10px;
     border: 1px solid black;   
     margin: 15px;
@@ -523,7 +523,7 @@ body .register .formulario form a{
     .crearUsuario{
         margin: 20px 50px;
         padding: 20px;
-        background-color: green;
+        background-color: #0F3E76;
         border: 1px solid black;
         border-radius: 25px;
     }
@@ -547,3 +547,6 @@ body .register .formulario form a{
         width: 100px;
         margin: 10px auto;
     }
+h1 {
+    color: #ffffff;
+}
