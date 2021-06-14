@@ -4,7 +4,7 @@ const path = require('path');
 app.use(express.static('public'));
 
 
-const PORT = process.env.PORT || 3000
+
 
 app.use(express.static(path.resolve(__dirname, '../public')));
 
@@ -29,8 +29,11 @@ app.use('/' , indexRouter)
 app.use('/user', userRouter);
 app.use('/prode' , prodeRouter);
 
-app.listen(PORT, () => {
-    console.log('Servidor corriendo en el puerto ' + PORT)
-}
 
-);
+
+
+//Levantamos servidor y por si nos dan un puerto
+app.set('port', process.env.PORT || 3000);
+app.listen(app.get('port'));
+console.log("Server on port", app.get('port')); 
+
