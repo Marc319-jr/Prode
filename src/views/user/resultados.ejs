@@ -8,10 +8,47 @@
     <main>
         <div class="resultadosUser">
             <h1>Crear partido para <%= participante.username  %> </h1>
+            <div class="gruposCont">
             <% for( let i = 0; i < participante.grupos.length; i++ ) { %>
-                <span>Hola</span>
-            
+                <div class = "grupoResult">
+                    <h2 style="color:white">GRUPO: <%= i+1 %> </h2>
+                <% for( let j = 0; j < participante.grupos[i].partidos.length; j++ ) { %>
+                    <form class  ="partidoResult" method = "POST" action="">
+                        <% let nombreLocal = participante.grupos[i].partidos[j].local 
+                        let nombreVisitante =  participante.grupos[i].partidos[j].visitante 
+                        let banderLocal;
+                        let banderaVisitante
+                     %> 
+                        <div class="partido">
+                            <p class="descripcion_partido">
+                                <%=participante.grupos[i].partidos[j].fecha%> <%=participante.grupos[i].partidos[j].hora  %> 
+                            </p>
+                            <% for( let k = 0; k < participante.grupos[i].equipos.length; k++ ) { %>
+                                <% (nombreLocal == participante.grupos[i].equipos[k].nombre) ? (banderaLocal = participante.grupos[i].equipos[k].bandera) : (banderaLocal = "");  %>
+                         <% } %>
+                         <div class="equipo_1">
+                            <img src="/image/equipos/<%=banderaLocal%>" alt="bandera" height="20px" width="20px">
+                            <p><%=participante.grupos[i].partidos[j].local%></p>
+                            <input type = "number" placeholder="0" name= "local">
+                        </div>
+                            <p>-</p>
+                            <% for( let k = 0; k < participante.grupos[i].equipos.length; k++ ) { %>
+                                <% (nombreVisitante == participante.grupos[i].equipos[k].nombre) ? (banderaVisitante = participante.grupos[i].equipos[k].bandera) : (banderaVisitante = "");  %>
+                             <% } %>
+                             <div class="equipo_2">
+                                <img src="/image/equipos/<%=banderaVisitante%>" alt="bandera" height="20px" width="20px">
+                                <p><%=participante.grupos[i].partidos[j].visitante%></p>
+                                <input type = "number" placeholder="0" name = "visitante">
+                            </div>
+                            <button type="submit">Ageregar</button>
+ 
+                        </div>
+                    </form>
+                
+                <% } %>
+                </div>
             <% } %>
+        </div>
 
        
         </div>

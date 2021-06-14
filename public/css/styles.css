@@ -558,5 +558,25 @@ body .register .formulario form a{
         padding: 40px;
         text-align: center;
         background-color: #0F3E76;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         
+    }
+
+    .gruposCont{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .resultadosUser .grupoResult{
+        margin: 15px;
+        padding: 20px;
+    }
+
+
+    .resultadosUser .grupoResult .partidoResult{
+        margin: 15px;
+
+
     }
