@@ -41,7 +41,7 @@ const controller = {
             numeroGrupo,
             numeroPartido,
             numeroProde,
-            resultado,
+            resultado: [0,0],
             ...req.body
         }
         console.log("creando en el prode: " + (numeroProde+1) + " en el grupo: " + (numeroGrupo+1) + " el partido: " + (numeroPartido+1));

@@ -34,7 +34,7 @@ const User ={
             id: this.generateId(),
             ...user,
             puntos: 0,
-            resultados: []
+            posicion: 0,
         }
         allUsers.push(newUser);
         fs.writeFileSync(this.filename ,JSON.stringify(allUsers, null,' '))
