@@ -3,6 +3,9 @@
     margin: 0;
     font-family: 'montserrat', sans-serif;
 }
+.none {
+    display: none;
+}
 /*----------------------Header -----------------------*/
 header{
     background-color: #01584c;
