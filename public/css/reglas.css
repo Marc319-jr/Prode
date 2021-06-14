@@ -21,3 +21,12 @@ background-color: #0F3E76
     color: white;
     font-family: 'montserrat',sans-serif;
 }
+.a_reglas {
+    color: #019bb6;
+}
+.underline{
+    text-decoration: underline;
+}
+.margin {
+    margin-bottom: 20px;
+}
