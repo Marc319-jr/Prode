@@ -354,8 +354,8 @@
     ]
    }
   ],
-  "puntos": 0,
-  "posicion": 0
+  "puntos": 3,
+  "posicion": 8
  },
  {
   "id": 2,
@@ -712,8 +712,8 @@
     ]
    }
   ],
-  "puntos": 0,
-  "posicion": 0
+  "puntos": 4,
+  "posicion": 3
  },
  {
   "id": 3,
@@ -721,6 +721,8 @@
   "prode": "0",
   "ganador": "Seleccione el equipo",
   "goleador": "",
+  "puntos": "5",
+  "posicion": "1",
   "frase": "",
   "grupos": [
    {
@@ -1109,9 +1111,7 @@
      }
     ]
    }
-  ],
-  "puntos": 0,
-  "posicion": 0
+  ]
  },
  {
   "id": 4,
@@ -1508,8 +1508,8 @@
     ]
    }
   ],
-  "puntos": 0,
-  "posicion": 0
+  "puntos": 4,
+  "posicion": 3
  },
  {
   "id": 5,
@@ -1906,8 +1906,8 @@
     ]
    }
   ],
-  "puntos": 0,
-  "posicion": 0
+  "puntos": 4,
+  "posicion": 3
  },
  {
   "id": 6,
@@ -2304,8 +2304,8 @@
     ]
    }
   ],
-  "puntos": 0,
-  "posicion": 0
+  "puntos": 2,
+  "posicion": 9
  },
  {
   "id": 7,
@@ -2702,8 +2702,8 @@
     ]
    }
   ],
-  "puntos": 0,
-  "posicion": 0
+  "puntos": 2,
+  "posicion": 9
  },
  {
   "id": 8,
@@ -3100,8 +3100,8 @@
     ]
    }
   ],
-  "puntos": 0,
-  "posicion": 0
+  "puntos": 2,
+  "posicion": 9
  },
  {
   "id": 9,
@@ -3498,8 +3498,8 @@
     ]
    }
   ],
-  "puntos": 0,
-  "posicion": 0
+  "puntos": 4,
+  "posicion": 3
  },
  {
   "id": 10,
@@ -3896,8 +3896,8 @@
     ]
    }
   ],
-  "puntos": 0,
-  "posicion": 0
+  "puntos": 2,
+  "posicion": 9
  },
  {
   "id": 11,
@@ -4294,8 +4294,8 @@
     ]
    }
   ],
-  "puntos": 0,
-  "posicion": 0
+  "puntos": 4,
+  "posicion": 3
  },
  {
     "id": 12,
@@ -4692,7 +4692,7 @@
       ]
      }
     ],
-    "puntos": 0,
-    "posicion": 0
+    "puntos": 5,
+    "posicion": 1
    }
 ]

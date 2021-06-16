@@ -28,21 +28,23 @@
                 </div>
 
             </div>
-            <div class="puesto_actual">
-                <div class="fila_puesto">
-                    <p class="titulo_proximo_partido"> TU PUESTO ES:</p>
-                    <p class="puesto">Nº</p>
-                </div>
-                <div class="fila_puesto">
-                    <p class="descripcion_proximo_partido">PUNTOS:</p>
-                    <p class="descripcion_proximo_partido">9 PUNTOS</p>
-                </div>
-                <div>
+            <% if(locals.isLogged) { %>
+                <div class="puesto_actual">
+                    <div class="fila_puesto">
+                        <p class="titulo_proximo_partido"> TU PUESTO ES:</p>
+                        <p class="puesto"> <%= locals.userLogged.posicion %>º</p>
+                    </div>
+                    <div class="fila_puesto">
+                        <p class="descripcion_proximo_partido">PUNTOS:</p>
+                        <p class="descripcion_proximo_partido"> <%= locals.userLogged.puntos %> </p>
+                    </div>
+                    <div>
                     <a href="#tabla">
                         <input class="tabla_input" type="submit" value="Ir a la tabla">
                     </a>
+                    </div>
                 </div>
-            </div>
+            <% } %>
         </div>
         <section class="prode_main">
             <% if (locals.isLogged) { %>
@@ -224,7 +226,7 @@
                   <td translate="no">1</td translate="no">
                 </tr>
                 <tr class="fondo2">
-                    <td translate="no">2º</td translate="no">
+                    <td translate="no">1º</td translate="no">
                     <td translate="no">
                       Pedro
                     </td translate="no">
@@ -240,7 +242,7 @@
                     <td translate="no">1</td translate="no">
                 </tr>
                 <tr class="fondo2">
-                    <td translate="no">4º</td translate="no">
+                    <td translate="no">3º</td translate="no">
                     <td translate="no">
                       Lean
                     </td translate="no">
@@ -248,7 +250,7 @@
                     <td translate="no">1</td translate="no">
                 </tr>
                 <tr class="fondo1">
-                    <td translate="no">5º</td translate="no">
+                    <td translate="no">3º</td translate="no">
                     <td translate="no">
                       Ale
                     </td translate="no">
@@ -256,7 +258,7 @@
                     <td translate="no">1</td translate="no">
                 </tr>
                 <tr class="fondo2">
-                    <td translate="no">6º</td translate="no">
+                    <td translate="no">3º</td translate="no">
                     <td translate="no">
                       Ilu
                     </td translate="no">
@@ -264,7 +266,7 @@
                     <td translate="no">1</td translate="no">
                 </tr>
                 <tr class="fondo1">
-                    <td translate="no">7º</td translate="no">
+                    <td translate="no">3º</td translate="no">
                     <td translate="no">
                       Noah
                     </td translate="no">
@@ -288,7 +290,7 @@
                     <td translate="no">0</td translate="no">
                 </tr>
                 <tr class="fondo2">
-                    <td translate="no">10º</td translate="no">
+                    <td translate="no">9º</td translate="no">
                     <td translate="no">
                       Lucho
                     </td translate="no">
@@ -296,7 +298,7 @@
                     <td translate="no">0</td translate="no">
                 </tr>
                 <tr class="fondo1">
-                    <td translate="no">11º</td translate="no">
+                    <td translate="no">9º</td translate="no">
                     <td translate="no">
                       Lito
                     </td translate="no">
@@ -304,7 +306,7 @@
                     <td translate="no">0</td translate="no">
                 </tr>
                 <tr class="fondo2">
-                    <td translate="no">12º</td translate="no">
+                    <td translate="no">9º</td translate="no">
                     <td translate="no">
                       Nico
                     </td translate="no">
