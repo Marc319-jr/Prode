@@ -79,7 +79,7 @@ const Prode = {
     },
     createMatch: function(partido){
 
-    }
+    },
 }
 
 

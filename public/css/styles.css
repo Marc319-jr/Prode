@@ -341,6 +341,9 @@ tr{
       }
   }
   @media (max-width: 650px){
+      .partidos_Jugados{
+          flex-direction: column;
+      }
     .puesto_actual{
         width: 80vw;
     }
