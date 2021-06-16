@@ -7,12 +7,13 @@ router.get('/login' , controller.login);
 router.get('/register', controller.register);
 router.get('/reglas', controller.reglas);
 router.get('/create', controller.create);
-router.get('/create/resultados' , controller.createResultados)
+router.get('/logout' , controller.logout);
 
 
 
 router.post('/guardar' ,controller.save);
-
+router.post('/guardar/resultadosUser' , controller.saveUserResult);
+router.post('/login' , controller.processLogin);
 
 
 

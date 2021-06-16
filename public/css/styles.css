@@ -419,10 +419,9 @@ body .register .formulario form a{
 /*-------------------------------creacion de un Prode por------------------------*/
 
 #crearProde{
-    background-color: #0F3E76;
-    background-color: #0F3E76;
+    background-color: rgb(230,230,230);
     padding: 120px;
-    margin: 40px 40px;
+    margin: 40px 200px;
     border: 1px solid black;
     border-radius: 25px;
     text-align: center;
@@ -432,7 +431,6 @@ body .register .formulario form a{
     margin: 50px;
     padding: 50px;
     background-color: rgb(230,230,230);
-    border: 1px solid black;
 }
 
 
@@ -571,7 +569,7 @@ body .register .formulario form a{
     }
     
     h1 {
-    color: #ffffff;
+    color: black;
     }   
 
 
@@ -579,7 +577,9 @@ body .register .formulario form a{
         margin: 60px 60px;
         padding: 40px;
         text-align: center;
-        background-color: #0F3E76;
+        background-color: rgb(180,180,180);
+        border: 1px solid black;
+        border-radius: 25px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -600,5 +600,6 @@ body .register .formulario form a{
     .resultadosUser .grupoResult .partidoResult{
         margin: 15px;
 
-
     }
+
+
