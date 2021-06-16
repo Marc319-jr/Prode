@@ -11,8 +11,8 @@ const User ={
         return this.getData();
     },
     
-    save: function(user){
-        fs.writeFileSync(this.filename ,JSON.stringify(user, null,' '))
+    save: function(array){
+        fs.writeFileSync(this.filename ,JSON.stringify(array, null,' '))
         return true
     },
 
@@ -40,9 +40,13 @@ const User ={
         fs.writeFileSync(this.filename ,JSON.stringify(allUsers, null,' '))
         return newUser
     },
-    createPartidos: function(userid){
+    createPartido: function(info){
         let allUsers = this.findAll();
-        let partidos = []
+        console.log("Estoy creando el partido");
+        console.log(info);
+        allUsers[info.userId-1].grupos[info.grupo].partidos[info.partido].resultado = info.resultado;
+        console.log(allUsers[info.userId-1].grupos[info.grupo].partidos[info.partido]);
+        this.save(allUsers)
     }
  
 }

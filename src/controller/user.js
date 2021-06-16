@@ -20,6 +20,14 @@ const controller = {
         let prodes = Prode.findAll();
         let prode = prodes[req.body.prode]
         let grupos = prode.grupos;
+        for( let i = 0;i < grupos.length; i++)
+        {
+            for(let j = 0 ; j< grupos[i].partidos.length ; j++)
+            {
+                grupos[i].partidos[j].resultado = [];
+            }
+        }
+       
         let user = {
             ...req.body,
             grupos
@@ -27,8 +35,20 @@ const controller = {
         userToCreate = User.create(user);
         res.render('../src/views/user/resultados', {'participante' : userToCreate});
     },
-    createResultados: (req,res) => {
-        res.send("hola")
+    saveUserResult: (req,res) => {
+        let resultado = [req.body.local , req.body.visitante];
+        let userId = req.query.userId;
+        let info = {
+            userId,
+            grupo: req.query.grupoId,
+            partido: req.query.partidoId,
+            resultado
+        }
+        User.createPartido(info);
+        let allUsers = User.findAll();
+        let user = allUsers[(userId-1)];
+        res.render('../src/views/user/resultados', {'participante' : user});
+
     }
 }
 

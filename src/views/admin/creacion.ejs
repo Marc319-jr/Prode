@@ -8,7 +8,7 @@
     <main>
         <br>
         <form id ="crearProde" action = "/prode/crear" method="POST">
-            <h1>Crea tu prode</h1>
+            <h1 style="color: black;">Crea tu prode</h1>
             <div class = "creacion">
             <label for="nombre">Nombre del prode</label>
             <input type="text" name="nombre">
@@ -50,8 +50,8 @@
                 <div class = "prodes">
                     <% for( let i = 0; i < prodes.length; i++ ) { %>
                         <article class ="prode">
-                            <a href="/prode/administrar?prodeId=<%=i%> ">
-                            <h1>prode numero <%=i+1  %> </h1>
+                            <a style="color:#0F3E76; text-decoration: none;" href="/prode/administrar?prodeId=<%=i%> ">
+                            <h1 style="color:#0F3E76 ;">prode numero <%=i+1  %> </h1>
                             </a>
                         </article>
                     <% } %>
