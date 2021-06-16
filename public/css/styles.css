@@ -13,6 +13,7 @@ header{
     align-items: center;
     flex-direction: row;
     max-height: 130px ;
+    justify-content: space-between;
 }
 header img {
     padding: 10px;
@@ -41,7 +42,7 @@ header img {
 	cursor: pointer;
 }
 .space {
-    margin-right: 10vw !important;
+    margin-right: 22vw !important;
 }
 @media only screen and (max-width: 1000px) {
     .menu_over {
@@ -86,6 +87,16 @@ header img {
 .prode {
     display: flex;
     justify-content: space-around;
+}
+.before_match {
+    color: #ffffff;
+    font-size: 26px;
+    text-align: center;
+}
+.prode_main {
+    padding: 50px 10px;
+    background-color: #025050;
+
 }
 .partido {
     display: flex;
@@ -343,6 +354,7 @@ tr{
    }
    .main_1{
        flex-direction: column;
+       height: 700px;
     }
   }
   @media (max-width: 400px){
@@ -410,12 +422,21 @@ body .register .formulario form button{
     padding: 5px;
     background-color: green;
 }
-
+.register {
+    background-color: #0F3E76;
+}
 
 body .register .formulario form a{
     margin-top: 40px;
 }
-
+@media (max-width:1200px) {
+    body .register .foto img{
+        display: none;
+    }
+    .register {
+        height: 700px;
+    }
+}
 /*-------------------------------creacion de un Prode por------------------------*/
 
 #crearProde{
