@@ -1,9 +1,15 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const session = require('express-session')
 app.use(express.static('public'));
 
 
+
+//uso de ssesiones para los usuarios logeados
+app.use(session({secret: 'Shh, Its a secret',
+                 resave: false,
+                 saveUninitialized: false}));
 
 
 app.use(express.static(path.resolve(__dirname, '../public')));
@@ -18,6 +24,11 @@ app.use(methodOverrider("_method"));
 //motor de EJS
 app.set('view engine', 'ejs');
 
+
+//middlewares
+const userloggedMiddleware = require('./middlewares/userlogged');
+
+app.use(userloggedMiddleware)
 
 //rutas
 const indexRouter = require('./routes/index');

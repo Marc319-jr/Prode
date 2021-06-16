@@ -5,7 +5,23 @@ const controller = {
         res.render('../src/views/user/login');
 
     },
+    processLogin: (req,res) => {
+        let users = User.findAll();
+        let userToLogin = User.findByField('username' , req.body.username)
+        if(userToLogin)
+        {
+            console.log("Encontre un usuario");
+            req.session.userLogged = userToLogin;
+            res.locals.userLogged = req.session.userLogged
+            console.log(res.locals.userLogged.username);
+            res.redirect('/')
+        }
+        else
+        {
+            res.send("No te enuentro, contactate con Perako o Marce para resolver el problema <3")
+        }
 
+    },
     register: (req,res) => {
         res.render('../src/views/user/register');
     },
@@ -49,6 +65,12 @@ const controller = {
         let user = allUsers[(userId-1)];
         res.render('../src/views/user/resultados', {'participante' : user});
 
+    },
+
+    logout : (req,res) => { 
+        console.log("Cerrando session");
+        req.session.destroy()
+        res.redirect('/')
     }
 }
 

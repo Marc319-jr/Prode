@@ -18,8 +18,16 @@
                     <a class="space" href="/user/reglas">
                         Reglas
                     </a>
-                    <a class="" href="/user/login">Login
-                    </a>
+                    <% if (locals.isLogged) { %>
+                        <span></span>
+                        <a href="#">Bienvenidos <%= locals.userLogged.username %> amigo del PLV </a>
+                        <a href="/user/logout">logout</a>
+
+                    <% } else {%>
+                        <a class="" href="/user/login">Login</a>
+                        
+                        <% } %>
+                    
                     <a class="none" href = "/user/register">Register</a>
                 </div>
             </div>
