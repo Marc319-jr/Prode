@@ -11,6 +11,7 @@
     "equipos": [
      {
       "nombre": "Brasil",
+      "apodo": "BRA",
       "bandera": "Bandera-1623360737301.png",
       "id": "1"
      },

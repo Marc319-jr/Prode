@@ -12,7 +12,7 @@ const controller = {
         {
             console.log("Encontre un usuario");
             req.session.userLogged = userToLogin;
-            res.locals.userLogged = req.session.userLogged
+            res.locals.userLogged = req.session.userLogged;
             console.log(res.locals.userLogged.username);
             res.redirect('/')
         }

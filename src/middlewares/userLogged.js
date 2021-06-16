@@ -14,7 +14,6 @@ function userLoggedMiddleWare(req,res,next){
         console.log("nadie esta logeado");
     }
 
-
     next();
 
 }
