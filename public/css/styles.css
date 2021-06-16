@@ -188,7 +188,7 @@ input[type=submit] {
 .prode {
     display: flex;
     justify-content: space-around;
-    flex-direction: row;
+    flex-direction: column;
 }
 .p_proximo_partido{
     margin: 5px;
@@ -308,7 +308,13 @@ tr{
     font-family: 'montserrat',sans-serif;
     font-weight: bold;
 }
-
+.partidos_Jugados{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px #73ae20 solid;
+    padding: 10px;
+}
   
 @media (max-width: 1200px) {
      .titulo_proximo_partido{
