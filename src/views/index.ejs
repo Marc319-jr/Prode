@@ -80,7 +80,7 @@
                                         </div>
                                         <p>-</p>
                                         <div class="equipo_2">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].visitante  %>.png" alt="" height="20px" width="20px">
+                                            <img src="/Imagenes/<% =locals.prode.grupos[0].partidos[i].visitante  %>.png" alt="" height="20px" width="20px">
                                             <p><%= locals.prode.grupos[0].partidos[i].apodoVisitante%> </p>
                                             <h2><%= locals.isLogged ? locals.userLogged.grupos[0].partidos[i].resultado[1] : locals.prode.grupos[0].partidos[i].resultado[1]  %></h2>
                                         </div>                       
