@@ -18,7 +18,7 @@ const controller = {
         }
         else
         {
-            res.send("No te enuentro, contactate con Perako o Marce para resolver el problema <3")
+            res.redirect('/user/login')
         }
 
     },
