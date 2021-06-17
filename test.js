@@ -1,12 +1,16 @@
 const { json } = require("express");
 const Jugado = {
-    "local": 1,
-    "visitante": 0,
+"resultado": [
+        "4",
+        "4"
+    ]
 };
 const Pedro = {
-    "local": 1,
-    "visitante": 0,
-    "puntos" : 0
+    "puntos" : 0,
+    "resultado": [
+        "4",
+        "1"
+    ]
 };
 const resultadoPartido = function(resultadoA,resultadoB) {
     let resultado = resultadoA - resultadoB;
@@ -21,18 +25,18 @@ const resultadoPartido = function(resultadoA,resultadoB) {
     return stringResultado
 }
 
-const sumaPuntos = function(Partido, Prode) {
-    if(Partido == Prode) {
-        if(Pedro.local == Jugado.local && Pedro.visitante == Jugado.visitante){
-            Pedro.puntos = Pedro.puntos + 3
+const sumaPuntos = function(comoSalio, Prode, persona, Partido) {
+    if(comoSalio == Prode) {
+        if(persona.resultado[0] == Partido.resultado[0] && persona.resultado[1] == Partido.resultado[1]){
+            persona.puntos = persona.puntos + 3
         } else {
-            Pedro.puntos = Pedro.puntos + 1
+            persona.puntos = persona.puntos + 1
         }
     }else {
-        Pedro.puntos = Pedro.puntos
+        persona.puntos = persona.puntos
     }
-    return Pedro.puntos
+    return persona.puntos
 }
-console.log(sumaPuntos(resultadoPartido(Pedro.local,Pedro.visitante), resultadoPartido(Jugado.local,Jugado.visitante)))
-console.log(resultadoPartido(Pedro.local,Pedro.visitante))
-console.log(resultadoPartido(Jugado.local,Jugado.visitante))
+console.log(sumaPuntos(resultadoPartido(Jugado.resultado[0],Jugado.resultado[1]), resultadoPartido(Pedro.resultado[0],Pedro.resultado[1]),Pedro,Jugado))
+console.log(resultadoPartido(Pedro.resultado[0],Pedro.resultado[1]))
+console.log(resultadoPartido(Jugado.resultado[0],Jugado.resultado[1]))
