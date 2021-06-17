@@ -24,12 +24,6 @@ app.use(methodOverrider("_method"));
 //motor de EJS
 app.set('view engine', 'ejs');
 
-
-//middlewares
-const userloggedMiddleware = require('./middlewares/userlogged');
-
-//app.use(userloggedMiddleware)
-
 //rutas
 const indexRouter = require('./routes/index');
 const userRouter = require('./routes/user');
@@ -49,4 +43,10 @@ const port = process.env.PORT || 3000;
 app.listen(port , () => {
     console.log("running on server " + port);
 })
+
+
+//middlewares
+const userloggedMiddleware = require('./middlewares/userlogged');
+
+//app.use(userloggedMiddleware)
 
