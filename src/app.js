@@ -28,7 +28,7 @@ app.set('view engine', 'ejs');
 //middlewares
 const userloggedMiddleware = require('./middlewares/userlogged');
 
-app.use(userloggedMiddleware)
+//app.use(userloggedMiddleware)
 
 //rutas
 const indexRouter = require('./routes/index');
