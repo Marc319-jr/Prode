@@ -1,6 +1,6 @@
-//const User = require('../model/User')
+/*const User = require('../model/User')
 const Prode = require('../model/Prode')
-
+*/
 function userLoggedMiddleWare(req,res,next){
     console.log("Estoy en el middleware de Userlogged");
     /*let allProdes = Prode.findAll();*/
