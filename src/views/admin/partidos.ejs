@@ -16,17 +16,23 @@
                             <% if (prode.grupos[i].partidos[j]) { %>
                                 <div id="partido">
                                     <h2>grupo: <%=i+1%> partido: <%= j+1 %></h2>
-                                    <div class="equipos">
-                                        <h1><%=prode.grupos[i].partidos[j].local%> </h1>
-                                        <h1>vs</h1>
-                                        <h1><%=prode.grupos[i].partidos[j].visitante%> </h1>
-                                    </div>
-                                    <div class = "info">
-                                        <h1>Hora: <%=prode.grupos[i].partidos[j].hora%></h1>
-                                        <h1>Fecha: <%=prode.grupos[i].partidos[j].fecha%></h1>
-                                        <h1>Estadio: <%=prode.grupos[i].partidos[j].estadio%></h1>
-
-                                    </div>
+                                    <form action="" method="POST">
+                                        <div class="equipos">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[i].partidos[j].local  %>.png" alt="" height="40px" width="40px">
+                                            <h1><%=prode.grupos[i].partidos[j].apodoLocal%> </h1>
+                                            <input type="number" name="local">
+                                            <h1>vs</h1>
+                                            <input type="number" name="local"> 
+                                            <h1><%=prode.grupos[i].partidos[j].apodoVisitante%> </h1>
+                                            <img src="/Imagenes/<%= locals.prode.grupos[i].partidos[j].visitante  %>.png" alt="" height="40px" width="40px">
+                                        </div>
+                                        <div class = "info">
+                                            <h1>Hora: <%=prode.grupos[i].partidos[j].hora%></h1>
+                                            <h1>Fecha: <%=prode.grupos[i].partidos[j].fecha%></h1>
+                                            <h1>Estadio: <%=prode.grupos[i].partidos[j].estadio%></h1>
+                                        </div>
+                                        <button type="submit"> ENVIAR</button>
+                                    </form>
                                 </div>
                                 <% } else { %>
                                     <form method="POST"
