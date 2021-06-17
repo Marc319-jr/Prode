@@ -45,7 +45,8 @@ app.use('/prode' , prodeRouter);
 
 //Levantamos servidor y por si nos dan un puerto
 //Levantamos servidor y por si nos dan un puerto
-app.set('port', process.env.PORT || 3000);
-app.listen(app.get('port'));
-console.log("Server on port", app.get('port')); 
+const port = process.env.PORT || 3000;
+app.listen(port , () => {
+    console.log("running on server " + port);
+})
 
