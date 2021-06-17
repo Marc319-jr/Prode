@@ -12,11 +12,6 @@ function userLoggedMiddleWare(req,res,next){
         res.locals.isLogged = true;
         res.locals.userLogged = req.session.userLogged
     }
-    else
-    {
-        console.log("nadie esta logeado");
-    }
-
     next();
 
 }
