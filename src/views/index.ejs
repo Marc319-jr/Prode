@@ -80,7 +80,7 @@
                                         </div>
                                         <p>-</p>
                                         <div class="equipo_2">
-                                            <img src="/Imagenes/<% =locals.prode.grupos[0].partidos[i].visitante  %>.png" alt="" height="20px" width="20px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].visitante  %>.png" alt="" height="20px" width="20px">
                                             <p><%= locals.prode.grupos[0].partidos[i].apodoVisitante%> </p>
                                             <h2><%= locals.isLogged ? locals.userLogged.grupos[0].partidos[i].resultado[1] : locals.prode.grupos[0].partidos[i].resultado[1]  %></h2>
                                         </div>                       
@@ -140,7 +140,7 @@
                                 </div>
                                 <p>-</p>
                                 <div class="equipo_2">
-                                    <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].visitante%>.png" alt="" height="20px" width="20px">
+                                    <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].visitante  %>.png" alt="" height="20px" width="20px">
                                     <p><%= locals.prode.grupos[0].partidos[0].apodoVisitante%> </p>
                                     <h2><%= locals.isLogged ? locals.userLogged.grupos[0].partidos[0].resultado[1] : locals.prode.grupos[0].partidos[0].resultado[1]  %></h2>
                                 </div>
@@ -152,13 +152,13 @@
                                         <%= locals.prode.grupos[0].partidos[i].fecha%> <%= locals.prode.grupos[0].partidos[i].hora%>
                                     </p>
                                         <div class="equipo_1">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].local%>.png" alt="" height="20px" width="20px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].local  %>.png" alt="" height="20px" width="20px">
                                             <p><%= locals.prode.grupos[0].partidos[i].apodoLocal%> </p>
                                             <h2><%=  locals.prode.grupos[0].partidos[i].resultado[0]  %></h2>
                                         </div>
                                         <p>-</p>
                                         <div class="equipo_2">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].visitante%>.png" alt="" height="20px" width="20px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].visitante  %>.png" alt="" height="20px" width="20px">
                                             <p><%= locals.prode.grupos[0].partidos[i].apodoVisitante%> </p>
                                             <h2><%= locals.prode.grupos[0].partidos[i].resultado[1]  %></h2>
                                         </div>                       
