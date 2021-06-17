@@ -1,4 +1,4 @@
-const User = require('../model/User')
+//const User = require('../model/User')
 const Prode = require('../model/Prode')
 
 function userLoggedMiddleWare(req,res,next){
