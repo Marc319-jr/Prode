@@ -46,7 +46,7 @@ app.listen(port , () => {
 
 
 //middlewares
-const userloggedMiddleware = require('./middlewares/userlogged');
+//const userloggedMiddleware = require('./middlewares/userlogged');
 
 //app.use(userloggedMiddleware)
 
