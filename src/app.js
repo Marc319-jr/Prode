@@ -44,7 +44,7 @@ app.use('/prode' , prodeRouter);
 
 
 //Levantamos servidor y por si nos dan un puerto
-app.set('port', process.env.PORT || 3000);
-app.listen(app.get('port'));
-console.log("Server on port", app.get('port')); 
+app.listen(3000 || process.env.PORT, () => {
+    console.log("Corriendo al servidor 3000")
+})
 
