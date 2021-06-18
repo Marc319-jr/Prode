@@ -44,23 +44,40 @@ const puntosPorPersona = function() {
             for (let j = 0; j < partidos.length; j++) {
                 if(allProdes[0].grupos[i].partidos[j].resultado[0] != "x" && allProdes[0].grupos[i].partidos[j].resultado[1] != "x"){
                     puntos = puntos + sumaPuntos(resultadoPartido(allUser[p].grupos[i].partidos[j].resultado[0],allUser[p].grupos[i].partidos[j].resultado[1]), resultadoPartido(allProdes[0].grupos[i].partidos[j].resultado[0],allProdes[0].grupos[i].partidos[j].resultado[1]),allUser[p].grupos[i].partidos[j],allProdes[0].grupos[i].partidos[j])
-            
+                    
                 }
             }
         }
-        console.log(allUser[p].username) 
-        console.log(puntos)
+        //console.log(allUser[p].username) 
+        //console.log(puntos)
         array.push({
             "nombre" : allUser[p].username,
             "puntos" : puntos
     })
 
-    }    
+    }
     return array
 }
 
 //console.log(resultadoPartido(Pedro.resultado[0],Pedro.resultado[1]))
 //console.log(resultadoPartido(Jugado.resultado[0],Jugado.resultado[1]))
 let array = puntosPorPersona();
-console.log(array);
+function sortJSON(data, key, orden) {
+    return data.sort(function (a, b) {
+        var x = a[key],
+        y = b[key];
 
+        if (orden === 'asc') {
+            return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+        }
+
+        if (orden === 'desc') {
+            return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+        }
+    });
+}
+var OrdenPuntos = sortJSON(array, 'puntos', 'desc');
+var OrdenJSON = sortJSON(allUser, 'puntos', 'desc');
+
+console.log(OrdenPuntos);
+console.log(OrdenJSON)
