@@ -6,11 +6,8 @@ const allUser = User.findAll()
 const Jugado = {
     resultado : allProdes[0].grupos[0].partidos[0].resultado
 };
-const Pedro = {
-    puntos : allUser[0].puntos,
-    resultado: allUser[0].grupos[0].partidos[0].resultado
-};
-
+const partidos =  allProdes[0].grupos[0].partidos
+const grupos = allProdes[0].grupos
 
 const resultadoPartido = function(resultadoA,resultadoB) {
     let resultado = resultadoA - resultadoB;
@@ -39,10 +36,10 @@ const sumaPuntos = function(comoSalio, Prode, persona, Partido) {
 }
 const puntosPorPersona = function() {
     for (let p = 0; p < allUser.length; p++) {
-        for (let i = 0; i < allUser.grupos.length; i++) {
-            for (let j = 0; j < allUser.partidos.length; j++) {
-                if(allProdes[0].resultados[0] != x && allProdes[0].resultados[1] != x){
-                    sumaPuntos(resultadoPartido(allUser[p].grupos[i].partidos[j].resultado), resultadoPartido(allProdes[0].grupos[i].partidos[j].resultado),allUser[p].grupos[i].partidos[j].resultado,allProdes[0].grupos[0].partidos[0].resultado)
+        for (let i = 0; i < grupos.length; i++) {
+            for (let j = 0; j < partidos.length; j++) {
+                if(allProdes[0].grupos[i].partidos[j].resultado[0] != "x" && allProdes[0].grupos[i].partidos[j].resultado[1] != "x"){
+                    sumaPuntos(resultadoPartido(allUser[p].grupos[i].partidos[j].resultado[0],allUser[p].grupos[i].partidos[j].resultado[1]), resultadoPartido(allProdes[0].grupos[i].partidos[j].resultado[0],allProdes[0].grupos[i].partidos[j].resultado[1]),allUser[p].grupos[i].partidos[j],allProdes[0].grupos[i].partidos[j])
             
                 }
             }
@@ -54,3 +51,4 @@ const puntosPorPersona = function() {
 //console.log(sumaPuntos(resultadoPartido(Jugado.resultado[0],Jugado.resultado[1]), resultadoPartido(Pedro.resultado[0],Pedro.resultado[1]),Pedro,Jugado))
 //console.log(resultadoPartido(Pedro.resultado[0],Pedro.resultado[1]))
 //console.log(resultadoPartido(Jugado.resultado[0],Jugado.resultado[1]))
+puntosPorPersona()
