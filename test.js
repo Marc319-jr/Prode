@@ -1,6 +1,12 @@
 const { json } = require("express");
 const Prode = require("./src/model/Prode");
 const User = require("./src/model/User");
+
+
+
+
+
+
 const allProdes = Prode.findAll()
 const allUser = User.findAll()
 const Jugado = {

@@ -53,6 +53,10 @@ const controller = {
         let nuevoProdes = Prode.findAll()
         let prodeAmandar = nuevoProdes[numeroProde]
         res.render('../src/views/admin/partidos' , {'prode' : prodeAmandar})
+    },
+
+    resultado: (req,res) => {
+        console.log(req.body);
     }
 
 }
