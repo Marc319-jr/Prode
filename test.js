@@ -38,6 +38,7 @@ const sumaPuntos = function(comoSalio, Prode, persona, Partido) {
     return persona.puntos
 }
 
+
 console.log(sumaPuntos(resultadoPartido(Jugado.resultado[0],Jugado.resultado[1]), resultadoPartido(Pedro.resultado[0],Pedro.resultado[1]),Pedro,Jugado))
 console.log(resultadoPartido(Pedro.resultado[0],Pedro.resultado[1]))
 console.log(resultadoPartido(Jugado.resultado[0],Jugado.resultado[1]))

@@ -44,6 +44,15 @@ header img {
 .space {
     margin-right: 22vw !important;
 }
+@media (max-width:1200px) {
+    .title{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .space {
+        margin-right: 13vw !important;
+    }
+}
 @media only screen and (max-width: 1000px) {
     .menu_over {
         display: none;
@@ -539,7 +548,42 @@ body .register .formulario form a{
     text-decoration: none;
 }
 
-
+@media (max-width:1000px) {
+    #crearProde {
+        margin: 20px;
+        padding: 0px;
+    }
+    .crearEquipos{
+        margin: 0px;
+        flex-direction: column;
+    }
+    .grupo {
+        padding: 0px;
+        margin: 0px;
+    }
+    .crearUsuario{
+        margin: 10px 60px !important;
+    }
+}
+@media (max-width:400px) {
+    .creacion{
+        margin: 0px;
+        padding: 0px;
+    }
+    .equipos img{
+        display: none;
+    }
+    .equipos h1 {
+        font-size: 22px;
+    }
+    .equipos h2 {
+        font-size: 16px;
+    }
+    .crearUsuario{
+        padding: 10px !important;
+        margin: 10px 10px !important;
+    }
+}
 
 /********************creacion de partidos********************/
 
@@ -620,6 +664,7 @@ body .register .formulario form a{
     .gruposCont{
         display: flex;
         justify-content: space-around;
+        flex-direction: column;
     }
 
     .resultadosUser .grupoResult{
@@ -630,7 +675,20 @@ body .register .formulario form a{
 
     .resultadosUser .grupoResult .partidoResult{
         margin: 15px;
-
     }
+    @media (max-width:500px) {
+        .resultadosUser {
+            margin: 5px;
+            padding: 5px;
+        }
+        .grupoResult img {
+            display: none;
+        }
+        .grupoResult{
+            margin: 5px;
+            padding: 5px;
+        }
+    }
+
 
 
