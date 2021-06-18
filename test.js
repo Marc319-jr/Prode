@@ -35,7 +35,9 @@ const sumaPuntos = function(comoSalio, Prode, persona, Partido) {
     }
     return parseFloat(puntos)
 }
+
 const puntosPorPersona = function() {
+    let array = [];
     for (let p = 0; p < allUser.length; p++) {
         puntos = 0
         for (let i = 0; i < grupos.length; i++) {
@@ -48,10 +50,17 @@ const puntosPorPersona = function() {
         }
         console.log(allUser[p].username) 
         console.log(puntos)
+        array.push({
+            "nombre" : allUser[p].username,
+            "puntos" : puntos
+    })
+
     }    
+    return array
 }
 
 //console.log(resultadoPartido(Pedro.resultado[0],Pedro.resultado[1]))
 //console.log(resultadoPartido(Jugado.resultado[0],Jugado.resultado[1]))
-puntosPorPersona()
+let array = puntosPorPersona();
+console.log(array);
 
