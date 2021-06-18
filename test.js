@@ -80,4 +80,4 @@ var OrdenPuntos = sortJSON(array, 'puntos', 'desc');
 var OrdenJSON = sortJSON(allUser, 'puntos', 'desc');
 
 console.log(OrdenPuntos);
-console.log(OrdenJSON)
+//console.log(OrdenJSON)
