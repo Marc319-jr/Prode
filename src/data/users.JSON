@@ -2,6 +2,7 @@
  {
   "id": 1,
   "username": "Marce",
+  "rol": "admin",
   "prode": "0",
   "ganador": "Argentina",
   "goleador": "Messi",
@@ -718,6 +719,7 @@
  {
   "id": 3,
   "username": "Pedro",
+  "rol": "admin",
   "prode": "0",
   "ganador": "Seleccione el equipo",
   "goleador": "",
