@@ -52,7 +52,7 @@ const puntosPorPersona = function() {
         //console.log(puntos)
         array.push({
             "nombre" : allUser[p].username,
-            "puntos" : puntos
+            "puntos" : puntos,
     })
 
     }
@@ -62,22 +62,17 @@ const puntosPorPersona = function() {
 //console.log(resultadoPartido(Pedro.resultado[0],Pedro.resultado[1]))
 //console.log(resultadoPartido(Jugado.resultado[0],Jugado.resultado[1]))
 let array = puntosPorPersona();
-function sortJSON(data, key, orden) {
+function sortJSON(data, key, ) {
     return data.sort(function (a, b) {
         var x = a[key],
         y = b[key];
-
-        if (orden === 'asc') {
-            return ((x < y) ? -1 : ((x > y) ? 1 : 0));
-        }
-
-        if (orden === 'desc') {
-            return ((x > y) ? -1 : ((x < y) ? 1 : 0));
-        }
+        return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+        
     });
 }
-var OrdenPuntos = sortJSON(array, 'puntos', 'desc');
-var OrdenJSON = sortJSON(allUser, 'puntos', 'desc');
+var OrdenPuntos = sortJSON(array, 'puntos');
+//var OrdenJSON = sortJSON(allUser, 'puntos', 'desc');
+
 
 console.log(OrdenPuntos);
 //console.log(OrdenJSON)
