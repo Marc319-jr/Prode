@@ -69,7 +69,7 @@ const controller = {
         let prode = Prode.resultado(info);
         User.puntosYposiciones(prode)
         console.log("Edite un prode");
-        res.render('../src/views/admin/partidos' , {'prode' : prode})    
+        res.redirect('/')    
     }
 
 }

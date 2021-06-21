@@ -219,6 +219,7 @@ const User ={
 
 
 
-
+let prode = Prode.findAll()[0];
+//User.puntosYposiciones(prode);
 
 module.exports = User
