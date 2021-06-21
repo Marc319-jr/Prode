@@ -218,7 +218,7 @@
                 </tr>
                 <% for( let i = 0; i < users.length; i++ ) { %>
                     <% if (i%2 ==0) { %>
-                        <tr class="fondo2">
+                        <tr class="fondo1">
                             <td translate="no"><%= users[i].posicion%>º</td translate="no">
                             <td translate="no">
                                 <%= users[i].username%>
@@ -228,7 +228,7 @@
                         </tr>
                      
                     <% } else {%>
-                        <tr class="fondo1">
+                        <tr class="fondo2">
                             <td translate="no"><%= users[i].posicion%>º</td translate="no">
                             <td translate="no">
                                 <%= users[i].username%>
