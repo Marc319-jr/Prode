@@ -52,6 +52,16 @@ const User ={
         allUsers[info.userId-1].grupos[info.grupo].partidos[info.partido].resultado = info.resultado;
         console.log(allUsers[info.userId-1].grupos[info.grupo].partidos[info.partido]);
         this.save(allUsers)
+    },
+
+    puntosYposiciones: function(prode){
+        console.log("vine desde Prode a User");
+        console.log(prode);
+        let allUsers = User.findAll();
+        let prodeUsers = [];
+
+        
+
     }
  
 }
