@@ -1,4 +1,5 @@
 const fs = require('fs');
+const Prode = require('./Prode');
 
 const User ={
     filename: './src/data/users.JSON',
@@ -54,17 +55,154 @@ const User ={
         this.save(allUsers)
     },
 
+
+
+
+
+
+
+    /**********backend para actualizar las tablas *///////////////
+
+
+
+    esPleno: function(resultadoA ,resultadoB){
+        if(resultadoA[0] == resultadoB[0] && resultadoA[0] == resultadoB[0])
+        {
+            return true
+        }
+        else
+        return false   
+    },
+
+    calculaPuntos: function(resultadoUser , resultadoProde){
+
+        console.log(" ----------");
+        console.log(resultadoUser);
+        console.log("vs");
+        console.log(resultadoProde);
+        console.log(" ----------");
+        let sumaUser = resultadoUser[0] - resultadoUser[1];
+        let sumaProde = (resultadoProde[0]) - (resultadoProde[1]);
+        console.log("Suma user:" + sumaUser);
+        console.log("Suma prode:" + sumaProde);
+        let info = {
+            puntos : 0,
+            pleno: false
+        }
+        if(sumaUser == 0 && sumaProde ==0) 
+        {
+            console.log("empate acertado");
+            info.puntos = 1
+            if(this.esPleno(resultadoUser,resultadoProde)){
+                console.log("es pleno");
+                info.puntos=3;
+                info.pleno = true
+            }
+            console.log(info);
+            return info
+        }
+        else if(sumaUser >0 && sumaProde >0)
+        {
+            console.log("victoria local asertda");
+            info.puntos = 1
+            if(this.esPleno(resultadoUser,resultadoProde)){
+                console.log("es pleno");
+                info.puntos=3;
+                info.pleno = true
+            }
+            console.log(info);
+            return info
+        }
+        else if(sumaUser <0 && sumaProde <0)
+        {
+            console.log("victoria visitante acertada");
+            info.puntos = 1
+            if(this.esPleno(resultadoUser,resultadoProde)){
+                console.log("es pleno");
+                info.puntos=3;
+                info.pleno = true
+            }
+            console.log(info);
+            return info
+        }
+        else
+        {
+            console.log("no acerto");
+            info.puntos = 0
+            console.log(info);
+            return info
+        }
+    },
+
+
+    sumaPuntos: function(user, prode)
+    {
+        console.log("************************");
+        console.log("Estoy en suma puntos");
+        console.log("***********************");
+        user.puntos =0;
+        user.posicion =0;
+        user.plenos =0
+        console.log("Nombre: " + user.username);
+        console.log("Puntos:" +user.puntos);
+
+        for(let i = 0;i<prode.grupos.length; i++)
+        {
+            for(let j = 0;j<prode.grupos[i].partidos.length; j++)
+            {
+               let info =  this.calculaPuntos(user.grupos[i].partidos[j].resultado , prode.grupos[i].partidos[j].resultado)
+               user.puntos += info.puntos
+               if(info.pleno){
+                   user.plenos ++;
+               }
+            }
+        }
+        console.log("Nombre: " + user.username);
+        console.log("Puntos:" +user.puntos);
+        console.log("plenos:" + user.plenos);
+        console.log("Me fui de suma puntos");
+        console.log("*********************");
+
+    },
+
+
     puntosYposiciones: function(prode){
+        console.log("************************");
+        console.log("Estoy en calcula puntosYposiciones");
+        console.log("***********************");
         console.log("vine desde Prode a User");
         console.log(prode);
-        let allUsers = User.findAll();
-        let prodeUsers = [];
+        console.log("prode: " + (prode.id-1));
+        let allUsers = this.findAll();
+        let usersProde = []
+        allUsers.forEach(element => {
+            if(element.prode == (prode.id-1))
+            {
+             usersProde.push(element)
+            }
+            
+        });
+        console.log(usersProde);
+        usersProde.forEach(element =>
+            {
+                this.sumaPuntos(element, prode)
+            });
+            console.log(usersProde);
 
-        
+
 
     }
- 
+    
 }
 
 
+
+
+
+
+
+
+
+let prode = Prode.findAll()[0];
+User.puntosYposiciones(prode)
 module.exports = User

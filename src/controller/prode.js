@@ -1,4 +1,6 @@
 const Prode = require('../model/Prode');
+const User = require('../model/User')
+
 const controller = {
     prode: (req,res) => {
         let prodes = Prode.findAll();
@@ -65,11 +67,9 @@ const controller = {
         console.log("Voy a crear editar un prode con la siguiente info:")
         console.log(info);
         let prode = Prode.resultado(info);
+        User.puntosYposiciones(prode)
         console.log("Edite un prode");
-        res.render('../src/views/admin/partidos' , {'prode' : prode})
-
-
-        
+        res.render('../src/views/admin/partidos' , {'prode' : prode})    
     }
 
 }
