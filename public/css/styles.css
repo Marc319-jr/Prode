@@ -233,6 +233,7 @@ input[type=submit] {
 }
 .partido_proximo {
     display: flex;
+    align-items: center;
 }
 .main_1 {
     display: flex;
@@ -319,10 +320,13 @@ tr{
 }
 .partidos_Jugados{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     border-bottom: 2px #73ae20 solid;
     padding: 10px;
+}
+.equipo_1 h2, .equipo_2 h2, .font_32{
+    font-size: 32px;
 }
   
 @media (max-width: 1200px) {
