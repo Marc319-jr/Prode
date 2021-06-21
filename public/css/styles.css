@@ -192,7 +192,7 @@ input[type=submit] {
     height: 38px;
     border-radius: 20px;
     cursor: pointer;
-    margin-top: 20px;
+    margin: 5px;
 }
 .prode {
     display: flex;
