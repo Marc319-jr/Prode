@@ -35,16 +35,25 @@ const sumaPuntos = function(comoSalio, Prode, persona, Partido) {
     }
     return parseFloat(puntos)
 }
-
+const sumaPlenos = function(comoSalio, Prode, persona, Partido) {
+    plenos = 0
+    if(comoSalio == Prode) {
+        if(persona.resultado[0] == Partido.resultado[0] && persona.resultado[1] == Partido.resultado[1]){
+            plenos = plenos + 1
+        }
+    }
+    return plenos
+}
 const puntosPorPersona = function() {
     let array = [];
     for (let p = 0; p < allUser.length; p++) {
         puntos = 0
+        plenos = 0
         for (let i = 0; i < grupos.length; i++) {
             for (let j = 0; j < partidos.length; j++) {
                 if(allProdes[0].grupos[i].partidos[j].resultado[0] != "x" && allProdes[0].grupos[i].partidos[j].resultado[1] != "x"){
                     puntos = puntos + sumaPuntos(resultadoPartido(allUser[p].grupos[i].partidos[j].resultado[0],allUser[p].grupos[i].partidos[j].resultado[1]), resultadoPartido(allProdes[0].grupos[i].partidos[j].resultado[0],allProdes[0].grupos[i].partidos[j].resultado[1]),allUser[p].grupos[i].partidos[j],allProdes[0].grupos[i].partidos[j])
-                    
+                    plenos = plenos + sumaPlenos(resultadoPartido(allUser[p].grupos[i].partidos[j].resultado[0],allUser[p].grupos[i].partidos[j].resultado[1]), resultadoPartido(allProdes[0].grupos[i].partidos[j].resultado[0],allProdes[0].grupos[i].partidos[j].resultado[1]),allUser[p].grupos[i].partidos[j],allProdes[0].grupos[i].partidos[j])
                 }
             }
         }
@@ -53,6 +62,7 @@ const puntosPorPersona = function() {
         array.push({
             "nombre" : allUser[p].username,
             "puntos" : puntos,
+            "plenos" : plenos,
     })
 
     }
