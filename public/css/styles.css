@@ -328,7 +328,7 @@ tr{
 .equipo_1 h2, .equipo_2 h2, .font_32{
     font-size: 32px;
 }
-  
+
 @media (max-width: 1200px) {
      .titulo_proximo_partido{
          font-size: 20px;
@@ -377,6 +377,15 @@ tr{
    .main_1{
        flex-direction: column;
        height: 700px;
+    }
+    td {
+        border-right:2px solid white ;
+    }
+    .destacado td {
+        border-bottom: 2px solid white;
+    }
+    td:nth-child(4n) {
+        border-right:none ;
     }
   }
   @media (max-width: 400px){
