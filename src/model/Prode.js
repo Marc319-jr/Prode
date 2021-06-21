@@ -1,4 +1,5 @@
 const fs = require('fs');
+const User = require('./User');
 
 const Prode = {
     filename: './src/data/prodes.JSON',
@@ -26,7 +27,6 @@ const Prode = {
         return 1;
 
     },
-
     teamsCreate: function(number){
         let array = [];
         for(let i =0;i<number;i++)
@@ -77,9 +77,18 @@ const Prode = {
         fs.writeFileSync(this.filename ,JSON.stringify(allProdes, null,' '))
         return  allProdes[prode-1]
     },
-    createMatch: function(partido){
 
-    },
+    resultado: function(info){
+    let allProdes = this.findAll();
+    let prode = allProdes[info.prodeId];
+    let resultadoPartido = [info.local,info.visitante];
+    console.log(resultadoPartido);
+    prode.grupos[info.grupoId].partidos[info.partidoId].resultado = resultadoPartido;
+    allProdes[info.prodeId] = prode;
+    User.puntosYposiciones(prode);
+    fs.writeFileSync(this.filename ,JSON.stringify(allProdes, null,' '))
+    return prode
+    }
 }
 
 

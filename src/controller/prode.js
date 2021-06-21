@@ -56,7 +56,20 @@ const controller = {
     },
 
     resultado: (req,res) => {
-        console.log(req.body);
+        let info = {
+            prodeId: (req.params.prodeId-1),
+            grupoId: req.params.grupoId,
+            partidoId: req.params.partidoId,
+            ...req.body
+        }
+        console.log("Voy a crear editar un prode con la siguiente info:")
+        console.log(info);
+        let prode = Prode.resultado(info);
+        console.log("Edite un prode");
+        res.render('../src/views/admin/partidos' , {'prode' : prode})
+
+
+        
     }
 
 }
