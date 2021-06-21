@@ -94,3 +94,17 @@
                     <td translate="no">4</td translate="no">
                     <td translate="no">0</td translate="no">
                 </tr>
+
+                <% for( let i = 1; i <= users.length; i++ ) { %>
+                    <% if(i%2!=0){ %>
+                        <tr class="fondo_1">
+                    <% }else{ %>
+                        <tr class="fondo_2">
+                    <% } %>
+                    <% if (locals.userLogged.puesto == i){ %>
+                        <td translate="no"><%= i %>º</td>
+                        <td translate="no"><%= userLogged.username %> </td>
+                        <td translate="no"><%= userLogged.puntos %> </td>
+                        <td translate="no"><%= userLogged.plenos %> </td>
+                    </tr>
+                    <% } } %>
