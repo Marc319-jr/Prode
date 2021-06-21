@@ -85,7 +85,6 @@ const Prode = {
     console.log(resultadoPartido);
     prode.grupos[info.grupoId].partidos[info.partidoId].resultado = resultadoPartido;
     allProdes[info.prodeId] = prode;
-    User.puntosYposiciones(prode);
     fs.writeFileSync(this.filename ,JSON.stringify(allProdes, null,' '))
     return prode
     }

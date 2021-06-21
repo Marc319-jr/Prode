@@ -66,7 +66,7 @@ const User ={
 
 
     esPleno: function(resultadoA ,resultadoB){
-        if(resultadoA[0] == resultadoB[0] && resultadoA[0] == resultadoB[0])
+        if(resultadoA[0] == resultadoB[0] && resultadoA[1] == resultadoB[1])
         {
             return true
         }
@@ -187,7 +187,27 @@ const User ={
             {
                 this.sumaPuntos(element, prode)
             });
+            usersProde.sort((a,b) => {
+                if(a.puntos < b.puntos)
+                {
+                    return 1;
+                }
+                else if( a.puntos > b.puntos)
+                {
+                    return -1
+                }
+                else{
+                    return 0
+                }
+            });
             console.log(usersProde);
+            for(let i = 0;i<usersProde.length;i++)
+            {
+                usersProde[i].posicion = (i+1);
+            }
+         
+            fs.writeFileSync(this.filename ,JSON.stringify(usersProde, null,' '))
+
 
 
 
@@ -201,8 +221,4 @@ const User ={
 
 
 
-
-
-let prode = Prode.findAll()[0];
-User.puntosYposiciones(prode)
 module.exports = User
