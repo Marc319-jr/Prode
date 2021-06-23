@@ -28,6 +28,9 @@ const controller = {
     reglas: (req,res) => {
         res.render('../src/views/user/reglas');
     }, 
+    cuadros: (req,res) => {
+        res.render('../src/views/user/cuadros');
+    }, 
     create: (req,res) => {
         let prodes = Prode.findAll();
         res.render("../src/views/user/create" , {'prodes' : prodes});
