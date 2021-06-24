@@ -50,7 +50,7 @@
       "fecha": "2021-06-13",
       "hora": "18:00",
       "resultado": [
-       "3",
+       "2",
        "1"
       ]
      },
@@ -394,7 +394,7 @@
     ]
    }
   ],
-  "puntos": 16,
+  "puntos": 17,
   "posicion": 1,
   "plenos": 4
  },
@@ -793,7 +793,7 @@
     ]
    }
   ],
-  "puntos": 13,
+  "puntos": 14,
   "posicion": 2,
   "plenos": 3
  },
@@ -1152,7 +1152,7 @@
     ]
    }
   ],
-  "puntos": 13,
+  "puntos": 14,
   "posicion": 3,
   "plenos": 3
  },
@@ -1551,407 +1551,8 @@
     ]
    }
   ],
-  "puntos": 12,
+  "puntos": 13,
   "posicion": 4,
-  "plenos": 3
- },
- {
-  "id": 9,
-  "username": "Norma",
-  "prode": "0",
-  "ganador": "Seleccione el equipo",
-  "goleador": "",
-  "frase": "",
-  "grupos": [
-   {
-    "id": 1,
-    "cantequipos": 5,
-    "equipos": [
-     {
-      "nombre": "Brasil",
-      "bandera": "Bandera-1623360737301.png",
-      "id": "1"
-     },
-     {
-      "nombre": "Venezuela",
-      "bandera": "Bandera-1623360745613.png",
-      "id": "2"
-     },
-     {
-      "nombre": "Colombia",
-      "bandera": "Bandera-1623360756720.png",
-      "id": "3"
-     },
-     {
-      "nombre": "Ecuador",
-      "bandera": "Bandera-1623360768128.jpg",
-      "id": "4"
-     },
-     {
-      "nombre": "Peru",
-      "bandera": "Bandera-1623360779018.png",
-      "id": "5"
-     }
-    ],
-    "partidos": [
-     {
-      "numeroGrupo": 0,
-      "numeroPartido": 0,
-      "numeroProde": 0,
-      "local": "Brasil",
-      "apodoLocal": "Bra",
-      "visitante": "Venezuela",
-      "apodoVisitante": "Ven",
-      "estadio": "?",
-      "fecha": "2021-06-13",
-      "hora": "18:00",
-      "resultado": [
-       "3",
-       "0"
-      ]
-     },
-     {
-      "numeroGrupo": 0,
-      "numeroPartido": 1,
-      "numeroProde": 0,
-      "local": "Colombia",
-      "apodoLocal": "Col",
-      "visitante": "Ecuador",
-      "apodoVisitante": "Ecu",
-      "estadio": "?",
-      "fecha": "2021-06-13",
-      "hora": "21:00",
-      "resultado": [
-       "1",
-       "2"
-      ]
-     },
-     {
-      "numeroGrupo": 0,
-      "numeroPartido": 2,
-      "numeroProde": 0,
-      "local": "Colombia",
-      "apodoLocal": "Col",
-      "visitante": "Venezuela",
-      "apodoVisitante": "Ven",
-      "estadio": "?",
-      "fecha": "2021-06-17",
-      "hora": "18:00",
-      "resultado": [
-       "2",
-       "1"
-      ]
-     },
-     {
-      "numeroGrupo": 0,
-      "numeroPartido": 3,
-      "numeroProde": 0,
-      "local": "Peru",
-      "apodoLocal": "Per",
-      "visitante": "Brasil",
-      "apodoVisitante": "Bra",
-      "estadio": "?",
-      "fecha": "2021-06-17",
-      "hora": "21:00",
-      "resultado": [
-       "0",
-       "1"
-      ]
-     },
-     {
-      "numeroGrupo": 0,
-      "numeroPartido": 4,
-      "numeroProde": 0,
-      "local": "Ecuador",
-      "apodoLocal": "Ecu",
-      "visitante": "Venezuela",
-      "apodoVisitante": "Ven",
-      "estadio": "?",
-      "fecha": "2021-06-20",
-      "hora": "18:00",
-      "resultado": [
-       "2",
-       "2"
-      ]
-     },
-     {
-      "numeroGrupo": 0,
-      "numeroPartido": 5,
-      "numeroProde": 0,
-      "local": "Colombia",
-      "apodoLocal": "Col",
-      "visitante": "Peru",
-      "apodoVisitante": "Per",
-      "estadio": "?",
-      "fecha": "2021-06-20",
-      "hora": "21:00",
-      "resultado": [
-       "1",
-       "1"
-      ]
-     },
-     {
-      "numeroGrupo": 0,
-      "numeroPartido": 6,
-      "numeroProde": 0,
-      "local": "Ecuador",
-      "apodoLocal": "Ecu",
-      "visitante": "Peru",
-      "apodoVisitante": "Per",
-      "estadio": "?",
-      "fecha": "2021-06-23",
-      "hora": "18:00",
-      "resultado": [
-       "0",
-       "1"
-      ]
-     },
-     {
-      "numeroGrupo": 0,
-      "numeroPartido": 7,
-      "numeroProde": 0,
-      "local": "Brasil",
-      "apodoLocal": "Bra",
-      "visitante": "Colombia",
-      "apodoVisitante": "Col",
-      "estadio": "?",
-      "fecha": "2021-06-24",
-      "hora": "22:00",
-      "resultado": [
-       "1",
-       "1"
-      ]
-     },
-     {
-      "numeroGrupo": 0,
-      "numeroPartido": 8,
-      "numeroProde": 0,
-      "local": "Venezuela",
-      "apodoLocal": "Ven",
-      "visitante": "Peru",
-      "apodoVisitante": "Per",
-      "estadio": "?",
-      "fecha": "2021-06-27",
-      "hora": "18:00",
-      "resultado": [
-       "0",
-       "1"
-      ]
-     },
-     {
-      "numeroGrupo": 0,
-      "numeroPartido": 9,
-      "numeroProde": 0,
-      "local": "Ecuador",
-      "apodoLocal": "Ecu",
-      "visitante": "Brasil",
-      "apodoVisitante": "Bra",
-      "estadio": "?",
-      "fecha": "2021-06-28",
-      "hora": "22:00",
-      "resultado": [
-       "0",
-       "2"
-      ]
-     }
-    ]
-   },
-   {
-    "id": 2,
-    "cantequipos": 5,
-    "equipos": [
-     {
-      "nombre": "Argentina",
-      "bandera": "Bandera-1623360785551.png",
-      "id": "1"
-     },
-     {
-      "nombre": "Chile",
-      "bandera": "Bandera-1623360795431.png",
-      "id": "2"
-     },
-     {
-      "nombre": "Paraguay",
-      "bandera": "Bandera-1623360802560.png",
-      "id": "3"
-     },
-     {
-      "nombre": "Bolivia",
-      "bandera": "Bandera-1623360817719.png",
-      "id": "4"
-     },
-     {
-      "nombre": "Uruguay",
-      "bandera": "Bandera-1623360824271.jpg",
-      "id": "5"
-     }
-    ],
-    "partidos": [
-     {
-      "numeroGrupo": 1,
-      "numeroPartido": 0,
-      "numeroProde": 0,
-      "local": "Argentina",
-      "apodoLocal": "Arg",
-      "visitante": "Chile",
-      "apodoVisitante": "Chi",
-      "estadio": "?",
-      "fecha": "2021-06-14",
-      "hora": "18:00",
-      "resultado": [
-       "2",
-       "0"
-      ]
-     },
-     {
-      "numeroGrupo": 1,
-      "numeroPartido": 1,
-      "numeroProde": 0,
-      "local": "Paraguay",
-      "apodoLocal": "Par",
-      "visitante": "Bolivia",
-      "apodoVisitante": "Bol",
-      "estadio": "?",
-      "fecha": "2021-06-14",
-      "hora": "21:00",
-      "resultado": [
-       "3",
-       "0"
-      ]
-     },
-     {
-      "numeroGrupo": 1,
-      "numeroPartido": 2,
-      "numeroProde": 0,
-      "local": "Chile",
-      "apodoLocal": "Chi",
-      "visitante": "Bolivia",
-      "apodoVisitante": "Bol",
-      "estadio": "?",
-      "fecha": "2021-06-18",
-      "hora": "18:00",
-      "resultado": [
-       "0",
-       "0"
-      ]
-     },
-     {
-      "numeroGrupo": 1,
-      "numeroPartido": 3,
-      "numeroProde": 0,
-      "local": "Argentina",
-      "apodoLocal": "Arg",
-      "visitante": "Uruguay",
-      "apodoVisitante": "Uru",
-      "estadio": "?",
-      "fecha": "2021-06-21",
-      "hora": "18:00",
-      "resultado": [
-       "1",
-       "2"
-      ]
-     },
-     {
-      "numeroGrupo": 1,
-      "numeroPartido": 4,
-      "numeroProde": 0,
-      "local": "Uruguay",
-      "apodoLocal": "Uru",
-      "visitante": "Chile",
-      "apodoVisitante": "Chi",
-      "estadio": "?",
-      "fecha": "2021-06-21",
-      "hora": "18:00",
-      "resultado": [
-       "1",
-       "3"
-      ]
-     },
-     {
-      "numeroGrupo": 1,
-      "numeroPartido": 5,
-      "numeroProde": 0,
-      "local": "Argentina",
-      "apodoLocal": "Arg",
-      "visitante": "Paraguay",
-      "apodoVisitante": "Par",
-      "estadio": "?",
-      "fecha": "2021-06-21",
-      "hora": "21:00",
-      "resultado": [
-       "1",
-       "0"
-      ]
-     },
-     {
-      "numeroGrupo": 1,
-      "numeroPartido": 6,
-      "numeroProde": 0,
-      "local": "Bolivia",
-      "apodoLocal": "Bol",
-      "visitante": "Uruguay",
-      "apodoVisitante": "Uru",
-      "estadio": "?",
-      "fecha": "2021-06-24",
-      "hora": "18:00",
-      "resultado": [
-       "0",
-       "4"
-      ]
-     },
-     {
-      "numeroGrupo": 1,
-      "numeroPartido": 7,
-      "numeroProde": 0,
-      "local": "Chile",
-      "apodoLocal": "Chi",
-      "visitante": "Paraguay",
-      "apodoVisitante": "Par",
-      "estadio": "?",
-      "fecha": "2021-06-24",
-      "hora": "21:00",
-      "resultado": [
-       "1",
-       "1"
-      ]
-     },
-     {
-      "numeroGrupo": 1,
-      "numeroPartido": 8,
-      "numeroProde": 0,
-      "local": "Bolivia",
-      "apodoLocal": "Bol",
-      "visitante": "Argentina",
-      "apodoVisitante": "Arg",
-      "estadio": "?",
-      "fecha": "2021-06-28",
-      "hora": "21:00",
-      "resultado": [
-       "1",
-       "2"
-      ]
-     },
-     {
-      "numeroGrupo": 1,
-      "numeroPartido": 9,
-      "numeroProde": 0,
-      "local": "Uruguay",
-      "apodoLocal": "Uru",
-      "visitante": "Paraguay",
-      "apodoVisitante": "Par",
-      "estadio": "?",
-      "fecha": "2021-06-28",
-      "hora": "21:00",
-      "resultado": [
-       "0",
-       "0"
-      ]
-     }
-    ]
-   }
-  ],
-  "puntos": 11,
-  "posicion": 5,
   "plenos": 3
  },
  {
@@ -2349,13 +1950,13 @@
     ]
    }
   ],
-  "puntos": 11,
-  "posicion": 6,
+  "puntos": 12,
+  "posicion": 5,
   "plenos": 2
  },
  {
-  "id": 5,
-  "username": "Camota",
+  "id": 9,
+  "username": "Norma",
   "prode": "0",
   "ganador": "Seleccione el equipo",
   "goleador": "",
@@ -2420,8 +2021,8 @@
       "fecha": "2021-06-13",
       "hora": "21:00",
       "resultado": [
-       "2",
-       "1"
+       "1",
+       "2"
       ]
      },
      {
@@ -2436,7 +2037,7 @@
       "fecha": "2021-06-17",
       "hora": "18:00",
       "resultado": [
-       "3",
+       "2",
        "1"
       ]
      },
@@ -2452,8 +2053,8 @@
       "fecha": "2021-06-17",
       "hora": "21:00",
       "resultado": [
-       "2",
-       "2"
+       "0",
+       "1"
       ]
      },
      {
@@ -2468,8 +2069,8 @@
       "fecha": "2021-06-20",
       "hora": "18:00",
       "resultado": [
-       "1",
-       "1"
+       "2",
+       "2"
       ]
      },
      {
@@ -2485,7 +2086,7 @@
       "hora": "21:00",
       "resultado": [
        "1",
-       "2"
+       "1"
       ]
      },
      {
@@ -2501,7 +2102,7 @@
       "hora": "18:00",
       "resultado": [
        "0",
-       "2"
+       "1"
       ]
      },
      {
@@ -2532,8 +2133,8 @@
       "fecha": "2021-06-27",
       "hora": "18:00",
       "resultado": [
-       "1",
-       "3"
+       "0",
+       "1"
       ]
      },
      {
@@ -2549,7 +2150,7 @@
       "hora": "22:00",
       "resultado": [
        "0",
-       "3"
+       "2"
       ]
      }
     ]
@@ -2597,8 +2198,8 @@
       "fecha": "2021-06-14",
       "hora": "18:00",
       "resultado": [
-       "1",
-       "2"
+       "2",
+       "0"
       ]
      },
      {
@@ -2613,7 +2214,7 @@
       "fecha": "2021-06-14",
       "hora": "21:00",
       "resultado": [
-       "0",
+       "3",
        "0"
       ]
      },
@@ -2629,8 +2230,8 @@
       "fecha": "2021-06-18",
       "hora": "18:00",
       "resultado": [
-       "3",
-       "1"
+       "0",
+       "0"
       ]
      },
      {
@@ -2645,8 +2246,8 @@
       "fecha": "2021-06-21",
       "hora": "18:00",
       "resultado": [
-       "2",
-       "3"
+       "1",
+       "2"
       ]
      },
      {
@@ -2661,8 +2262,8 @@
       "fecha": "2021-06-21",
       "hora": "18:00",
       "resultado": [
-       "2",
-       "1"
+       "1",
+       "3"
       ]
      },
      {
@@ -2677,7 +2278,7 @@
       "fecha": "2021-06-21",
       "hora": "21:00",
       "resultado": [
-       "2",
+       "1",
        "0"
       ]
      },
@@ -2693,7 +2294,7 @@
       "fecha": "2021-06-24",
       "hora": "18:00",
       "resultado": [
-       "1",
+       "0",
        "4"
       ]
      },
@@ -2725,8 +2326,8 @@
       "fecha": "2021-06-28",
       "hora": "21:00",
       "resultado": [
-       "0",
-       "1"
+       "1",
+       "2"
       ]
      },
      {
@@ -2741,16 +2342,16 @@
       "fecha": "2021-06-28",
       "hora": "21:00",
       "resultado": [
-       "2",
-       "2"
+       "0",
+       "0"
       ]
      }
     ]
    }
   ],
-  "puntos": 10,
-  "posicion": 7,
-  "plenos": 2
+  "puntos": 12,
+  "posicion": 6,
+  "plenos": 3
  },
  {
   "id": 3,
@@ -3148,8 +2749,8 @@
     ]
    }
   ],
-  "puntos": 10,
-  "posicion": 8,
+  "puntos": 11,
+  "posicion": 7,
   "plenos": 2
  },
  {
@@ -3508,9 +3109,408 @@
     ]
    }
   ],
-  "puntos": 10,
-  "posicion": 9,
+  "puntos": 11,
+  "posicion": 8,
   "plenos": 1
+ },
+ {
+  "id": 5,
+  "username": "Camota",
+  "prode": "0",
+  "ganador": "Seleccione el equipo",
+  "goleador": "",
+  "frase": "",
+  "grupos": [
+   {
+    "id": 1,
+    "cantequipos": 5,
+    "equipos": [
+     {
+      "nombre": "Brasil",
+      "bandera": "Bandera-1623360737301.png",
+      "id": "1"
+     },
+     {
+      "nombre": "Venezuela",
+      "bandera": "Bandera-1623360745613.png",
+      "id": "2"
+     },
+     {
+      "nombre": "Colombia",
+      "bandera": "Bandera-1623360756720.png",
+      "id": "3"
+     },
+     {
+      "nombre": "Ecuador",
+      "bandera": "Bandera-1623360768128.jpg",
+      "id": "4"
+     },
+     {
+      "nombre": "Peru",
+      "bandera": "Bandera-1623360779018.png",
+      "id": "5"
+     }
+    ],
+    "partidos": [
+     {
+      "numeroGrupo": 0,
+      "numeroPartido": 0,
+      "numeroProde": 0,
+      "local": "Brasil",
+      "apodoLocal": "Bra",
+      "visitante": "Venezuela",
+      "apodoVisitante": "Ven",
+      "estadio": "?",
+      "fecha": "2021-06-13",
+      "hora": "18:00",
+      "resultado": [
+       "3",
+       "0"
+      ]
+     },
+     {
+      "numeroGrupo": 0,
+      "numeroPartido": 1,
+      "numeroProde": 0,
+      "local": "Colombia",
+      "apodoLocal": "Col",
+      "visitante": "Ecuador",
+      "apodoVisitante": "Ecu",
+      "estadio": "?",
+      "fecha": "2021-06-13",
+      "hora": "21:00",
+      "resultado": [
+       "2",
+       "1"
+      ]
+     },
+     {
+      "numeroGrupo": 0,
+      "numeroPartido": 2,
+      "numeroProde": 0,
+      "local": "Colombia",
+      "apodoLocal": "Col",
+      "visitante": "Venezuela",
+      "apodoVisitante": "Ven",
+      "estadio": "?",
+      "fecha": "2021-06-17",
+      "hora": "18:00",
+      "resultado": [
+       "3",
+       "1"
+      ]
+     },
+     {
+      "numeroGrupo": 0,
+      "numeroPartido": 3,
+      "numeroProde": 0,
+      "local": "Peru",
+      "apodoLocal": "Per",
+      "visitante": "Brasil",
+      "apodoVisitante": "Bra",
+      "estadio": "?",
+      "fecha": "2021-06-17",
+      "hora": "21:00",
+      "resultado": [
+       "2",
+       "2"
+      ]
+     },
+     {
+      "numeroGrupo": 0,
+      "numeroPartido": 4,
+      "numeroProde": 0,
+      "local": "Ecuador",
+      "apodoLocal": "Ecu",
+      "visitante": "Venezuela",
+      "apodoVisitante": "Ven",
+      "estadio": "?",
+      "fecha": "2021-06-20",
+      "hora": "18:00",
+      "resultado": [
+       "1",
+       "1"
+      ]
+     },
+     {
+      "numeroGrupo": 0,
+      "numeroPartido": 5,
+      "numeroProde": 0,
+      "local": "Colombia",
+      "apodoLocal": "Col",
+      "visitante": "Peru",
+      "apodoVisitante": "Per",
+      "estadio": "?",
+      "fecha": "2021-06-20",
+      "hora": "21:00",
+      "resultado": [
+       "1",
+       "2"
+      ]
+     },
+     {
+      "numeroGrupo": 0,
+      "numeroPartido": 6,
+      "numeroProde": 0,
+      "local": "Ecuador",
+      "apodoLocal": "Ecu",
+      "visitante": "Peru",
+      "apodoVisitante": "Per",
+      "estadio": "?",
+      "fecha": "2021-06-23",
+      "hora": "18:00",
+      "resultado": [
+       "0",
+       "2"
+      ]
+     },
+     {
+      "numeroGrupo": 0,
+      "numeroPartido": 7,
+      "numeroProde": 0,
+      "local": "Brasil",
+      "apodoLocal": "Bra",
+      "visitante": "Colombia",
+      "apodoVisitante": "Col",
+      "estadio": "?",
+      "fecha": "2021-06-24",
+      "hora": "22:00",
+      "resultado": [
+       "1",
+       "1"
+      ]
+     },
+     {
+      "numeroGrupo": 0,
+      "numeroPartido": 8,
+      "numeroProde": 0,
+      "local": "Venezuela",
+      "apodoLocal": "Ven",
+      "visitante": "Peru",
+      "apodoVisitante": "Per",
+      "estadio": "?",
+      "fecha": "2021-06-27",
+      "hora": "18:00",
+      "resultado": [
+       "1",
+       "3"
+      ]
+     },
+     {
+      "numeroGrupo": 0,
+      "numeroPartido": 9,
+      "numeroProde": 0,
+      "local": "Ecuador",
+      "apodoLocal": "Ecu",
+      "visitante": "Brasil",
+      "apodoVisitante": "Bra",
+      "estadio": "?",
+      "fecha": "2021-06-28",
+      "hora": "22:00",
+      "resultado": [
+       "0",
+       "3"
+      ]
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "cantequipos": 5,
+    "equipos": [
+     {
+      "nombre": "Argentina",
+      "bandera": "Bandera-1623360785551.png",
+      "id": "1"
+     },
+     {
+      "nombre": "Chile",
+      "bandera": "Bandera-1623360795431.png",
+      "id": "2"
+     },
+     {
+      "nombre": "Paraguay",
+      "bandera": "Bandera-1623360802560.png",
+      "id": "3"
+     },
+     {
+      "nombre": "Bolivia",
+      "bandera": "Bandera-1623360817719.png",
+      "id": "4"
+     },
+     {
+      "nombre": "Uruguay",
+      "bandera": "Bandera-1623360824271.jpg",
+      "id": "5"
+     }
+    ],
+    "partidos": [
+     {
+      "numeroGrupo": 1,
+      "numeroPartido": 0,
+      "numeroProde": 0,
+      "local": "Argentina",
+      "apodoLocal": "Arg",
+      "visitante": "Chile",
+      "apodoVisitante": "Chi",
+      "estadio": "?",
+      "fecha": "2021-06-14",
+      "hora": "18:00",
+      "resultado": [
+       "1",
+       "2"
+      ]
+     },
+     {
+      "numeroGrupo": 1,
+      "numeroPartido": 1,
+      "numeroProde": 0,
+      "local": "Paraguay",
+      "apodoLocal": "Par",
+      "visitante": "Bolivia",
+      "apodoVisitante": "Bol",
+      "estadio": "?",
+      "fecha": "2021-06-14",
+      "hora": "21:00",
+      "resultado": [
+       "0",
+       "0"
+      ]
+     },
+     {
+      "numeroGrupo": 1,
+      "numeroPartido": 2,
+      "numeroProde": 0,
+      "local": "Chile",
+      "apodoLocal": "Chi",
+      "visitante": "Bolivia",
+      "apodoVisitante": "Bol",
+      "estadio": "?",
+      "fecha": "2021-06-18",
+      "hora": "18:00",
+      "resultado": [
+       "3",
+       "1"
+      ]
+     },
+     {
+      "numeroGrupo": 1,
+      "numeroPartido": 3,
+      "numeroProde": 0,
+      "local": "Argentina",
+      "apodoLocal": "Arg",
+      "visitante": "Uruguay",
+      "apodoVisitante": "Uru",
+      "estadio": "?",
+      "fecha": "2021-06-21",
+      "hora": "18:00",
+      "resultado": [
+       "2",
+       "3"
+      ]
+     },
+     {
+      "numeroGrupo": 1,
+      "numeroPartido": 4,
+      "numeroProde": 0,
+      "local": "Uruguay",
+      "apodoLocal": "Uru",
+      "visitante": "Chile",
+      "apodoVisitante": "Chi",
+      "estadio": "?",
+      "fecha": "2021-06-21",
+      "hora": "18:00",
+      "resultado": [
+       "2",
+       "1"
+      ]
+     },
+     {
+      "numeroGrupo": 1,
+      "numeroPartido": 5,
+      "numeroProde": 0,
+      "local": "Argentina",
+      "apodoLocal": "Arg",
+      "visitante": "Paraguay",
+      "apodoVisitante": "Par",
+      "estadio": "?",
+      "fecha": "2021-06-21",
+      "hora": "21:00",
+      "resultado": [
+       "2",
+       "0"
+      ]
+     },
+     {
+      "numeroGrupo": 1,
+      "numeroPartido": 6,
+      "numeroProde": 0,
+      "local": "Bolivia",
+      "apodoLocal": "Bol",
+      "visitante": "Uruguay",
+      "apodoVisitante": "Uru",
+      "estadio": "?",
+      "fecha": "2021-06-24",
+      "hora": "18:00",
+      "resultado": [
+       "1",
+       "4"
+      ]
+     },
+     {
+      "numeroGrupo": 1,
+      "numeroPartido": 7,
+      "numeroProde": 0,
+      "local": "Chile",
+      "apodoLocal": "Chi",
+      "visitante": "Paraguay",
+      "apodoVisitante": "Par",
+      "estadio": "?",
+      "fecha": "2021-06-24",
+      "hora": "21:00",
+      "resultado": [
+       "1",
+       "1"
+      ]
+     },
+     {
+      "numeroGrupo": 1,
+      "numeroPartido": 8,
+      "numeroProde": 0,
+      "local": "Bolivia",
+      "apodoLocal": "Bol",
+      "visitante": "Argentina",
+      "apodoVisitante": "Arg",
+      "estadio": "?",
+      "fecha": "2021-06-28",
+      "hora": "21:00",
+      "resultado": [
+       "0",
+       "1"
+      ]
+     },
+     {
+      "numeroGrupo": 1,
+      "numeroPartido": 9,
+      "numeroProde": 0,
+      "local": "Uruguay",
+      "apodoLocal": "Uru",
+      "visitante": "Paraguay",
+      "apodoVisitante": "Par",
+      "estadio": "?",
+      "fecha": "2021-06-28",
+      "hora": "21:00",
+      "resultado": [
+       "2",
+       "2"
+      ]
+     }
+    ]
+   }
+  ],
+  "puntos": 11,
+  "posicion": 9,
+  "plenos": 2
  },
  {
   "id": 12,
@@ -3907,17 +3907,17 @@
     ]
    }
   ],
-  "puntos": 9,
+  "puntos": 10,
   "posicion": 10,
   "plenos": 1
  },
  {
-  "id": 11,
+  "id": 13,
   "username": "Toni",
   "prode": "0",
-  "ganador": "Seleccione el equipo",
-  "goleador": "",
-  "frase": "",
+  "ganador": "Venezuela",
+  "goleador": "Messi",
+  "frase": "Aguante el prode y JavaScript",
   "grupos": [
    {
     "id": 1,
@@ -4306,7 +4306,7 @@
     ]
    }
   ],
-  "puntos": 9,
+  "puntos": 10,
   "posicion": 11,
   "plenos": 1
  },
@@ -4705,7 +4705,7 @@
     ]
    }
   ],
-  "puntos": 8,
+  "puntos": 9,
   "posicion": 12,
   "plenos": 1
  },
@@ -5104,7 +5104,7 @@
     ]
    }
   ],
-  "puntos": 7,
+  "puntos": 8,
   "posicion": 13,
   "plenos": 0
  }

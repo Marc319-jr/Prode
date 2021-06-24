@@ -28,9 +28,6 @@ const controller = {
     reglas: (req,res) => {
         res.render('../src/views/user/reglas');
     }, 
-    cuadros: (req,res) => {
-        res.render('../src/views/user/cuadros');
-    }, 
     create: (req,res) => {
         let prodes = Prode.findAll();
         res.render("../src/views/user/create" , {'prodes' : prodes});
@@ -65,8 +62,14 @@ const controller = {
         }
         User.createPartido(info);
         let allUsers = User.findAll();
-        let user = allUsers[(userId-1)];
-        res.render('../src/views/user/resultados', {'participante' : user});
+        let user = allUsers.filter(function(user) {
+            if(user.id == userId)
+            {
+                return true
+            }
+        })
+        console.log(user)
+        res.render('../src/views/user/resultados', {'participante' : user[0]});
 
     },
 

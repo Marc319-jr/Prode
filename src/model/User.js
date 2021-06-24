@@ -18,11 +18,14 @@ const User ={
     },
 
     generateId: function(){
+        console.log("Estoy generando un ID");
         let allUsers = this.findAll();
-        let lastUser = allUsers.pop();
-        if(lastUser)
+        let lastid = (allUsers.length +1);
+        console.log("el ultimo ID es: " + lastid);
+
+        if(lastid)
         {
-            return lastUser.id + 1;
+            return lastid;
         }
         else
         return 1;
