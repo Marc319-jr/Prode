@@ -1,4 +1,6 @@
 const Prode = require('../model/Prode');
+const User = require('../model/User')
+
 const controller = {
     prode: (req,res) => {
         let prodes = Prode.findAll();
@@ -56,7 +58,18 @@ const controller = {
     },
 
     resultado: (req,res) => {
-        console.log(req.body);
+        let info = {
+            prodeId: (req.params.prodeId-1),
+            grupoId: req.params.grupoId,
+            partidoId: req.params.partidoId,
+            ...req.body
+        }
+        console.log("Voy a crear editar un prode con la siguiente info:")
+        console.log(info);
+        let prode = Prode.resultado(info);
+        User.puntosYposiciones(prode)
+        console.log("Edite un prode");
+        res.redirect('/')    
     }
 
 }

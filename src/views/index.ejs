@@ -11,19 +11,17 @@
            
             <div class="proximo_partido">
                 <p class="titulo_proximo_partido">PROXIMO PARTIDO:</p>
-                <div id="countdown" class="row justify-content-center align-items-center">
-                </div>
                 <div class="partido_proximo">
                     <div class="equipo_1">
-                        <img src="/Imagenes/Chile.png" alt="" height="60px" width="60px" class="bandera_prox">
-                        <p class="p_proximo_partido">CHI</p>
+                        <img src="/Imagenes/Brasil.png" alt="" height="30px" width="30px" class="bandera_prox">
+                        <img src="/Imagenes/Brasil_tipografia.png" alt=""  width="45px" >  
                     </div>
                     <a href="#prode">
                         <input class="boton_prode" type="submit" value="Ir al Prode">
                     </a>
                     <div class="equipo_2">
-                        <img src="/Imagenes/Bolivia.png" alt="" height="60px" width="60px" class="bandera_prox">
-                        <p class="p_proximo_partido">BOL</p>
+                        <img src="/Imagenes/Colombia.png" alt="" height="30px" width="30px" class="bandera_prox">
+                        <img src="/Imagenes/Colombia_tipografia.png" alt=""  width="45px">
                     </div>
                 </div>
 
@@ -60,28 +58,28 @@
                         <form class="main_partidos">
                             <div class="partido primer_partido">
                                     <div class="equipo_1">
-                                        <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].local  %>.png" alt="" height="20px" width="20px">
-                                        <p><%= locals.prode.grupos[0].partidos[0].apodoLocal%> </p>
+                                        <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].local  %>.png" alt="" height="30px" width="30px">
+                                        <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].local  %>_tipografia.png" alt=""  width="45px">
                                         <h2><%= locals.isLogged ? locals.userLogged.grupos[0].partidos[0].resultado[0] : locals.prode.grupos[0].partidos[0].resultado[0]  %></h2>
                                     </div>
-                                    <p>-</p>
+                                    <p class="font_32">-</p>
                                     <div class="equipo_2">
-                                        <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].visitante  %>.png" alt="" height="20px" width="20px">
-                                        <p><%= locals.prode.grupos[0].partidos[0].apodoVisitante%> </p>
+                                        <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].visitante  %>.png" alt="" height="30px" width="30px">
+                                        <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].visitante  %>_tipografia.png" alt=""  width="45px">
                                         <h2><%= locals.isLogged ? locals.userLogged.grupos[0].partidos[0].resultado[1] : locals.prode.grupos[0].partidos[0].resultado[1]  %></h2>
                                     </div>                       
                             </div>
                             <% for( let i = 1; i < locals.prode.grupos[0].partidos.length; i++ ) { %>
                                 <div class="partido">
                                         <div class="equipo_1">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].local  %>.png" alt="" height="20px" width="20px">
-                                            <p><%= locals.prode.grupos[0].partidos[i].apodoLocal%> </p>
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].local  %>.png" alt="" height="30px" width="30px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].local  %>_tipografia.png" alt=""  width="45px">
                                             <h2><%= locals.isLogged ? locals.userLogged.grupos[0].partidos[i].resultado[0] : locals.prode.grupos[0].partidos[i].resultado[0]  %></h2>
                                         </div>
-                                        <p>-</p>
+                                        <p class="font_32">-</p>
                                         <div class="equipo_2">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].visitante  %>.png" alt="" height="20px" width="20px">
-                                            <p><%= locals.prode.grupos[0].partidos[i].apodoVisitante%> </p>
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].visitante  %>.png" alt="" height="30px" width="30px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].visitante  %>_tipografia.png" alt=""  width="45px">
                                             <h2><%= locals.isLogged ? locals.userLogged.grupos[0].partidos[i].resultado[1] : locals.prode.grupos[0].partidos[i].resultado[1]  %></h2>
                                         </div>                       
                                 </div>
@@ -93,28 +91,28 @@
                         <form class="main_partidos">
                             <div class="partido primer_partido">
                                     <div class="equipo_1">
-                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].local  %>.png" alt="" height="20px" width="20px">
-                                        <p><%= locals.prode.grupos[1].partidos[0].apodoLocal%> </p>
+                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].local  %>.png" alt="" height="30px" width="30px">
+                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].local  %>_tipografia.png" alt="" width="45px">
                                         <h2><%= locals.isLogged ? locals.userLogged.grupos[1].partidos[0].resultado[0] : locals.prode.grupos[1].partidos[0].resultado[0]  %></h2>
                                     </div>
-                                    <p>-</p>
+                                    <p class="font_32">-</p>
                                     <div class="equipo_2">
-                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].visitante  %>.png" alt="" height="20px" width="20px">
-                                        <p><%= locals.prode.grupos[1].partidos[0].apodoVisitante%> </p>
+                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].visitante  %>.png" alt="" height="30px" width="30px">
+                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].visitante  %>_tipografia.png" alt=""  width="45px">
                                         <h2><%= locals.isLogged ? locals.userLogged.grupos[1].partidos[0].resultado[1] : locals.prode.grupos[1].partidos[0].resultado[1]  %></h2>
                                     </div>                       
                             </div>
                             <% for( let i = 1; i < locals.prode.grupos[1].partidos.length; i++ ) { %>
                                 <div class="partido">
                                         <div class="equipo_1">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].local  %>.png" alt="" height="20px" width="20px">
-                                            <p><%= locals.prode.grupos[1].partidos[i].apodoLocal%> </p>
+                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].local  %>.png" alt="" height="30px" width="30px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].local  %>_tipografia.png" alt="" width="45px">
                                             <h2><%= locals.isLogged ? locals.userLogged.grupos[1].partidos[i].resultado[0] : locals.prode.grupos[1].partidos[i].resultado[0]  %></h2>
                                         </div>
-                                        <p>-</p>
+                                        <p class="font_32">-</p>
                                         <div class="equipo_2">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].visitante  %>.png" alt="" height="20px" width="20px">
-                                            <p><%= locals.prode.grupos[1].partidos[i].apodoVisitante%> </p>
+                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].visitante  %>.png" alt="" height="30px" width="30px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].visitante  %>_tipografia.png" alt=""  width="45px">
                                             <h2><%= locals.isLogged ? locals.userLogged.grupos[1].partidos[i].resultado[1] : locals.prode.grupos[1].partidos[i].resultado[1]  %></h2>
                                         </div>                       
                                 </div>
@@ -134,14 +132,14 @@
                                     <%= locals.prode.grupos[0].partidos[0].fecha%> <%= locals.prode.grupos[0].partidos[0].hora%>
                                 </p>
                                 <div class="equipo_1">
-                                    <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].local%>.png" alt="" height="20px" width="20px">
-                                    <p><%= locals.prode.grupos[0].partidos[0].apodoLocal%> </p>
+                                    <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].local  %>.png" alt="" height="30px" width="30px">
+                                    <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].local  %>_tipografia.png" alt=""  width="45px">
                                     <h2><%= locals.prode.grupos[0].partidos[0].resultado[0]  %></h2>
                                 </div>
-                                <p>-</p>
+                                <p class="font_32">-</p>
                                 <div class="equipo_2">
-                                    <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].visitante  %>.png" alt="" height="20px" width="20px">
-                                    <p><%= locals.prode.grupos[0].partidos[0].apodoVisitante%> </p>
+                                    <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].visitante  %>.png" alt="" height="30px" width="30px">
+                                    <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].visitante  %>_tipografia.png" alt=""  width="45px">
                                     <h2><%= locals.isLogged ? locals.userLogged.grupos[0].partidos[0].resultado[1] : locals.prode.grupos[0].partidos[0].resultado[1]  %></h2>
                                 </div>
                             </div>
@@ -152,14 +150,14 @@
                                         <%= locals.prode.grupos[0].partidos[i].fecha%> <%= locals.prode.grupos[0].partidos[i].hora%>
                                     </p>
                                         <div class="equipo_1">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].local  %>.png" alt="" height="20px" width="20px">
-                                            <p><%= locals.prode.grupos[0].partidos[i].apodoLocal%> </p>
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].local  %>.png" alt=""  height="30px" width="30px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].local  %>_tipografia.png" alt="" width="45px">
                                             <h2><%=  locals.prode.grupos[0].partidos[i].resultado[0]  %></h2>
                                         </div>
-                                        <p>-</p>
+                                        <p class="font_32">-</p>
                                         <div class="equipo_2">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].visitante  %>.png" alt="" height="20px" width="20px">
-                                            <p><%= locals.prode.grupos[0].partidos[i].apodoVisitante%> </p>
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].visitante  %>.png" alt="" height="30px" width="30px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].visitante  %>_tipografia.png" alt=""  width="45px">
                                             <h2><%= locals.prode.grupos[0].partidos[i].resultado[1]  %></h2>
                                         </div>                       
                                 </div>
@@ -174,14 +172,14 @@
                                     <%= locals.prode.grupos[1].partidos[0].fecha%> <%= locals.prode.grupos[1].partidos[0].hora%>
                                 </p>
                                     <div class="equipo_1">
-                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].local  %>.png" alt="" height="20px" width="20px">
-                                        <p><%= locals.prode.grupos[1].partidos[0].apodoLocal%> </p>
+                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].local  %>.png" alt="" height="30px" width="30px">
+                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].local  %>_tipografia.png" alt="" width="45px">
                                         <h2><%= locals.prode.grupos[1].partidos[0].resultado[0]  %></h2>
                                     </div>
-                                    <p>-</p>
+                                    <p class="font_32">-</p>
                                     <div class="equipo_2">
-                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].visitante  %>.png" alt="" height="20px" width="20px">
-                                        <p><%= locals.prode.grupos[1].partidos[0].apodoVisitante%> </p>
+                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].visitante  %>.png" alt="" height="30px" width="30px">
+                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].visitante  %>_tipografia.png" alt=""  width="45px">
                                         <h2><%=  locals.prode.grupos[1].partidos[0].resultado[1]  %></h2>
                                     </div>                       
                             </div>
@@ -192,14 +190,14 @@
                                         <%= locals.prode.grupos[1].partidos[i].fecha%> <%= locals.prode.grupos[1].partidos[i].hora%>
                                     </p>
                                         <div class="equipo_1">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].local  %>.png" alt="" height="20px" width="20px">
-                                            <p><%= locals.prode.grupos[1].partidos[i].apodoLocal%> </p>
+                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].local  %>.png" alt="" height="30px" width="30px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].local  %>_tipografia.png" alt="" width="45px">
                                             <h2><%= locals.prode.grupos[1].partidos[i].resultado[0]  %></h2>
                                         </div>
-                                        <p>-</p>
+                                        <p class="font_32">-</p>
                                         <div class="equipo_2">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].visitante  %>.png" alt="" height="20px" width="20px">
-                                            <p><%= locals.prode.grupos[1].partidos[i].apodoVisitante%> </p>
+                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].visitante  %>.png" alt="" height="30px" width="30px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].visitante  %>_tipografia.png" alt="" width="45px">
                                             <h2><%= locals.prode.grupos[1].partidos[i].resultado[1]  %></h2>
                                         </div>                       
                                 </div>
@@ -217,103 +215,31 @@
                   <td translate="no">Puntos</td translate="no">
                   <td translate="no">Plenos</td translate="no">
                 </tr>
-                <tr class="fondo1">
-                    <td translate="no">1º</td translate="no">
-                  <td translate="no">
-                    BrUiels
-                  </td translate="no">
-                  <td translate="no">6</td translate="no">
-                  <td translate="no">1</td translate="no">
-                </tr>
-                <tr class="fondo2">
-                    <td translate="no">1º</td translate="no">
-                    <td translate="no">
-                      Pedro
-                    </td translate="no">
-                    <td translate="no">6</td translate="no">
-                    <td translate="no">1</td translate="no">
-                </tr>
-                <tr class="fondo1">
-                    <td translate="no">3º</td translate="no">
-                    <td translate="no">
-                      Lean
-                    </td translate="no">
-                    <td translate="no">5</td translate="no">
-                    <td translate="no">1</td translate="no">
-                </tr>
-                <tr class="fondo2">
-                    <td translate="no">3º</td translate="no">
-                    <td translate="no">
-                      Ale
-                    </td translate="no">
-                    <td translate="no">5</td translate="no">
-                    <td translate="no">1</td translate="no">
-                </tr>
-                <tr class="fondo1">
-                    <td translate="no">3º</td translate="no">
-                    <td translate="no">
-                      Ilu
-                    </td translate="no">
-                    <td translate="no">5</td translate="no">
-                    <td translate="no">1</td translate="no">
-                </tr>
-                <tr class="fondo2">
-                    <td translate="no">3º</td translate="no">
-                    <td translate="no">
-                      Noah
-                    </td translate="no">
-                    <td translate="no">5</td translate="no">
-                    <td translate="no">1</td translate="no">
-                </tr>
-                <tr class="fondo1">
-                    <td translate="no">7º</td translate="no">
-                    <td translate="no">
-                      Camo
-                    </td translate="no">
-                    <td translate="no">4</td translate="no">
-                    <td translate="no">1</td translate="no">
-                </tr>
-                <tr class="fondo2">
-                    <td translate="no">8º</td translate="no">
-                    <td translate="no">
-                      Marce
-                    </td translate="no">
-                    <td translate="no">3</td translate="no">
-                    <td translate="no">0</td translate="no">
-                </tr>
-                <tr class="fondo1">
-                    <td translate="no">8º</td translate="no">
-                    <td translate="no">
-                      MK
-                    </td translate="no">
-                    <td translate="no">3</td translate="no">
-                    <td translate="no">0</td translate="no">
-                </tr>
+                <% for( let i = 0; i < users.length; i++ ) { %>
+                    <% if (i%2 ==0) { %>
+                        <tr class="fondo1">
+                            <td translate="no"><%= users[i].posicion%>º</td translate="no">
+                            <td translate="no">
+                                <%= users[i].username%>
+                            </td translate="no">
+                            <td translate="no"><%= users[i].puntos%></td translate="no">
+                            <td translate="no"> <%= users[i].plenos%></td="no">
+                        </tr>
+                     
+                    <% } else {%>
+                        <tr class="fondo2">
+                            <td translate="no"><%= users[i].posicion%>º</td translate="no">
+                            <td translate="no">
+                                <%= users[i].username%>
+                            </td translate="no">
+                            <td translate="no"><%= users[i].puntos%></td translate="no">
+                            <td translate="no"> <%= users[i].plenos%></td="no">
+                        </tr>
+            
+                        <% } %>
+                <% } %>
+
                 
-                <tr class="fondo2">
-                    <td translate="no">8º</td translate="no">
-                    <td translate="no">
-                      Lito
-                    </td translate="no">
-                    <td translate="no">3</td translate="no">
-                    <td translate="no">0</td translate="no">
-                </tr>
-                <tr class="fondo1">
-                    <td translate="no">8º</td translate="no">
-                    <td translate="no">
-                      Nico
-                    </td translate="no">
-                    <td translate="no">3</td translate="no">
-                    <td translate="no">0</td translate="no">
-                </tr>
-                <tr class="fondo2">
-                    <td translate="no">12º</td translate="no">
-                    <td translate="no">
-                      Lucho
-                    </td translate="no">
-                    <td translate="no">2</td translate="no">
-                    <td translate="no">0</td translate="no">
-                </tr>
               </table>
               <p class="p_reglas_index margin">Link para ver todos los prodes: <a class="a_reglas" target="_blank" href="https://drive.google.com/drive/folders/1_8CpnCPLDAL8d78kFg_oTcV02W3hWQUs?usp=sharing"> drive con PRODES</a></p>
         </div>

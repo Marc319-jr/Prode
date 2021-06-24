@@ -16,19 +16,19 @@
                             <% if (prode.grupos[i].partidos[j]) { %>
                                 <div id="partido">
                                     <h2>grupo: <%=i+1%> partido: <%= j+1 %></h2>
-                                    <form action="/prode/<%=i%>/<%=j%>" method="POST" >
+                                    <form action="/prode/<%=i%>/<%=j%>/<%=prode.id%>" method="POST" >
                                         <div class="equipos">
                                             <img src="/Imagenes/<%= locals.prode.grupos[i].partidos[j].local  %>.png" alt="" height="40px" width="40px">
                                             <h1><%=prode.grupos[i].partidos[j].apodoLocal%> </h1>
                                             <% if (prode.grupos[i].partidos[j].resultado[0] == "x" ) { %>
                                                 <input type="number" name="local"> 
                                             <% } else {%>  
-                                                <h1><%=prode.grupos[i].partidos[j].resultado[1]%></h1>
+                                                <h1><%=prode.grupos[i].partidos[j].resultado[0]%></h1>
                                                 <% } %>                                          <h1>vs</h1>
                                             <% if (prode.grupos[i].partidos[j].resultado[0] == "x" ) { %>
                                                 <input type="number" name="visitante"> 
                                             <% } else {%>
-                                                <h1><%=prode.grupos[i].partidos[j].resultado[0]%></h1>
+                                                <h1><%=prode.grupos[i].partidos[j].resultado[1]%></h1>
                                                 <% } %>
                                             <h1><%=prode.grupos[i].partidos[j].apodoVisitante%> </h1>
                                             <img src="/Imagenes/<%= locals.prode.grupos[i].partidos[j].visitante  %>.png" alt="" height="40px" width="40px">
