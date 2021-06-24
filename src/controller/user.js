@@ -5,6 +5,10 @@ const controller = {
         res.render('../src/views/user/login');
 
     },
+    cuadros: (req,res) => {
+        res.render('../src/views/user/cuadros');
+
+    },
     processLogin: (req,res) => {
         let users = User.findAll();
         let userToLogin = User.findByField('username' , req.body.username)

@@ -4,6 +4,7 @@ const controller = require('../controller/user');
 
 
 router.get('/login' , controller.login);
+router.get('/cuadros', controller.cuadros);
 router.get('/register', controller.register);
 router.get('/reglas', controller.reglas);
 router.get('/create', controller.create);
