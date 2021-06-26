@@ -9,6 +9,7 @@ router.get('/register', controller.register);
 router.get('/reglas', controller.reglas);
 router.get('/create', controller.create);
 router.get('/logout' , controller.logout);
+router.get('/showprode', controller.showprode)
 
 
 

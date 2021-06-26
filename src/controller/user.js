@@ -81,6 +81,16 @@ const controller = {
         console.log("Cerrando session");
         req.session.destroy()
         res.redirect('/')
+    }, 
+
+    showprode: (req,res) =>
+    {
+        let userId = req.query.userId
+        console.log("el user id es");
+        console.log(userId);
+        user = User.findById(userId)
+        res.send(user)
+
     }
 }
 

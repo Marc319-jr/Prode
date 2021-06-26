@@ -20,6 +20,7 @@ let fileUpload = multer({storage});
 
 router.get('/' , controller.prode)
 router.get('/administrar' , controller.administrar);
+router.get('/resultados' , controller.resultadoUser);
 
 
 router.post('/crear' , controller.crear);

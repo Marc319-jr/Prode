@@ -32,6 +32,21 @@ const User ={
 
     },
 
+    findById: function(id){
+        console.log("buscando por id: " + id);
+        let allUsers = this.findAll();
+        let userFound;
+        allUsers.forEach(user => {
+            console.log(user.id);
+            if(user.id == id){
+                console.log("encontre al usuario");
+                userFound = user;
+            }
+        })
+        return userFound
+
+    },
+
     findByField: function(field , text){
         let allUsers = this.findAll();
         let userFound = allUsers.find(oneUser => oneUser[field] === text);

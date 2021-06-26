@@ -1,0 +1,29 @@
+
+<head>
+    <link href ="/css/presentar.css"  rel = "stylesheet">
+    <%- include('../partials/header')  %> 
+    <title>Resultados</title>
+</head>
+
+
+<body>
+
+    <%- include('../partials/head')  %>
+    <main class = "mainResultados">
+        <p class = "info">Seleccione el participante que desea ver:</p>
+        <section class = "usersshow">
+            <% for( let i = 0; i < users.length; i++ ) { %>
+            
+                <a href="/user/showprode?userId=<%= users[i].id %>" style = "text-decoration: none; color: black;">
+                <article class = "ususario">
+                    <h2>Nombre: <%= users[i].username  %> </h2>
+                    <h2>Posicion: <%= users[i].posicion  %></h2>
+                    <h2>Puntos: <%= users[i].puntos  %></h2>
+                    <h2>Plenos: <%= users[i].plenos  %></h2>
+                </article>
+                </a>
+                <% } %>
+
+        </section>
+    </main> 
+</body>

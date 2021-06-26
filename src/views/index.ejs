@@ -49,6 +49,8 @@
             <% if (locals.isLogged) { %>
                 <span></span>
                 <P class="before_match">El prode corresponde a: <%= locals.userLogged.username %>, te deseamos suerte! </P>
+                <p class="before_match"><a href="/prode/resultados">Click aca para ver a los otros prodes</a></p>
+
             <% } else {%>                    
                 <% } %>
             <div class="prode" id="prode">
@@ -121,8 +123,10 @@
                             <% } %>
                         </form>
                         <% } %>
-                    </div>
+                        
+                    </div> 
                 </div>
+
                 <p class="before_match">Estos son los resultados hasta ahora de la Copa America:</p>
                 <div class="partidos_Jugados">
                     <div class="grupo_1">

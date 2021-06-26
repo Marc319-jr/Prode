@@ -70,7 +70,14 @@ const controller = {
         User.puntosYposiciones(prode)
         console.log("Edite un prode");
         res.redirect('/')    
+    }, 
+
+    resultadoUser: (req,res) => {
+        let allUsers = User.findAll()
+        res.render('../src/views/info/otroUser' , {'users' : allUsers})
     }
+
+
 
 }
 
