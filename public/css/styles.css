@@ -8,7 +8,11 @@
 }
 /*----------------------Header -----------------------*/
 header{
+    min-width: 700px;
     background-color: #01584c;
+}
+.header{
+    width: 100vw;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -82,6 +86,9 @@ header img {
     }
 }
 /*-----------------------main --------------------*/
+main{
+    min-width: 700px;
+}
 #editMe.design_{
     display: none !important;
 }
@@ -236,11 +243,15 @@ input[type=submit] {
     align-items: center;
 }
 .main_1 {
+    background-color: #0a3c0a;
+    height: 500px;
+}
+.encabezado_main {
     display: flex;
+    height: 500px;
     justify-content: space-around;
     align-items: center;
-    height: 500px;
-    background-color: #0a3c0a;
+    width: 100vw;
 }
 .puesto_actual {
     display: flex;
@@ -303,7 +314,11 @@ tr{
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: #0F3E76;
+      width: 100vw;
+      
+  }
+  .responsive_table {
+    background-color: #0F3E76;
   }
   .a_reglas {
     color: #019bb6;
@@ -321,9 +336,9 @@ tr{
 .partidos_Jugados{
     display: flex;
     justify-content: space-around;
-    align-items: center;
     border-bottom: 2px #73ae20 solid;
     padding: 10px;
+    width: 100vw;
 }
 .equipo_1 h2, .equipo_2 h2, .font_32{
     font-size: 32px;
@@ -369,14 +384,20 @@ tr{
     .grupo_1{
         width: 80vw;
     }
+    .before_match{
+        font-size: 16px;
+        width: 100vw;
+    }
    .prode{
        flex-direction: column;
-       align-items: center;
        justify-content: center;
    }
    .main_1{
-       flex-direction: column;
        height: 700px;
+    }
+    .encabezado_main {
+        flex-direction: column;
+        height: 700px;
     }
     td {
         border-right:2px solid white ;
@@ -759,9 +780,9 @@ body .register .formulario form a{
     margin-left: 25%;
 }
 .ronda_2 {
-    margin-left: 15px;
+    margin-left: 35px;
 }
-.ronda_2_2 { margin-left: 15px;}
+.ronda_2_2 { margin-left: 35px;}
 .ronda_2 .partido_cuadros {
     margin-top: 40px;
 }
@@ -783,6 +804,20 @@ body .register .formulario form a{
     right: -10px;
     width: 10px;
     border-bottom: 3px solid #73ae20 ;
+}
+.palito_cuadro {
+    border: 3px solid #73ae20;
+    width: 10px;
+    right: -18px;
+    top: 65px;
+    position: absolute;
+}
+.palito_cuadro_semi{
+    border: 3px solid #73ae20;
+    width: 10px;
+    right: -18px;
+    top: 130px;
+    position: absolute;
 }
 .final {
     background-color: #0a3c0a;
@@ -820,4 +855,10 @@ body .register .formulario form a{
 } 
 .tipografia{
     margin-bottom: 10px;
+}
+.main_cuadros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
 }

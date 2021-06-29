@@ -11,374 +11,206 @@
            
             <div class="proximo_partido">
                 <p class="titulo_proximo_partido">PROXIMO PARTIDO:</p>
-                <div id="countdown" class="row justify-content-center align-items-center">
-                </div>
                 <div class="partido_proximo">
                     <div class="equipo_1">
-                        <img src="/Imagenes/COLOMBIA.png" alt="" height="60px" width="60px" class="bandera_prox">
-                        <p class="p_proximo_partido">Col</p>
+                        <img src="/Imagenes/Brasil.png" alt="" height="30px" width="30px" class="bandera_prox">
+                        <img src="/Imagenes/Brasil_tipografia.png" alt=""  width="45px">
+                        
                     </div>
                     <a href="#prode">
                         <input class="boton_prode" type="submit" value="Ir al Prode">
                     </a>
                     <div class="equipo_2">
-                        <img src="/Imagenes/venezuela.png" alt="" height="60px" width="60px" class="bandera_prox">
-                        <p class="p_proximo_partido">Par</p>
+                        <img src="/Imagenes/Ecuador.png" alt="" height="30px" width="30px" class="bandera_prox">
+                        <img src="/Imagenes/Ecuador_tipografia.png" alt=""  width="45px" >
                     </div>
                 </div>
 
             </div>
-            <div class="puesto_actual">
-                <div class="fila_puesto">
-                    <p class="titulo_proximo_partido"> TU PUESTO ES:</p>
-                    <p class="puesto">Nº</p>
-                </div>
-                <div class="fila_puesto">
-                    <p class="descripcion_proximo_partido">PUNTOS:</p>
-                    <p class="descripcion_proximo_partido">9 PUNTOS</p>
-                </div>
-                <div>
+            <% if(locals.isLogged) { %>
+                <div class="puesto_actual">
+                    <div class="fila_puesto">
+                        <p class="titulo_proximo_partido"> TU PUESTO ES:</p>
+                        <p class="puesto"> <%= locals.userLogged.posicion %>º</p>
+                    </div>
+                    <div class="fila_puesto">
+                        <p class="descripcion_proximo_partido">PUNTOS:</p>
+                        <p class="descripcion_proximo_partido"> <%= locals.userLogged.puntos %> </p>
+                    </div>
+                    <div>
                     <a href="#tabla">
                         <input class="tabla_input" type="submit" value="Ir a la tabla">
                     </a>
+                    </div>
                 </div>
-            </div>
+            <% } %>
         </div>
-        <div class="prode" id="prode">
-            <div class="grupo_1">
-                <p class="titulo_grupo">  GRUPO 1:</p>
-                <form class="main_partidos">
-                    <div class="partido primer_partido">
-                        <p class="descripcion_partido">
-                            Dom, 13/06-18Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].local  %>.png" alt="" height="20px" width="20px">
-                            <p><%= locals.prode.grupos[0].partidos[0].local%> </p>
-                            <h2><%= locals.isLogged ? locals.userLogged.grupos[0].partidos[0].resultado[0] : locals.prode.grupos[0].partidos[0].resultado[0]  %></h2>
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].visitante  %>.png" alt="" height="20px" width="20px">
-                            <p><%= locals.prode.grupos[0].partidos[0].visitante%> </p>
-                            <h2><%= locals.isLogged ? locals.userLogged.grupos[0].partidos[0].resultado[1] : locals.prode.grupos[0].partidos[0].resultado[1]  %></h2>
-                        </div>
+        <section class="prode_main">
+            <% if (locals.isLogged) { %>
+                <span></span>
+                <P class="before_match">El prode corresponde a: <%= locals.userLogged.username %>, te deseamos suerte! </P>
+                <p class="before_match"><a href="/prode/resultados">Click aca para ver a los otros prodes</a></p>
+            <% } else {%>                    
+                <% } %>
+            <div class="prode" id="prode">
+                <% if(locals.isLogged) { %>
+                <div class="partidos_Jugados">
+                    <div class="grupo_1">
+                        <p class="titulo_grupo">  GRUPO 1:</p>
+                        <form class="main_partidos">
+                            <div class="partido primer_partido">
+                                    <div class="equipo_1">
+                                        <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].local  %>.png" alt="" height="30px" width="30px">
+                                        <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].local  %>_tipografia.png" alt=""  width="45px">
+                                        <h2><%= locals.isLogged ? locals.userLogged.grupos[0].partidos[0].resultado[0] : locals.prode.grupos[0].partidos[0].resultado[0]  %></h2>
+                                    </div>
+                                    <p class="font_32">-</p>
+                                    <div class="equipo_2">
+                                        <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].visitante  %>.png" alt="" height="30px" width="30px">
+                                        <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].visitante  %>_tipografia.png" alt=""  width="45px">
+                                        <h2><%= locals.isLogged ? locals.userLogged.grupos[0].partidos[0].resultado[1] : locals.prode.grupos[0].partidos[0].resultado[1]  %></h2>
+                                    </div>                       
+                            </div>
+                            <% for( let i = 1; i < locals.prode.grupos[0].partidos.length; i++ ) { %>
+                                <div class="partido">
+                                        <div class="equipo_1">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].local  %>.png" alt="" height="30px" width="30px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].local  %>_tipografia.png" alt=""  width="45px">
+                                            <h2><%= locals.isLogged ? locals.userLogged.grupos[0].partidos[i].resultado[0] : locals.prode.grupos[0].partidos[i].resultado[0]  %></h2>
+                                        </div>
+                                        <p class="font_32">-</p>
+                                        <div class="equipo_2">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].visitante  %>.png" alt="" height="30px" width="30px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].visitante  %>_tipografia.png" alt=""  width="45px">
+                                            <h2><%= locals.isLogged ? locals.userLogged.grupos[0].partidos[i].resultado[1] : locals.prode.grupos[0].partidos[i].resultado[1]  %></h2>
+                                        </div>                       
+                                </div>
+                        </form>
+                        <% } %>
+                    </div>
+                    <div class="grupo_1">
+                        <p class="titulo_grupo">  GRUPO 2:</p>
+                        <form class="main_partidos">
+                            <div class="partido primer_partido">
+                                    <div class="equipo_1">
+                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].local  %>.png" alt="" height="30px" width="30px">
+                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].local  %>_tipografia.png" alt="" width="45px">
+                                        <h2><%= locals.isLogged ? locals.userLogged.grupos[1].partidos[0].resultado[0] : locals.prode.grupos[1].partidos[0].resultado[0]  %></h2>
+                                    </div>
+                                    <p class="font_32">-</p>
+                                    <div class="equipo_2">
+                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].visitante  %>.png" alt="" height="30px" width="30px">
+                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].visitante  %>_tipografia.png" alt=""  width="45px">
+                                        <h2><%= locals.isLogged ? locals.userLogged.grupos[1].partidos[0].resultado[1] : locals.prode.grupos[1].partidos[0].resultado[1]  %></h2>
+                                    </div>                       
+                            </div>
+                            <% for( let i = 1; i < locals.prode.grupos[1].partidos.length; i++ ) { %>
+                                <div class="partido">
+                                        <div class="equipo_1">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].local  %>.png" alt="" height="30px" width="30px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].local  %>_tipografia.png" alt="" width="45px">
+                                            <h2><%= locals.isLogged ? locals.userLogged.grupos[1].partidos[i].resultado[0] : locals.prode.grupos[1].partidos[i].resultado[0]  %></h2>
+                                        </div>
+                                        <p class="font_32">-</p>
+                                        <div class="equipo_2">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].visitante  %>.png" alt="" height="30px" width="30px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].visitante  %>_tipografia.png" alt=""  width="45px">
+                                            <h2><%= locals.isLogged ? locals.userLogged.grupos[1].partidos[i].resultado[1] : locals.prode.grupos[1].partidos[i].resultado[1]  %></h2>
+                                        </div>                       
+                                </div>
+                            
+                            <% } %>
+                        </form>
+                        <% } %>
                         
+                    </div> 
+                </div>
+
+                <p class="before_match">Estos son los resultados hasta ahora de la Copa America:</p>
+                <div class="partidos_Jugados">
+                    <div class="grupo_1">
+                        <p class="titulo_grupo">  GRUPO 1:</p>
+                        <form class="main_partidos">
+                            <div class="partido primer_partido">
+                                <p class="descripcion_partido">
+                                    <%= locals.prode.grupos[0].partidos[0].fecha%> <%= locals.prode.grupos[0].partidos[0].hora%>
+                                </p>
+                                <div class="equipo_1">
+                                    <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].local  %>.png" alt="" height="30px" width="30px">
+                                    <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].local  %>_tipografia.png" alt=""  width="45px">
+                                    <h2><%= locals.prode.grupos[0].partidos[0].resultado[0]  %></h2>
+                                </div>
+                                <p class="font_32">-</p>
+                                <div class="equipo_2">
+                                    <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].visitante  %>.png" alt="" height="30px" width="30px">
+                                    <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].visitante  %>_tipografia.png" alt=""  width="45px">
+                                    <h2><%= locals.isLogged ? locals.userLogged.grupos[0].partidos[0].resultado[1] : locals.prode.grupos[0].partidos[0].resultado[1]  %></h2>
+                                </div>
+                            </div>
+                            <% for( let i = 1; i < locals.prode.grupos[0].partidos.length; i++ ) { %>
+                                <% if( locals.prode.grupos[0].partidos[i].resultado[0] != "x") {%>
+                                <div class="partido">
+                                    <p class="descripcion_partido">
+                                        <%= locals.prode.grupos[0].partidos[i].fecha%> <%= locals.prode.grupos[0].partidos[i].hora%>
+                                    </p>
+                                        <div class="equipo_1">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].local  %>.png" alt=""  height="30px" width="30px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].local  %>_tipografia.png" alt="" width="45px">
+                                            <h2><%=  locals.prode.grupos[0].partidos[i].resultado[0]  %></h2>
+                                        </div>
+                                        <p class="font_32">-</p>
+                                        <div class="equipo_2">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].visitante  %>.png" alt="" height="30px" width="30px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].visitante  %>_tipografia.png" alt=""  width="45px">
+                                            <h2><%= locals.prode.grupos[0].partidos[i].resultado[1]  %></h2>
+                                        </div>                       
+                                </div>
+                                <% } } %>
+                        </form>
                     </div>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            Dom, 13/06-21Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/COLOMBIA.png" alt="" height="20px" width="20px">
-                            <p>Col</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/ecuador.png" alt="" height="20px" width="20px">
-                            <p>Ecu</p>
-                            <input type = "number" placeholder="0">
-                        </div>
+                    <div class="grupo_1">
+                        <p class="titulo_grupo">  GRUPO 2:</p>
+                        <form class="main_partidos">
+                            <div class="partido primer_partido">
+                                <p class="descripcion_partido">
+                                    <%= locals.prode.grupos[1].partidos[0].fecha%> <%= locals.prode.grupos[1].partidos[0].hora%>
+                                </p>
+                                    <div class="equipo_1">
+                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].local  %>.png" alt="" height="30px" width="30px">
+                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].local  %>_tipografia.png" alt="" width="45px">
+                                        <h2><%= locals.prode.grupos[1].partidos[0].resultado[0]  %></h2>
+                                    </div>
+                                    <p class="font_32">-</p>
+                                    <div class="equipo_2">
+                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].visitante  %>.png" alt="" height="30px" width="30px">
+                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].visitante  %>_tipografia.png" alt=""  width="45px">
+                                        <h2><%=  locals.prode.grupos[1].partidos[0].resultado[1]  %></h2>
+                                    </div>                       
+                            </div>
+                            <% for( let i = 1; i < locals.prode.grupos[1].partidos.length; i++ ) { %>
+                            <% if( locals.prode.grupos[1].partidos[i].resultado[0] != "x") {%>
+                                <div class="partido">
+                                    <p class="descripcion_partido">
+                                        <%= locals.prode.grupos[1].partidos[i].fecha%> <%= locals.prode.grupos[1].partidos[i].hora%>
+                                    </p>
+                                        <div class="equipo_1">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].local  %>.png" alt="" height="30px" width="30px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].local  %>_tipografia.png" alt="" width="45px">
+                                            <h2><%= locals.prode.grupos[1].partidos[i].resultado[0]  %></h2>
+                                        </div>
+                                        <p class="font_32">-</p>
+                                        <div class="equipo_2">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].visitante  %>.png" alt="" height="30px" width="30px">
+                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].visitante  %>_tipografia.png" alt="" width="45px">
+                                            <h2><%= locals.prode.grupos[1].partidos[i].resultado[1]  %></h2>
+                                        </div>                       
+                                </div>
+                            <%  } }%>   
+                        </form>
                     </div>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            Jue, 17/06-18Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/COLOMBIA.png" alt="" height="20px" width="20px">
-                            <p>Col</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/venezuela.png" alt="" height="20px" width="20px">
-                            <p>Ven</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                    </div>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            Jue, 17/06-21Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/Peru.png" alt="" height="20px" width="20px">
-                            <p>Per</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/brasil.png" alt="" height="20px" width="20px">
-                            <p>Bra</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                    </div>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            Dom, 20/06-18Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/ecuador.png" alt="" height="20px" width="20px">
-                            <p>Ecu</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/venezuela.png" alt="" height="20px" width="20px">
-                            <p>Ven</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                    </div>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            Dom, 20/06-21Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/COLOMBIA.png" alt="" height="20px" width="20px">
-                            <p>Col</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/Peru.png" alt="" height="20px" width="20px">
-                            <p>Per</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                    </div>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            Mie, 23/06-18Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="Imagenes/ecuador.png" alt="" height="20px" width="20px">
-                            <p>Ecu</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/Peru.png" alt="" height="20px" width="20px">
-                            <p>Per</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                    </div>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            Mie, 24/06-21Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/brasil.png" alt="" height="20px" width="20px">
-                            <p>Bra</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/COLOMBIA.png" alt="" height="20px" width="20px">
-                            <p>Col</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                    </div>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            Dom, 27/06-18Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/venezuela.png" alt="" height="20px" width="20px">
-                            <p>Ven</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/Peru.png" alt="" height="20px" width="20px">
-                            <p>Per</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                    </div>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            Dom, 27/06-18Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/ecuador.png" alt="" height="20px" width="20px">
-                            <p>Ecu</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/brasil.png" alt="" height="20px" width="20px">
-                            <p>Bra</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                    </div>
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-            <div class="grupo_1">
-                <p class="titulo_grupo">  GRUPO 2:</p>
-                <form class="main_partidos">
-                    <div class="partido primer_partido">
-                        <p class="descripcion_partido">
-                            Lun, 14/06-18Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].local  %>.png" alt="" height="20px" width="20px">
-                            <p><%= locals.prode.grupos[1].partidos[0].local%> </p>
-                            <h2><%= locals.isLogged ? locals.userLogged.grupos[1].partidos[0].resultado[0] : locals.prode.grupos[1].partidos[0].resultado[0]  %></h2>
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].visitante  %>.png" alt="" height="20px" width="20px">
-                            <p><%= locals.prode.grupos[1].partidos[0].visitante%> </p>
-                            <h2><%= locals.isLogged ? locals.userLogged.grupos[1].partidos[0].resultado[1] : locals.prode.grupos[1].partidos[0].resultado[1]  %></h2>
-                        </div>
-                    </div>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            Lun, 14/06-21Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/paraguay.png" alt="" height="20px" width="20px">
-                            <p>Par</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/bolivia.png" alt="" height="20px" width="20px">
-                            <p>Bol</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                    </div>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            Vie, 18/06-18Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/chile.png" alt="" height="20px" width="20px">
-                            <p>Chi</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/bolivia.png" alt="" height="20px" width="20px">
-                            <p>Bol</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                    </div>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            Vie, 18/06-21Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/argentina.png" alt="" height="20px" width="20px">
-                            <p>Arg</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/uruguay.jpg" alt="" height="20px" width="20px">
-                            <p>Uru</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                    </div>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            Lun, 21/06-18Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/uruguay.jpg" alt="" height="20px" width="20px">
-                            <p>Uru</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/chile.png" alt="" height="20px" width="20px">
-                            <p>Chi</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                    </div>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            Lun, 21/06-21Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/argentina.png" alt="" height="20px" width="20px">
-                            <p>Arg</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/paraguay.png" alt="" height="20px" width="20px">
-                            <p>Par</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                    </div>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            Jue, 24/06-18Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/bolivia.png" alt="" height="20px" width="20px">
-                            <p>Bol</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/uruguay.jpg" alt="" height="20px" width="20px">
-                            <p>Uru</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                    </div>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            Jue, 24/06-21Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/chile.png" alt="" height="20px" width="20px">
-                            <p>Chi</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/paraguay.png" alt="" height="20px" width="20px">
-                            <p>Par</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                    </div>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            Lun, 28/06-21Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/bolivia.png" alt="" height="20px" width="20px">
-                            <p>Bol</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/argentina.png" alt="" height="20px" width="20px">
-                            <p>Arg</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                    </div>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            Lun, 28/06-21Hs
-                        </p>
-                        <div class="equipo_1">
-                            <img src="/Imagenes/uruguay.jpg" alt="" height="20px" width="20px">
-                            <p>Uru</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                        <p>-</p>
-                        <div class="equipo_2">
-                            <img src="/Imagenes/paraguay.png" alt="" height="20px" width="20px">
-                            <p>Par</p>
-                            <input type = "number" placeholder="0">
-                        </div>
-                    </div>
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-        </div>
+                </div>
+            
+        </section>
         <div class="tabla" id="tabla">
             <table cellspacing="0" cellpadding="0">
                 <tr class="destacado">
@@ -387,102 +219,31 @@
                   <td translate="no">Puntos</td translate="no">
                   <td translate="no">Plenos</td translate="no">
                 </tr>
-                <tr class="fondo1">
-                    <td translate="no">1º</td translate="no">
-                  <td translate="no">
-                    BrUiels
-                  </td translate="no">
-                  <td translate="no">5</td translate="no">
-                  <td translate="no">1</td translate="no">
-                </tr>
-                <tr class="fondo2">
-                    <td translate="no">2º</td translate="no">
-                    <td translate="no">
-                      Pedro
-                    </td translate="no">
-                    <td translate="no">5</td translate="no">
-                    <td translate="no">1</td translate="no">
-                </tr>
-                <tr class="fondo1">
-                    <td translate="no">3º</td translate="no">
-                    <td translate="no">
-                      Camo
-                    </td translate="no">
-                    <td translate="no">4</td translate="no">
-                    <td translate="no">1</td translate="no">
-                </tr>
-                <tr class="fondo2">
-                    <td translate="no">4º</td translate="no">
-                    <td translate="no">
-                      Lean
-                    </td translate="no">
-                    <td translate="no">4</td translate="no">
-                    <td translate="no">1</td translate="no">
-                </tr>
-                <tr class="fondo1">
-                    <td translate="no">5º</td translate="no">
-                    <td translate="no">
-                      Ale
-                    </td translate="no">
-                    <td translate="no">4</td translate="no">
-                    <td translate="no">1</td translate="no">
-                </tr>
-                <tr class="fondo2">
-                    <td translate="no">6º</td translate="no">
-                    <td translate="no">
-                      Ilu
-                    </td translate="no">
-                    <td translate="no">4</td translate="no">
-                    <td translate="no">1</td translate="no">
-                </tr>
-                <tr class="fondo1">
-                    <td translate="no">7º</td translate="no">
-                    <td translate="no">
-                      Noah
-                    </td translate="no">
-                    <td translate="no">4</td translate="no">
-                    <td translate="no">1</td translate="no">
-                </tr>
-                <tr class="fondo2">
-                    <td translate="no">8º</td translate="no">
-                    <td translate="no">
-                      Marce
-                    </td translate="no">
-                    <td translate="no">3</td translate="no">
-                    <td translate="no">0</td translate="no">
-                </tr>
-                <tr class="fondo1">
-                    <td translate="no">9º</td translate="no">
-                    <td translate="no">
-                      MK
-                    </td translate="no">
-                    <td translate="no">2</td translate="no">
-                    <td translate="no">0</td translate="no">
-                </tr>
-                <tr class="fondo2">
-                    <td translate="no">10º</td translate="no">
-                    <td translate="no">
-                      Lucho
-                    </td translate="no">
-                    <td translate="no">2</td translate="no">
-                    <td translate="no">0</td translate="no">
-                </tr>
-                <tr class="fondo1">
-                    <td translate="no">11º</td translate="no">
-                    <td translate="no">
-                      Lito
-                    </td translate="no">
-                    <td translate="no">2</td translate="no">
-                    <td translate="no">0</td translate="no">
-                </tr>
-                <tr class="fondo2">
-                    <td translate="no">12º</td translate="no">
-                    <td translate="no">
-                      Nico
-                    </td translate="no">
-                    <td translate="no">2</td translate="no">
-                    <td translate="no">0</td translate="no">
-                </tr>
+                <% for( let i = 0; i < users.length; i++ ) { %>
+                    <% if (i%2 ==0) { %>
+                        <tr class="fondo1">
+                            <td translate="no"><%= users[i].posicion%>º</td translate="no">
+                            <td translate="no">
+                                <%= users[i].username%>
+                            </td translate="no">
+                            <td translate="no"><%= users[i].puntos%></td translate="no">
+                            <td translate="no"> <%= users[i].plenos%></td="no">
+                        </tr>
+                     
+                    <% } else {%>
+                        <tr class="fondo2">
+                            <td translate="no"><%= users[i].posicion%>º</td translate="no">
+                            <td translate="no">
+                                <%= users[i].username%>
+                            </td translate="no">
+                            <td translate="no"><%= users[i].puntos%></td translate="no">
+                            <td translate="no"> <%= users[i].plenos%></td="no">
+                        </tr>
+            
+                        <% } %>
+                <% } %>
+
+                
               </table>
               <p class="p_reglas_index margin">Link para ver todos los prodes: <a class="a_reglas" target="_blank" href="https://drive.google.com/drive/folders/1_8CpnCPLDAL8d78kFg_oTcV02W3hWQUs?usp=sharing"> drive con PRODES</a></p>
         </div>
@@ -507,7 +268,6 @@ $(document).ready(function() {
   });
   </script>
   <script>
-
       $(document).ready(function(){
           $(".menu_mobile_bt").click(function(){
               $(".menu_over").slideToggle();

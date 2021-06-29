@@ -8,7 +8,7 @@
     <main>
         
         <div class="main_1" id="#main_1">
-           
+           <div class="encabezado_main">
             <div class="proximo_partido">
                 <p class="titulo_proximo_partido">PROXIMO PARTIDO:</p>
                 <div class="partido_proximo">
@@ -44,6 +44,7 @@
                     </div>
                 </div>
             <% } %>
+            </div>
         </div>
         <section class="prode_main">
             <% if (locals.isLogged) { %>
@@ -126,127 +127,179 @@
                         
                     </div> 
                 </div>
-
-                <p class="before_match">Estos son los resultados hasta ahora de la Copa America:</p>
-                <div class="partidos_Jugados">
-                    <div class="grupo_1">
-                        <p class="titulo_grupo">  GRUPO 1:</p>
-                        <form class="main_partidos">
-                            <div class="partido primer_partido">
-                                <p class="descripcion_partido">
-                                    <%= locals.prode.grupos[0].partidos[0].fecha%> <%= locals.prode.grupos[0].partidos[0].hora%>
-                                </p>
-                                <div class="equipo_1">
-                                    <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].local  %>.png" alt="" height="30px" width="30px">
-                                    <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].local  %>_tipografia.png" alt=""  width="45px">
-                                    <h2><%= locals.prode.grupos[0].partidos[0].resultado[0]  %></h2>
-                                </div>
-                                <p class="font_32">-</p>
-                                <div class="equipo_2">
-                                    <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].visitante  %>.png" alt="" height="30px" width="30px">
-                                    <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[0].visitante  %>_tipografia.png" alt=""  width="45px">
-                                    <h2><%= locals.isLogged ? locals.userLogged.grupos[0].partidos[0].resultado[1] : locals.prode.grupos[0].partidos[0].resultado[1]  %></h2>
-                                </div>
-                            </div>
-                            <% for( let i = 1; i < locals.prode.grupos[0].partidos.length; i++ ) { %>
-                                <% if( locals.prode.grupos[0].partidos[i].resultado[0] != "x") {%>
-                                <div class="partido">
-                                    <p class="descripcion_partido">
-                                        <%= locals.prode.grupos[0].partidos[i].fecha%> <%= locals.prode.grupos[0].partidos[i].hora%>
-                                    </p>
-                                        <div class="equipo_1">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].local  %>.png" alt=""  height="30px" width="30px">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].local  %>_tipografia.png" alt="" width="45px">
-                                            <h2><%=  locals.prode.grupos[0].partidos[i].resultado[0]  %></h2>
+                <div class="main_cuadros" >
+                    <p class="descripcion_cuadros">RESULTADOS COPA AMERICA:</p>
+                    <div class="cuadro">
+                        <div class="cuadros" id="cuadros">
+                            <div class="ronda_1">
+                                <p class="cuartos">Cuartos de Final:</p>
+                                <div class="partido_cuadros">
+                                    <div class="equipos_cuadros">
+                                        <div class="pais">
+                                            <img src="/Imagenes/Peru_tipografia.png" alt="" width="35px" class="tipografia">
+                                            <img src="/Imagenes/Peru.png" alt="">
                                         </div>
-                                        <p class="font_32">-</p>
-                                        <div class="equipo_2">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].visitante  %>.png" alt="" height="30px" width="30px">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[0].partidos[i].visitante  %>_tipografia.png" alt=""  width="45px">
-                                            <h2><%= locals.prode.grupos[0].partidos[i].resultado[1]  %></h2>
-                                        </div>                       
-                                </div>
-                                <% } } %>
-                        </form>
-                    </div>
-                    <div class="grupo_1">
-                        <p class="titulo_grupo">  GRUPO 2:</p>
-                        <form class="main_partidos">
-                            <div class="partido primer_partido">
-                                <p class="descripcion_partido">
-                                    <%= locals.prode.grupos[1].partidos[0].fecha%> <%= locals.prode.grupos[1].partidos[0].hora%>
-                                </p>
-                                    <div class="equipo_1">
-                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].local  %>.png" alt="" height="30px" width="30px">
-                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].local  %>_tipografia.png" alt="" width="45px">
-                                        <h2><%= locals.prode.grupos[1].partidos[0].resultado[0]  %></h2>
+                                        <div>
+                                            <img src="/Imagenes/Paraguay_tipografia.png" alt="" width="35px" class="tipografia">
+                                            <img src="/Imagenes/Paraguay.png" alt="">
+                                        </div>
                                     </div>
-                                    <p class="font_32">-</p>
-                                    <div class="equipo_2">
-                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].visitante  %>.png" alt="" height="30px" width="30px">
-                                        <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[0].visitante  %>_tipografia.png" alt=""  width="45px">
-                                        <h2><%=  locals.prode.grupos[1].partidos[0].resultado[1]  %></h2>
-                                    </div>                       
-                            </div>
-                            <% for( let i = 1; i < locals.prode.grupos[1].partidos.length; i++ ) { %>
-                            <% if( locals.prode.grupos[1].partidos[i].resultado[0] != "x") {%>
-                                <div class="partido">
-                                    <p class="descripcion_partido">
-                                        <%= locals.prode.grupos[1].partidos[i].fecha%> <%= locals.prode.grupos[1].partidos[i].hora%>
-                                    </p>
-                                        <div class="equipo_1">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].local  %>.png" alt="" height="30px" width="30px">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].local  %>_tipografia.png" alt="" width="45px">
-                                            <h2><%= locals.prode.grupos[1].partidos[i].resultado[0]  %></h2>
+                                    <div class="resultado_cuadros"> - </div>
+                                    <div class="border_cuadros">
+                                        <div class="palito_cuadro">
+
                                         </div>
-                                        <p class="font_32">-</p>
-                                        <div class="equipo_2">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].visitante  %>.png" alt="" height="30px" width="30px">
-                                            <img src="/Imagenes/<%= locals.prode.grupos[1].partidos[i].visitante  %>_tipografia.png" alt="" width="45px">
-                                            <h2><%= locals.prode.grupos[1].partidos[i].resultado[1]  %></h2>
-                                        </div>                       
+                                    </div>
                                 </div>
-                            <%  } }%>   
-                        </form>
+                                <div class="partido_cuadros">
+                                    <div class="equipos_cuadros">
+                                        <div class="pais">
+                                            <img src="/Imagenes/Brasil_tipografia.png" alt="" width="35px" class="tipografia">
+                                            <img src="/Imagenes/Brasil.png" alt="">
+                                        </div>
+                                        <div>
+                                            <img src="/Imagenes/Chile_tipografia.png" alt="" width="35px" class="tipografia">
+                                            <img src="/Imagenes/Chile.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resultado_cuadros"> - </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="ronda_2">
+                                <p class="semis">Semi-Final:</p>
+                                <div class="partido_cuadros">
+                                    <div class="equipos_cuadros">
+                                        <div class="pais">
+                                            <p>Cuartos 1</p>
+                                            <img src="/Imagenes/a-jugar.png" alt="">
+                                        </div>
+                                        <div>
+                                            <p>Cuartos 2</p>
+                                            <img src="/Imagenes/a-jugar.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resultado_cuadros"> - </div>
+                                    <div class="border_cuadros_semi">
+                                        <div class="palito_cuadro_semi">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="cuadros_dos">
+                            <div class="ronda_1">
+                                <div class="partido_cuadros">
+                                    <div class="equipos_cuadros">
+                                        <div class="pais">
+                                            <img src="/Imagenes/Uruguay_tipografia.png" alt="" width="35px" class="tipografia">
+                                            <img src="/Imagenes/Uruguay.png" alt="">
+                                        </div>
+                                        <div>
+                                            <img src="/Imagenes/Colombia_tipografia.png" alt="" width="35px" class="tipografia">
+                                            <img src="/Imagenes/Colombia.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resultado_cuadros"> - </div>
+                                    <div class="border_cuadros">
+                                        <div class="palito_cuadro">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="partido_cuadros">
+                                    <div class="equipos_cuadros">
+                                        <div class="pais">
+                                            <img src="/Imagenes/Argentina_tipografia.png" alt="" width="35px" class="tipografia">
+                                            <img src="/Imagenes/Argentina.png" alt="">
+                                        </div>
+                                        <div>
+                                            <img src="/Imagenes/Ecuador_tipografia.png" alt="" width="35px" class="tipografia">
+                                            <img src="/Imagenes/Ecuador.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resultado_cuadros"> - </div>
+                                </div>
+                            </div>
+                            <div class="ronda_2_2">
+                                <div class="partido_cuadros">
+                                    <div class="equipos_cuadros">
+                                        <div class="pais">
+                                            <p>Cuartos 3</p>
+                                            <img src="/Imagenes/a-jugar.png" alt="">
+                                        </div>
+                                        <div>
+                                            <p>Cuartos 4</p>
+                                            <img src="/Imagenes/a-jugar.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resultado_cuadros"> - </div>
+                                </div>
+                                
+                            </div>
+                            <div class="ronda_2">
+                                <div class="Final">
+                                    <p class="descripcion_final">GRAN FINAL:</p>
+                                    <div class="equipos_cuadros">
+                                        <div class="pais">
+                                            <p>Semis 1</p>
+                                            <img src="/Imagenes/a-jugar.png" alt="" height="60px"> 
+                                        </div>
+                                        <div>
+                                            <p>Semis 2</p>
+                                            <img src="/Imagenes/a-jugar.png" alt="" height="60px">
+                                        </div>
+                                    </div>
+                                    <div class="resultado_cuadros"> - </div>
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+              
             
         </section>
-        <div class="tabla" id="tabla">
-            <table cellspacing="0" cellpadding="0">
-                <tr class="destacado">
-                  <td translate="no">Puesto</td translate="no">
-                  <td translate="no">Nombre</td translate="no">
-                  <td translate="no">Puntos</td translate="no">
-                  <td translate="no">Plenos</td translate="no">
-                </tr>
-                <% for( let i = 0; i < users.length; i++ ) { %>
-                    <% if (i%2 ==0) { %>
-                        <tr class="fondo1">
-                            <td translate="no"><%= users[i].posicion%>º</td translate="no">
-                            <td translate="no">
-                                <%= users[i].username%>
-                            </td translate="no">
-                            <td translate="no"><%= users[i].puntos%></td translate="no">
-                            <td translate="no"> <%= users[i].plenos%></td="no">
-                        </tr>
-                     
-                    <% } else {%>
-                        <tr class="fondo2">
-                            <td translate="no"><%= users[i].posicion%>º</td translate="no">
-                            <td translate="no">
-                                <%= users[i].username%>
-                            </td translate="no">
-                            <td translate="no"><%= users[i].puntos%></td translate="no">
-                            <td translate="no"> <%= users[i].plenos%></td="no">
-                        </tr>
-            
-                        <% } %>
-                <% } %>
-
+        <div class="responsive_table">
+            <div class="tabla" id="tabla">
+                <table cellspacing="0" cellpadding="0">
+                    <tr class="destacado">
+                    <td translate="no">Puesto</td translate="no">
+                    <td translate="no">Nombre</td translate="no">
+                    <td translate="no">Puntos</td translate="no">
+                    <td translate="no">Plenos</td translate="no">
+                    </tr>
+                    <% for( let i = 0; i < users.length; i++ ) { %>
+                        <% if (i%2 ==0) { %>
+                            <tr class="fondo1">
+                                <td translate="no"><%= users[i].posicion%>º</td translate="no">
+                                <td translate="no">
+                                    <%= users[i].username%>
+                                </td translate="no">
+                                <td translate="no"><%= users[i].puntos%></td translate="no">
+                                <td translate="no"> <%= users[i].plenos%></td="no">
+                            </tr>
+                        
+                        <% } else {%>
+                            <tr class="fondo2">
+                                <td translate="no"><%= users[i].posicion%>º</td translate="no">
+                                <td translate="no">
+                                    <%= users[i].username%>
+                                </td translate="no">
+                                <td translate="no"><%= users[i].puntos%></td translate="no">
+                                <td translate="no"> <%= users[i].plenos%></td="no">
+                            </tr>
                 
-              </table>
-              <p class="p_reglas_index margin">Link para ver todos los prodes: <a class="a_reglas" target="_blank" href="https://drive.google.com/drive/folders/1_8CpnCPLDAL8d78kFg_oTcV02W3hWQUs?usp=sharing"> drive con PRODES</a></p>
+                            <% } %>
+                    <% } %>
+
+                    
+                </table>
+                <p class="p_reglas_index margin">Link para ver todos los prodes: <a class="a_reglas" target="_blank" href="https://drive.google.com/drive/folders/1_8CpnCPLDAL8d78kFg_oTcV02W3hWQUs?usp=sharing"> drive con PRODES</a></p>
+            </div>
         </div>
         
     </main>
