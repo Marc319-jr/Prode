@@ -74,6 +74,20 @@ const User ={
     },
 
 
+    createPartidoElim : function(info){
+        let user = this.findById(info.userId)
+        user.eliminatorias.cuartos.partidos[info.partido].resultado = info.resultado
+        let allUsers = this.findAll();
+        for(let i = 0; i< allUsers.length; i++)
+        {
+            if(allUsers[i].id == info.userId)
+            allUsers[i] = user;
+        }
+
+        this.save(allUsers);
+    },
+
+
 
 
 

@@ -15,6 +15,7 @@ router.get('/showprode', controller.showprode)
 
 router.post('/guardar' ,controller.save);
 router.post('/guardar/resultadosUser' , controller.saveUserResult);
+router.post('/guardar/resultadosUserElim' , controller.saveUserResultElim)
 router.post('/login' , controller.processLogin);
 
 

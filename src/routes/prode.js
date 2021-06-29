@@ -26,6 +26,7 @@ router.get('/resultados' , controller.resultadoUser);
 router.post('/crear' , controller.crear);
 router.post('/crearEquipos' ,fileUpload.single('bandera') , controller.crearEquipos);
 router.post('/crearPartido' , controller.crearPartido);
+router.post('/eliminatorias' , controller.eliminatorias)
 router.post('/:grupoId/:partidoId/:prodeId' , controller.resultado);
 
 

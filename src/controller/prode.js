@@ -75,6 +75,49 @@ const controller = {
     resultadoUser: (req,res) => {
         let allUsers = User.findAll()
         res.render('../src/views/info/otroUser' , {'users' : allUsers})
+    },
+    eliminatorias : (req,res) => {
+        let eliminatorias = {
+            cuartos: {
+                equipos: [req.body],
+                partidos: 
+                [
+                    {local: req.body.cuartos1Local , apodolocal: "Per" , visitante: req.body.cuartos1Visitante, apodovisitante: "Par" , fecha: "02/07/2021" , estadio: "" , resultado: ["x","x"] },
+                    {local: req.body.cuartos2Local , apodolocal: "Bra" , visitante: req.body.cuartos2Visitante, apodovisitante: "Chi" , fecha: "02/07/2021" , estadio: "" , resultado: ["x","x"] },
+                    {local: req.body.cuartos3Local , apodolocal: "Uru" , visitante: req.body.cuartos3Visitante, apodovisitante: "Col" , fecha: "03/07/2021" , estadio: "" , resultado: ["x","x"] },
+                    {local: req.body.cuartos4Local , apodolocal: "Arg" , visitante: req.body.cuartos4Visitante, apodovisitante: "Ecu" , fecha: "03/07/2021" , estadio: "" , resultado: ["x","x"] }
+                ]
+                
+
+            },
+            semis: {
+                equipos: [],
+                partidos: [{},{}]
+
+            },
+            final: {
+                equipos : [],
+                partido: {}
+            },
+            tercerPuesto: {
+                equipos : [],
+                partido: {}
+            }
+        }
+        let prodes = Prode.findAll();
+        let prode = prodes[(req.query.id -1)]
+        prode.eliminatorias = eliminatorias
+        prodes[(req.query.id -1)] = prode
+        Prode.save(prodes)
+        let users = User.findAll();
+        users.forEach(element => {
+            element.eliminatorias = eliminatorias;
+        });
+        User.save(users)
+        res.redirect("/")
+        
+
+
     }
 
 

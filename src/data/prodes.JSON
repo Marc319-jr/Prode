@@ -391,6 +391,87 @@
      }
     ]
    }
-  ]
+  ],
+  "eliminatorias": {
+   "cuartos": {
+    "equipos": [
+     {
+      "cuartos1Local": "Peru",
+      "cuartos1Visitante": "Paraguay",
+      "cuartos2Local": "Brasil",
+      "cuartos2Visitante": "Chile",
+      "cuartos3Local": "Uruguay",
+      "cuartos3Visitante": "Colombia",
+      "cuartos4Local": "Argentina",
+      "cuartos4Visitante": "Ecuador"
+     }
+    ],
+    "partidos": [
+     {
+      "local": "Peru",
+      "apodolocal": "Per",
+      "visitante": "Paraguay",
+      "apodovisitante": "Par",
+      "fecha": "02/07/2021",
+      "estadio": "",
+      "resultado": [
+       "x",
+       "x"
+      ]
+     },
+     {
+      "local": "Brasil",
+      "apodolocal": "Bra",
+      "visitante": "Chile",
+      "apodovisitante": "Chi",
+      "fecha": "02/07/2021",
+      "estadio": "",
+      "resultado": [
+       "x",
+       "x"
+      ]
+     },
+     {
+      "local": "Uruguay",
+      "apodolocal": "Uru",
+      "visitante": "Colombia",
+      "apodovisitante": "Col",
+      "fecha": "03/07/2021",
+      "estadio": "",
+      "resultado": [
+       "x",
+       "x"
+      ]
+     },
+     {
+      "local": "Argentina",
+      "apodolocal": "Arg",
+      "visitante": "Ecuador",
+      "apodovisitante": "Ecu",
+      "fecha": "03/07/2021",
+      "estadio": "",
+      "resultado": [
+       "x",
+       "x"
+      ]
+     }
+    ]
+   },
+   "semis": {
+    "equipos": [],
+    "partidos": [
+     {},
+     {}
+    ]
+   },
+   "final": {
+    "equipos": [],
+    "partido": {}
+   },
+   "tercerPuesto": {
+    "equipos": [],
+    "partido": {}
+   }
+  }
  }
 ]

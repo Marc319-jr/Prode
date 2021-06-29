@@ -89,8 +89,22 @@ const controller = {
         console.log("el user id es");
         console.log(userId);
         user = User.findById(userId)
-        res.send(user)
+        res.render('../src/views/user/resultados', {'participante' : user});
 
+    },
+
+    saveUserResultElim : (req,res) => { 
+        let resultado = [req.body.local , req.body.visitante]
+        let userId = req.query.userId
+        let info = {
+            userId,
+            grupo: req.query.grupoId,
+            partido: req.query.partidoId,
+            resultado
+        }
+        User.createPartidoElim(info);
+        let user = User.findById(userId)
+        res.render('../src/views/user/resultados', {'participante' : user});
     }
 }
 
