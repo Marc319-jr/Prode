@@ -8,12 +8,12 @@
 }
 /*----------------------Header -----------------------*/
 header{
-    min-width: 700px;
+    min-width: 730px;
     background-color: #01584c;
 }
 .header{
     width: 100vw;
-    min-width: 700px;
+    min-width: 730px;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -88,7 +88,7 @@ header img {
 }
 /*-----------------------main --------------------*/
 main{
-    min-width: 700px;
+    min-width: 730px;
 }
 #editMe.design_{
     display: none !important;
@@ -253,7 +253,7 @@ input[type=submit] {
     justify-content: space-around;
     align-items: center;
     width: 100vw;
-    min-width: 700px;
+    min-width: 730px;
 }
 .puesto_actual {
     display: flex;
@@ -317,7 +317,7 @@ tr{
       align-items: center;
       justify-content: center;
       width: 100vw;
-      min-width: 700px;
+      min-width: 730px;
       
   }
   .responsive_table {
@@ -342,7 +342,7 @@ tr{
     border-bottom: 2px #73ae20 solid;
     padding: 10px;
     width: 100vw;
-    min-width: 700px;
+    min-width: 730px;
 }
 .equipo_1 h2, .equipo_2 h2, .font_32{
     font-size: 32px;
@@ -391,7 +391,7 @@ tr{
     .before_match{
         font-size: 16px;
         width: 100vw;
-        min-width: 700px;
+        min-width: 730px;
     }
    .prode{
        flex-direction: column;
@@ -420,7 +420,7 @@ tr{
     }
     table{
         width: 100vw;
-        min-width: 700px;
+        min-width: 730px;
     }
   }
 /*-------------------Login y Register-----------------*/
