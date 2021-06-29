@@ -202,6 +202,9 @@ input[type=submit] {
     cursor: pointer;
     margin: 5px;
 }
+.color_prodes{
+    color: #ffd768;
+}
 .prode {
     display: flex;
     justify-content: space-around;
