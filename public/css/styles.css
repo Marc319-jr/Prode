@@ -13,6 +13,7 @@ header{
 }
 .header{
     width: 100vw;
+    min-width: 700px;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -252,6 +253,7 @@ input[type=submit] {
     justify-content: space-around;
     align-items: center;
     width: 100vw;
+    min-width: 700px;
 }
 .puesto_actual {
     display: flex;
@@ -315,6 +317,7 @@ tr{
       align-items: center;
       justify-content: center;
       width: 100vw;
+      min-width: 700px;
       
   }
   .responsive_table {
@@ -339,6 +342,7 @@ tr{
     border-bottom: 2px #73ae20 solid;
     padding: 10px;
     width: 100vw;
+    min-width: 700px;
 }
 .equipo_1 h2, .equipo_2 h2, .font_32{
     font-size: 32px;
@@ -387,6 +391,7 @@ tr{
     .before_match{
         font-size: 16px;
         width: 100vw;
+        min-width: 700px;
     }
    .prode{
        flex-direction: column;
@@ -415,6 +420,7 @@ tr{
     }
     table{
         width: 100vw;
+        min-width: 700px;
     }
   }
 /*-------------------Login y Register-----------------*/
