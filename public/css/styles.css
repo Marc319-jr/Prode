@@ -884,7 +884,7 @@ body .register .formulario form a{
     margin-top: 100px;
     max-width: 450px;
 }
-@media (max-width:1400px) {
+@media (max-width:1150px) {
     .cuadro_partido {
         flex-direction: column-reverse;
         justify-content: center;
