@@ -44,6 +44,17 @@
                     </div>
                 </div>
             <% } %>
+            <% if(locals.isLogged) { %>
+                <div class="puesto_actual">
+                    <p class="titulo_proximo_partido"> Inscripcion al Prode:</p>
+                    <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+data-preference-id="337647185-6890de76-29c7-4032-aa86-c9509b632a94" data-source="button">
+</script>
+                </div>
+
+
+            <% } %>
+
             </div>
         </div>
         <section class="prode_main">
