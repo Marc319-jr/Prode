@@ -893,3 +893,31 @@ body .register .formulario form a{
         width: 100vw;
     }
 }
+
+
+/**************************************Pago/*********************/
+
+
+.main_pago {
+    background-color: rgb(2, 80, 80);
+    height: 87.3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: unset !important;
+}
+.pago{
+    font-size: 64px;
+    text-align: center;
+    color: #ffffff;
+}
+.a_pago {
+    font-size: 28px;
+    text-align: center;
+    color: #ffffff;
+}
+.pago_a {
+    color: #ffd768;
+}
