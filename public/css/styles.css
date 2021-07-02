@@ -382,12 +382,14 @@ tr{
       }
     .puesto_actual{
         width: 80vw;
+        margin: 20px;
     }
     .bandera_prox {
         display: unset;
     }
     .proximo_partido{
         width: 80vw;
+        margin: 20px;
     }
     .grupo_1{
         width: 80vw;
@@ -402,11 +404,11 @@ tr{
        justify-content: center;
    }
    .main_1{
-       height: 700px;
+       height: 900px;
     }
     .encabezado_main {
         flex-direction: column;
-        height: 700px;
+        height: 900px;
     }
     td {
         border-right:2px solid white ;
