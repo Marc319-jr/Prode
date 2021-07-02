@@ -116,8 +116,16 @@ const controller = {
         User.save(users)
         res.redirect("/")
         
+    },
 
-
+    resutltadoEliminatorias : (req,res) => {
+        let info = {
+            prodeId: (req.params.prodeId-1),
+            grupoId: req.params.grupoId,
+            partidoId: req.params.partidoId,
+            ...req.body
+        }
+        console.log("Voy a editar la siguiente info");
     }
 
 

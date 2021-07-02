@@ -99,193 +99,29 @@
                     </div>
 
                     <% } %>
+                    
             </div>
-            <div class = "eliminatorias" style = "text-align: center; margin-top: 20px;">
-                <h1>Crear fase eliminatoria para el prode <%= prode.id  %> </h1>
-            </div>
-            <form action="/prode/eliminatorias?id=<%= prode.id %>" method="POST">
-            <div class="main_cuadros" >
-                <p class="descripcion_cuadros">RESULTADOS COPA AMERICA:</p>
-                <div class="cuadro">
-                    <div class="cuadros" id="cuadros">
-                        <div class="ronda_1">
-                            <p class="cuartos">Cuartos de Final:</p>
-                            <div class="partido_cuadros">
-                                <div class="equipos_cuadros">
-                                    <div class="pais">
-                                        <select name = "cuartos1Local">
-                                            <option>Equipo 1</option>
-                                            <% for( let i = 0; i < prode.cantgrupos; i++ ) { %>
-                                                <% for( let j = 0; j < prode.cantequipos/2; j++ ) { %>
-                                                   <option> <%= prode.grupos[i].equipos[j].nombre  %> </option>                                              
-                                                <% } %>                                
-                                            <% } %>              
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <select name = "cuartos1Visitante">
-                                            <option>Equipo 2</option>
-                                            <% for( let i = 0; i < prode.cantgrupos; i++ ) { %>
-                                                <% for( let j = 0; j < prode.cantequipos/2; j++ ) { %>
-                                                   <option> <%= prode.grupos[i].equipos[j].nombre  %> </option>                                  
-                                                <% } %>                             
-                                            <% } %>                                          
-                                        </select>     
-                                    </div>
-                                </div>
-                                <div class="resultado_cuadros"> - </div>
-                                <div class="border_cuadros">
-                                    <div class="palito_cuadro">
+            <h1 id = "titulo">Eliminatorias del prode:  <%= prode.id  %> </h1>
+            <div class="crearEquipos">
+                <% fases = [ "cuartos" , "Semi Finales" , "GRAN FINAL" , "3er Puesto"]; %>
+                <% for( let i = 0; i < 4; i++ ) { %>
+                    <div class="grupo" style="flex-direction: column;">
+                        <h1> <%= fases[i] %></h1>
+                            <div class  ="partidoElim">
 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="partido_cuadros">
-                                <div class="equipos_cuadros">
-                                    <div class="pais">
-                                        <select name = "cuartos2Local">
-                                            <option>Equipo 1</option>
-                                            <% for( let i = 0; i < prode.cantgrupos; i++ ) { %>
-                                                <% for( let j = 0; j < prode.cantequipos/2; j++ ) { %>
-                                                   <option> <%= prode.grupos[i].equipos[j].nombre  %> </option>                                              
-                                                <% } %>                                
-                                            <% } %>              
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <select name = "cuartos2Visitante">
-                                            <option>Equipo 2</option>
-                                            <% for( let i = 0; i < prode.cantgrupos; i++ ) { %>
-                                                <% for( let j = 0; j < prode.cantequipos/2; j++ ) { %>
-                                                   <option> <%= prode.grupos[i].equipos[j].nombre  %> </option>                                  
-                                                <% } %>                             
-                                            <% } %>                                          
-                                        </select>     
-                                    </div>
-                                </div>
-                                <div class="resultado_cuadros"> - </div>
-                                
-                            </div>
-                        </div>
-                        <div class="ronda_2">
-                            <p class="semis">Semi-Final:</p>
-                            <div class="partido_cuadros">
-                                <div class="equipos_cuadros">
-                                    <div class="pais">
-                                        <p>Cuartos 1</p>
-                                        <img src="/Imagenes/a-jugar.png" alt="">
-                                    </div>
-                                    <div>
-                                        <p>Cuartos 2</p>
-                                        <img src="/Imagenes/a-jugar.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="resultado_cuadros"> - </div>
-                                <div class="border_cuadros_semi">
-                                    <div class="palito_cuadro_semi">
-
-                                    </div>
-                                </div>
-                            </div>
                             
-                        </div>
+                            </div>
+                        
+                    
+                    
+                    
+                    
                     </div>
-                    <div class="cuadros_dos">
-                        <div class="ronda_1">
-                            <div class="partido_cuadros">
-                                <div class="equipos_cuadros">
-                                    <div class="pais">
-                                        <select name = "cuartos3Local">
-                                            <option>Equipo 1</option>
-                                            <% for( let i = 0; i < prode.cantgrupos; i++ ) { %>
-                                                <% for( let j = 0; j < prode.cantequipos/2; j++ ) { %>
-                                                   <option> <%= prode.grupos[i].equipos[j].nombre  %> </option>                                              
-                                                <% } %>                                
-                                            <% } %>              
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <select name = "cuartos3Visitante">
-                                            <option>Equipo 2</option>
-                                            <% for( let i = 0; i < prode.cantgrupos; i++ ) { %>
-                                                <% for( let j = 0; j < prode.cantequipos/2; j++ ) { %>
-                                                   <option> <%= prode.grupos[i].equipos[j].nombre  %> </option>                                  
-                                                <% } %>                             
-                                            <% } %>                                          
-                                        </select>     
-                                    </div>
-                                </div>
-                                <div class="resultado_cuadros"> - </div>
-                                <div class="border_cuadros">
-                                    <div class="palito_cuadro">
+                <% } %>
 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="partido_cuadros">
-                                <div class="equipos_cuadros">
-                                    <div class="pais">
-                                        <select name = "cuartos4Local">
-                                            <option>Equipo 1</option>
-                                            <% for( let i = 0; i < prode.cantgrupos; i++ ) { %>
-                                                <% for( let j = 0; j < prode.cantequipos/2; j++ ) { %>
-                                                   <option> <%= prode.grupos[i].equipos[j].nombre  %> </option>                                              
-                                                <% } %>                                
-                                            <% } %>              
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <select name = "cuartos4Visitante">
-                                            <option>Equipo 2</option>
-                                            <% for( let i = 0; i < prode.cantgrupos; i++ ) { %>
-                                                <% for( let j = 0; j < prode.cantequipos/2; j++ ) { %>
-                                                   <option> <%= prode.grupos[i].equipos[j].nombre  %> </option>                                  
-                                                <% } %>                             
-                                            <% } %>                                          
-                                        </select>     
-                                    </div>
-                                </div>
-                                <div class="resultado_cuadros"> - </div>
-                            </div>
-                        </div>
-                        <div class="ronda_2_2">
-                            <div class="partido_cuadros">
-                                <div class="equipos_cuadros">
-                                    <div class="pais">
-                                        <p>Cuartos 3</p>
-                                        <img src="/Imagenes/a-jugar.png" alt="">
-                                    </div>
-                                    <div>
-                                        <p>Cuartos 4</p>
-                                        <img src="/Imagenes/a-jugar.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="resultado_cuadros"> - </div>
-                            </div>
-                            
-                        </div>
-                        <div class="ronda_2">
-                            <div class="Final">
-                                <p class="descripcion_final">GRAN FINAL:</p>
-                                <div class="equipos_cuadros">
-                                    <div class="pais">
-                                        <p>Semis 1</p>
-                                        <img src="/Imagenes/a-jugar.png" alt="" height="60px"> 
-                                    </div>
-                                    <div>
-                                        <p>Semis 2</p>
-                                        <img src="/Imagenes/a-jugar.png" alt="" height="60px">
-                                    </div>
-                                </div>
-                                <div class="resultado_cuadros"> - </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
             </div>
-            <button type="submit" style="width: 200px; margin: 20px; " >Crear</button>
-        </form>
+
+            
         
         </main>
 </body>
