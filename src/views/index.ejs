@@ -9,41 +9,50 @@
         
         <div class="main_1" id="#main_1">
            <div class="encabezado_main">
-            <div class="proximo_partido">
-                <p class="titulo_proximo_partido">PROXIMO PARTIDO:</p>
-                <div class="partido_proximo">
-                    <div class="equipo_1">
-                        <img src="/Imagenes/Peru.png" alt="" height="30px" width="30px" class="bandera_prox">
-                        <img src="/Imagenes/Peru_tipografia.png" alt=""  width="45px">
-                        
+                <div class="proximo_partido">
+                    <p class="titulo_proximo_partido">PROXIMO PARTIDO:</p>
+                    <div class="partido_proximo">
+                        <div class="equipo_1">
+                            <img src="/Imagenes/Peru.png" alt="" height="30px" width="30px" class="bandera_prox">
+                            <img src="/Imagenes/Peru_tipografia.png" alt=""  width="45px">
+                            
+                        </div>
+                        <a href="#prode">
+                            <input class="boton_prode" type="submit" value="Ir al Prode">
+                        </a>
+                        <div class="equipo_2">
+                            <img src="/Imagenes/Paraguay.png" alt="" height="30px" width="30px" class="bandera_prox">
+                            <img src="/Imagenes/Paraguay_tipografia.png" alt=""  width="45px" >
+                        </div>
                     </div>
-                    <a href="#prode">
-                        <input class="boton_prode" type="submit" value="Ir al Prode">
-                    </a>
-                    <div class="equipo_2">
-                        <img src="/Imagenes/Paraguay.png" alt="" height="30px" width="30px" class="bandera_prox">
-                        <img src="/Imagenes/Paraguay_tipografia.png" alt=""  width="45px" >
-                    </div>
-                </div>
 
-            </div>
-            <% if(locals.isLogged) { %>
-                <div class="puesto_actual">
-                    <div class="fila_puesto">
-                        <p class="titulo_proximo_partido"> TU PUESTO ES:</p>
-                        <p class="puesto"> <%= locals.userLogged.posicion %>º</p>
-                    </div>
-                    <div class="fila_puesto">
-                        <p class="descripcion_proximo_partido">PUNTOS:</p>
-                        <p class="descripcion_proximo_partido"> <%= locals.userLogged.puntos %> </p>
-                    </div>
-                    <div>
-                    <a href="#tabla">
-                        <input class="tabla_input" type="submit" value="Ir a la tabla">
-                    </a>
-                    </div>
                 </div>
-            <% } %>
+                <% if(locals.isLogged) { %>
+                    <div class="puesto_actual">
+                        <div class="fila_puesto">
+                            <p class="titulo_proximo_partido"> TU PUESTO ES:</p>
+                            <p class="puesto"> <%= locals.userLogged.posicion %>º</p>
+                        </div>
+                        <div class="fila_puesto">
+                            <p class="descripcion_proximo_partido">PUNTOS:</p>
+                            <p class="descripcion_proximo_partido"> <%= locals.userLogged.puntos %> </p>
+                        </div>
+                        <div>
+                        <a href="#tabla">
+                            <input class="tabla_input" type="submit" value="Ir a la tabla">
+                        </a>
+                        </div>
+                    </div>
+                <% } %>
+                <% if(locals.isLogged) { %>
+                    <div class="puesto_actual">
+                        <p class="titulo_proximo_partido"> Inscripcion al Prode:</p>
+                        <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"data-preference-id="337647185-6890de76-29c7-4032-aa86-c9509b632a94" data-source="button"></script>
+                    </div>
+
+
+                <% } %>
+
             </div>
         </div>
         <section class="prode_main">

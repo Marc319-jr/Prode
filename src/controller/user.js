@@ -1,6 +1,10 @@
 const Prode = require('../model/Prode');
 const User = require('../model/User');
 const controller = {
+    pago: (req,res) => {
+        res.render('../src/views/user/pago');
+
+    },
     login: (req,res) => {
         res.render('../src/views/user/login');
 
@@ -31,7 +35,7 @@ const controller = {
     },
     reglas: (req,res) => {
         res.render('../src/views/user/reglas');
-    }, 
+    },
     create: (req,res) => {
         let prodes = Prode.findAll();
         res.render("../src/views/user/create" , {'prodes' : prodes});
