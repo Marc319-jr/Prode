@@ -246,7 +246,7 @@ const User ={
                 usersProde[i].posicion = (i+1);
             }
          
-            fs.writeFileSync(this.filename ,JSON.stringify(usersProde, null,' '))
+            //fs.writeFileSync(this.filename ,JSON.stringify(usersProde, null,' '))
 
 
 
