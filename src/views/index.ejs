@@ -58,6 +58,7 @@
         <section class="prode_main">
             <% if (locals.isLogged) { %>
                 <span></span>
+                <p class="descripcion_cuadros">PRODE PRIMERA FASE:</p>
                 <P class="before_match">El prode corresponde a: <%= locals.userLogged.username %>, te deseamos suerte! </P>
                 <p class="before_match "><a class="color_prodes" href="/prode/resultados">Click aca para ver a los otros prodes</a></p>
 
@@ -137,7 +138,7 @@
                     </div> 
                 </div>
                 <div class="main_cuadros" >
-                    <p class="descripcion_cuadros">RESULTADOS COPA AMERICA:</p>
+                    <p class="descripcion_cuadros">RESULTADOS SEGUNDA FASE:</p>
                     <div class="cuadro_partido">
                         <div class="cuadro">
                             <div class="cuadros" id="cuadros">
@@ -270,9 +271,9 @@
                         </div>
                         <% if(locals.isLogged) { %>
                         <div class="grupo_final">
-                            <p class="titulo_proximo_partido">TU PRODE DE LOS CUADROS:</p>
+                            <p class="titulo_grupo">TU PRODE DE LOS CUADROS:</p>
                             <% for( let i = 0; i < locals.prode.eliminatorias.cuartos.partidos.length; i++ ) { %>
-                                <div class="partido">
+                                <div class="partido border">
                                         <div class="equipo_1">
                                             <img src="/Imagenes/<%= locals.prode.eliminatorias.cuartos.partidos[i].local  %>.png" alt="" height="30px" width="30px">
                                             <img src="/Imagenes/<%= locals.prode.eliminatorias.cuartos.partidos[i].local  %>_tipografia.png" alt=""  width="45px">
@@ -295,6 +296,7 @@
             
         </section>
         <div class="responsive_table">
+            <p class="descripcion_cuadros">TABLA DE POSICIONES:</p>
             <div class="tabla" id="tabla">
                 <table cellspacing="0" cellpadding="0">
                     <tr class="destacado">

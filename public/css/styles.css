@@ -334,6 +334,7 @@ tr{
   }
   .responsive_table {
     background-color: #0F3E76;
+    padding-top: 20px;
   }
   .a_reglas {
     color: #019bb6;
@@ -358,7 +359,9 @@ tr{
 .equipo_1 h2, .equipo_2 h2, .font_32{
     font-size: 32px;
 }
-
+.border:first-child{
+    border-bottom: 1px solid #000000;
+}
 @media (max-width: 1200px) {
      .titulo_proximo_partido{
          font-size: 20px;
