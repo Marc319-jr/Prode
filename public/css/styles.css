@@ -2,18 +2,26 @@
     padding: 0;
     margin: 0;
     font-family: 'montserrat', sans-serif;
+    margin-left: 0; margin-right: 0;
+    box-sizing: border-box;
 }
 .none {
     display: none;
 }
+html{
+    width: 100vw;
+    min-width: 730px;
+    padding: 0;
+    margin: 0;
+}
 /*----------------------Header -----------------------*/
 header{
-    min-width: 730px;
+    
     background-color: #01584c;
 }
 .header{
-    width: 99vw;
-    min-width: 730px;
+    width: 100%;
+    
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -73,11 +81,12 @@ header img {
         flex-direction: column;
         top: 125px;
         left: 0px;
+        min-width: 730px;
 		position: absolute;
 		z-index: 1000;
         color: #000;
         width: 100%;
-        min-width: 730px;
+        
     }
     .menu_mobile_bt{ display: block; margin-right: 2%;}
     .title{
@@ -88,9 +97,7 @@ header img {
     }
 }
 /*-----------------------main --------------------*/
-main{
-    min-width: 730px;
-}
+
 #editMe.design_{
     display: none !important;
 }
@@ -110,6 +117,7 @@ main{
     color: #ffffff;
     font-size: 26px;
     text-align: center;
+    margin: 0px;
 }
 .prode_main {
     padding: 50px 10px;
@@ -256,8 +264,8 @@ input[type=submit] {
     height: 500px;
     justify-content: space-around;
     align-items: center;
-    width: 99vw;
-    min-width: 730px;
+    width: 100%;
+    
 }
 .puesto_actual {
     display: flex;
@@ -320,8 +328,8 @@ tr{
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 99vw;
-      min-width: 730px;
+      width: 100%;
+      
       
   }
   .responsive_table {
@@ -345,7 +353,7 @@ tr{
     justify-content: space-around;
     border-bottom: 2px #73ae20 solid;
     padding: 10px;
-    min-width: 730px;
+    
 }
 .equipo_1 h2, .equipo_2 h2, .font_32{
     font-size: 32px;
@@ -396,8 +404,7 @@ tr{
     }
     .before_match{
         font-size: 16px;
-        width: 100vw;
-        min-width: 730px;
+        
     }
    .prode{
        flex-direction: column;
@@ -426,7 +433,7 @@ tr{
     }
     table{
         width: 100vw;
-        min-width: 730px;
+        
     }
   }
 /*-------------------Login y Register-----------------*/
