@@ -155,7 +155,7 @@
                                                 <img src="/Imagenes/Paraguay.png" alt="">
                                             </div>
                                         </div>
-                                        <div class="resultado_cuadros"> - </div>
+                                        <div class="resultado_cuadros"> 3(4) - 3(3) </div>
                                         <div class="border_cuadros">
                                             <div class="palito_cuadro">
 
@@ -173,7 +173,7 @@
                                                 <img src="/Imagenes/Chile.png" alt="">
                                             </div>
                                         </div>
-                                        <div class="resultado_cuadros"> - </div>
+                                        <div class="resultado_cuadros"> 1 - 0 </div>
                                         
                                     </div>
                                 </div>
@@ -312,8 +312,8 @@
                                 <td translate="no">
                                     <%= users[i].username%>
                                 </td translate="no">
-                                <td translate="no"><%= users[i].puntos%></td translate="no">
-                                <td translate="no"> <%= users[i].plenos%></td="no">
+                                <td translate="no"><%= (users[i].puntos + users[i].puntosEliminatorias)%></td translate="no">
+                                <td translate="no"> <%= (users[i].plenos) + users[i].plenosEliminatorias %></td="no">
                             </tr>
                         
                         <% } else {%>
@@ -322,8 +322,8 @@
                                 <td translate="no">
                                     <%= users[i].username%>
                                 </td translate="no">
-                                <td translate="no"><%= users[i].puntos%></td translate="no">
-                                <td translate="no"> <%= users[i].plenos%></td="no">
+                                <td translate="no"><%= (users[i].puntos + users[i].puntosEliminatorias)%></td translate="no">
+                                <td translate="no"> <%= (users[i].plenos) + users[i].plenosEliminatorias %></td="no">
                             </tr>
                 
                             <% } %>

@@ -102,12 +102,46 @@
                     
             </div>
             <h1 id = "titulo">Eliminatorias del prode:  <%= prode.id  %> </h1>
-            <div class="crearEquipos">
-                <% fases = [ "cuartos" , "Semi Finales" , "GRAN FINAL" , "3er Puesto"]; %>
-                <% for( let i = 0; i < 4; i++ ) { %>
                     <div class="grupo" style="flex-direction: column;">
-                        <h1> <%= fases[i] %></h1>
                             <div class  ="partidoElim">
+                                <h1 id = "titulo">Cuartos</h1>
+                                    <% for( let i = 0; i < prode.eliminatorias.cuartos.partidos.length; i++ ) { %>
+                                        <div id  ="partido">
+                                            <% if (prode.eliminatorias.cuartos.partidos[i].resultado[0] == "x") { %>
+                                                <form action="/prode/insertarCuartos?prodeID=<%=prode.id%>&partidoId=<%=i%>" method="POST">
+                                                    <h2><%= prode.eliminatorias.cuartos.partidos[i].local %></h2>
+                                                    <img src="/Imagenes/<%= prode.eliminatorias.cuartos.partidos[i].local  %>.png" alt="" height="40px" width="40px">
+                                                    <input type="number" name="local">
+                                                    <h1>vs</h1>
+                                                    <img src="/Imagenes/<%= prode.eliminatorias.cuartos.partidos[i].visitante  %>.png" alt="" height="40px" width="40px">
+                                                    <input type="number" name="visitante">
+                                                    <h2><%= prode.eliminatorias.cuartos.partidos[i].visitante %></h2>
+                                                    <h1>penales?</h1>
+                                                    <h2>Local</h2>
+                                                    <input type="number" name="penalesLocal">
+                                                    <h2>Visitante</h2>
+                                                    <input type="number" name="penalesVisitante">
+                                                    <br>
+                                                    <button type="submit">Insertar</button>
+                                                </form>
+                                            <% } else { %>
+                                                <h2><%= prode.eliminatorias.cuartos.partidos[i].local %></h2>
+                                                    <img src="/Imagenes/<%= prode.eliminatorias.cuartos.partidos[i].local  %>.png" alt="" height="40px" width="40px">
+                                                    <h2><%= prode.eliminatorias.cuartos.partidos[i].resultado[0] %></h2>
+
+                                                    <h1>vs</h1>
+                                                    <img src="/Imagenes/<%= prode.eliminatorias.cuartos.partidos[i].visitante  %>.png" alt="" height="40px" width="40px">
+                                                    <h2><%= prode.eliminatorias.cuartos.partidos[i].resultado[1] %></h2>
+                                                    <h2><%= prode.eliminatorias.cuartos.partidos[i].visitante %></h2>
+
+                                                <% } %>
+
+
+                                        
+                                    </div>
+
+                                    <% } %>
+
 
                             
                             </div>
@@ -117,7 +151,6 @@
                     
                     
                     </div>
-                <% } %>
 
             </div>
 

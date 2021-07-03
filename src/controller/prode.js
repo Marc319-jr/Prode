@@ -120,12 +120,15 @@ const controller = {
 
     resutltadoEliminatorias : (req,res) => {
         let info = {
-            prodeId: (req.params.prodeId-1),
-            grupoId: req.params.grupoId,
-            partidoId: req.params.partidoId,
-            ...req.body
+            prodeId: (req.query.prodeID),
+            fase: "eliminatorias",
+            partidoId: req.query.partidoId,
+            resultado: [req.body.local,req.body.visitante],
+            penales: [req.body.penalesLocal , req.body.penalesVisitante]
         }
-        console.log("Voy a editar la siguiente info");
+        let prode = Prode.resutladoEliminatorias(info);
+        User.puntosYposicionesEliminatorias(prode);
+        res.redirect("/")
     }
 
 

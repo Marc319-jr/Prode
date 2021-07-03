@@ -87,6 +87,24 @@ const Prode = {
     allProdes[info.prodeId] = prode;
     fs.writeFileSync(this.filename ,JSON.stringify(allProdes, null,' '))
     return prode
+    },
+
+
+    resutladoEliminatorias(info){
+        let idProde = (info.prodeId - (1))
+        let idPartido = info.partidoId;
+        let resultado = info.resultado;
+        let penales = info.penales;
+        let allProdes = this.findAll();
+        let prode = allProdes[idProde];
+        prode.eliminatorias.cuartos.partidos[idPartido].resultado = resultado
+        if(penales[0] >= 0)
+        {
+        prode.eliminatorias.cuartos.partidos[idPartido].penales = penales
+        }
+        allProdes[idProde] = prode
+        fs.writeFileSync(this.filename ,JSON.stringify(allProdes, null,' '))
+        return prode
     }
 }
 

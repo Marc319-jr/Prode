@@ -127,7 +127,7 @@ const User ={
             info.puntos = 1
             if(this.esPleno(resultadoUser,resultadoProde)){
                 console.log("es pleno");
-                info.puntos=3;
+                info.puntos=4;
                 info.pleno = true
             }
             console.log(info);
@@ -139,7 +139,7 @@ const User ={
             info.puntos = 1
             if(this.esPleno(resultadoUser,resultadoProde)){
                 console.log("es pleno");
-                info.puntos=3;
+                info.puntos=4;
                 info.pleno = true
             }
             console.log(info);
@@ -151,7 +151,7 @@ const User ={
             info.puntos = 1
             if(this.esPleno(resultadoUser,resultadoProde)){
                 console.log("es pleno");
-                info.puntos=3;
+                info.puntos=4;
                 info.pleno = true
             }
             console.log(info);
@@ -246,20 +246,152 @@ const User ={
                 usersProde[i].posicion = (i+1);
             }
          
-            //fs.writeFileSync(this.filename ,JSON.stringify(usersProde, null,' '))
+            fs.writeFileSync(this.filename ,JSON.stringify(usersProde, null,' '))
+    },
 
+    calculaPuntosEliminatorias: function(resultadoUser , resultadoProde){
 
+        console.log(" ----------");
+        console.log(resultadoUser);
+        console.log("vs");
+        console.log(resultadoProde);
+        console.log(" ----------");
+        let sumaUser = resultadoUser[0] - resultadoUser[1];
+        let sumaProde = (resultadoProde[0]) - (resultadoProde[1]);
+        console.log("Suma user:" + sumaUser);
+        console.log("Suma prode:" + sumaProde);
+        let info = {
+            puntos : 0,
+            pleno: false
+        }
+        if(sumaUser == 0 && sumaProde ==0) 
+        {
+            console.log("empate acertado");
+            info.puntos = 1
+            if(this.esPleno(resultadoUser,resultadoProde)){
+                console.log("es pleno");
+                info.puntos=4;
+                info.pleno = true
+            }
+            console.log(info);
+            return info
+        }
+        else if(sumaUser >0 && sumaProde >0)
+        {
+            console.log("victoria local asertda");
+            info.puntos = 1
+            if(this.esPleno(resultadoUser,resultadoProde)){
+                console.log("es pleno");
+                info.puntos=4;
+                info.pleno = true
+            }
+            console.log(info);
+            return info
+        }
+        else if(sumaUser <0 && sumaProde <0)
+        {
+            console.log("victoria visitante acertada");
+            info.puntos = 1
+            if(this.esPleno(resultadoUser,resultadoProde)){
+                console.log("es pleno");
+                info.puntos=4;
+                info.pleno = true
+            }
+            console.log(info);
+            return info
+        }
+        else
+        {
+            console.log("no acerto");
+            info.puntos = 0
+            console.log(info);
+            return info
+        }
+    },
 
+    sumaPuntosEliminatorias: function(user, prode)
+    {
+        console.log("************************");
+        console.log("Estoy en suma puntos Eliminatorias");
+        console.log("***********************");
+        console.log("Nombre: " + user.username);
+        console.log("Puntos:" +user.puntos);
+        user.puntosEliminatorias =0;
+        user.plenosEliminatorias = 0;
+        
+
+   
+            for(let j = 0;j<prode.eliminatorias.cuartos.partidos.length; j++)
+            {
+               let info =  this.calculaPuntosEliminatorias(user.eliminatorias.cuartos.partidos[j].resultado , prode.eliminatorias.cuartos.partidos[j].resultado)
+               user.puntosEliminatorias += info.puntos
+               if(info.pleno){
+                   user.plenosEliminatorias ++;
+               }
+            }
+        console.log("Nombre: " + user.username);
+        console.log("Puntos eliminatorias:" +user.puntosEliminatorias);
+        console.log("plenos eliminatorias:" + user.plenosEliminatorias);
+        console.log("Me fui de suma puntos");
+        console.log("*********************");
+
+    },
+
+    puntosYposicionesEliminatorias : function(prode){
+        console.log("************************");
+        console.log("Estoy en calcula puntosYposiciones de eliminatorias");
+        console.log("***********************");
+        console.log("vine desde Prode a User");
+        console.log(prode);
+        console.log("prode: " + (prode.id-1));
+        let allUsers = this.findAll();
+        let usersProde = []
+        allUsers.forEach(element => {
+            if(element.prode == (prode.id-1))
+            {
+             usersProde.push(element)
+            }
+            
+        });
+        console.log(usersProde);
+        usersProde.forEach(element =>
+            {
+                this.sumaPuntosEliminatorias(element, prode)
+            });
+            usersProde.sort((a,b) => {
+                if(a.puntos < b.puntos)
+                {
+                    return 1;
+                }
+                else if( a.puntos > b.puntos)
+                {
+                    return -1
+                }
+                else if(a.plenos < b.plenos)
+                {
+                    return 1;
+                }
+                else if( a.plenos > b.plenos)
+                {
+                    return -1
+                }
+                else{
+                    return 0
+                }
+            });
+            console.log(usersProde);
+            for(let i = 0;i<usersProde.length;i++)
+            {
+                usersProde[i].posicion = (i+1);
+            }
+         
+            fs.writeFileSync(this.filename ,JSON.stringify(usersProde, null,' '))
 
     }
-    
 }
 
 
-
-
-
 let prode = Prode.findAll()[0];
-//User.puntosYposiciones(prode);
+//User.puntosYposicionesEliminatorias(prode);
 
 module.exports = User

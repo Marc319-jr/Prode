@@ -477,7 +477,9 @@
     "equipos": [],
     "partido": {}
    }
-  }
+  },
+  "puntosEliminatorias": 2,
+  "plenosEliminatorias": 0
  },
  {
   "id": 7,
@@ -957,7 +959,9 @@
     "equipos": [],
     "partido": {}
    }
-  }
+  },
+  "puntosEliminatorias": 2,
+  "plenosEliminatorias": 0
  },
  {
   "id": 11,
@@ -1437,7 +1441,9 @@
     "equipos": [],
     "partido": {}
    }
-  }
+  },
+  "puntosEliminatorias": 2,
+  "plenosEliminatorias": 0
  },
  {
   "id": 3,
@@ -1918,7 +1924,9 @@
     "equipos": [],
     "partido": {}
    }
-  }
+  },
+  "puntosEliminatorias": 1,
+  "plenosEliminatorias": 0
  },
  {
   "id": 1,
@@ -2359,7 +2367,9 @@
     "equipos": [],
     "partido": {}
    }
-  }
+  },
+  "puntosEliminatorias": 1,
+  "plenosEliminatorias": 0
  },
  {
   "id": 2,
@@ -2799,7 +2809,9 @@
     "equipos": [],
     "partido": {}
    }
-  }
+  },
+  "puntosEliminatorias": 2,
+  "plenosEliminatorias": 0
  },
  {
   "id": 8,
@@ -3279,7 +3291,9 @@
     "equipos": [],
     "partido": {}
    }
-  }
+  },
+  "puntosEliminatorias": 1,
+  "plenosEliminatorias": 0
  },
  {
   "id": 9,
@@ -3759,7 +3773,9 @@
     "equipos": [],
     "partido": {}
    }
-  }
+  },
+  "puntosEliminatorias": 1,
+  "plenosEliminatorias": 0
  },
  {
   "id": 6,
@@ -4239,7 +4255,9 @@
     "equipos": [],
     "partido": {}
    }
-  }
+  },
+  "puntosEliminatorias": 1,
+  "plenosEliminatorias": 0
  },
  {
   "id": 5,
@@ -4719,7 +4737,9 @@
     "equipos": [],
     "partido": {}
    }
-  }
+  },
+  "puntosEliminatorias": 2,
+  "plenosEliminatorias": 0
  },
  {
   "id": 12,
@@ -5199,7 +5219,9 @@
     "equipos": [],
     "partido": {}
    }
-  }
+  },
+  "puntosEliminatorias": 2,
+  "plenosEliminatorias": 0
  },
  {
   "id": 13,
@@ -5679,7 +5701,9 @@
     "equipos": [],
     "partido": {}
    }
-  }
+  },
+  "puntosEliminatorias": 2,
+  "plenosEliminatorias": 0
  },
  {
   "id": 10,
@@ -6159,6 +6183,8 @@
     "equipos": [],
     "partido": {}
    }
-  }
+  },
+  "puntosEliminatorias": 2,
+  "plenosEliminatorias": 0
  }
 ]
