@@ -359,19 +359,19 @@ const User ={
                 this.sumaPuntosEliminatorias(element, prode)
             });
             usersProde.sort((a,b) => {
-                if(a.puntos < b.puntos)
+                if((a.puntosEliminatorias + a.puntos) < (b.puntosEliminatorias + b.puntos))
                 {
                     return 1;
                 }
-                else if( a.puntos > b.puntos)
+                else if( (a.puntosEliminatorias + a.puntos) >(b.puntosEliminatorias + b.puntos))
                 {
                     return -1
                 }
-                else if(a.plenos < b.plenos)
+                else if((a.plenosEliminatorias + a.plenos) < (b.plenosEliminatorias + b.plenos))
                 {
                     return 1;
                 }
-                else if( a.plenos > b.plenos)
+                else if( (a.plenosEliminatorias + a.plenos) > (b.plenosEliminatorias + b.plenos))
                 {
                     return -1
                 }
