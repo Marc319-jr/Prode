@@ -43,14 +43,12 @@
                                         <% } else { %>
                                             <button type="submit"> EDITAR</button>
                                             <% } %>
-
                                     </form>
                                 </div>
                                 <% } else { %>
                                     <form method="POST"
                                         action="/prode/crearPartido?prode=<%=prode.id %> &grupo=<%=i+1%>&partido=<%=j+1%>"
                                         class="partido">
-
                                         <div class="equipo">
                                             <h2>grupo: <%=i+1%> partido: <%= j+1 %>
                                             </h2>
@@ -63,7 +61,6 @@
                                                             <%=prode.grupos[i].equipos[k].nombre %>
                                                         </option>
                                                         <% } %>
-
                                                 </select>
                                                 <h4>VS</h4>
                                                 <select name="visitante">
@@ -72,9 +69,7 @@
                                                         <option>
                                                             <%=prode.grupos[i].equipos[k].nombre %>
                                                         </option>
-
                                                         <% } %>
-
                                                 </select>
                                             </div>
                                             <br>
@@ -85,19 +80,11 @@
                                             <label for="hora">Horario:</label>
                                             <input type="time" name="hora">
                                             <button type="submit">Crear</button>
-
                                         </div>
                                     </form>
-
                                     <% } %>
-
-
-
-
                                         <% } %>
-
                     </div>
-
                     <% } %>
                     
             </div>
@@ -128,21 +115,23 @@
                                                 <h2><%= prode.eliminatorias.cuartos.partidos[i].local %></h2>
                                                     <img src="/Imagenes/<%= prode.eliminatorias.cuartos.partidos[i].local  %>.png" alt="" height="40px" width="40px">
                                                     <h2><%= prode.eliminatorias.cuartos.partidos[i].resultado[0] %></h2>
-
                                                     <h1>vs</h1>
                                                     <img src="/Imagenes/<%= prode.eliminatorias.cuartos.partidos[i].visitante  %>.png" alt="" height="40px" width="40px">
                                                     <h2><%= prode.eliminatorias.cuartos.partidos[i].resultado[1] %></h2>
                                                     <h2><%= prode.eliminatorias.cuartos.partidos[i].visitante %></h2>
-
                                                 <% } %>
-
-
                                         
                                     </div>
+                                    <% } %>
+                            
                             </div>
-                        </div>
-    
-
+                        
+                    
+                    
+                    
+                    
+                    </div>
+            </div>
             
         
         </main>
