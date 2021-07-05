@@ -474,10 +474,39 @@
     ]
    },
    "semis": {
-    "equipos": [],
+    "equipos": [
+    {
+        "semis1Local": "Brasil",
+        "semis1Visitante": "Peru",
+        "semis2Local": "Argentina",
+        "semis2Visitante": "Colombia"
+    }
+    ],
     "partidos": [
-     {},
-     {}
+        {
+            "local": "Brasil",
+            "apodolocal": "Bra",
+            "visitante": "Peru",
+            "apodovisitante": "Per",
+            "fecha": "05/07/2021",
+            "estadio": "",
+            "resultado": [
+             "x",
+             "x"
+            ]
+           },
+           {
+            "local": "Argentina",
+            "apodolocal": "Arg",
+            "visitante": "Colombia",
+            "apodovisitante": "Col",
+            "fecha": "05/07/2021",
+            "estadio": "",
+            "resultado": [
+             "x",
+             "x"
+            ]
+        }
     ]
    },
    "final": {

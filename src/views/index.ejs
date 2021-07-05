@@ -287,6 +287,21 @@
                                         </div>                       
                                 </div>
                             <% } %>
+                            <% for( let i = 0; i < locals.prode.eliminatorias.semis.partidos.length; i++ ) { %>
+                                <div class="partido border">
+                                        <div class="equipo_1">
+                                            <img src="/Imagenes/<%= locals.prode.eliminatorias.semis.partidos[i].local  %>.png" alt="" height="30px" width="30px">
+                                            <img src="/Imagenes/<%= locals.prode.eliminatorias.semis.partidos[i].local  %>_tipografia.png" alt=""  width="45px">
+                                            <h2><%= locals.isLogged ? locals.userLogged.eliminatorias.semis.partidos[i].resultado[0] : locals.prode.eliminatorias.semis.partidos[i].resultado[0]  %></h2>
+                                        </div>
+                                        <p class="font_32">-</p>
+                                        <div class="equipo_2">
+                                            <img src="/Imagenes/<%= locals.prode.eliminatorias.semis.partidos[i].visitante  %>.png" alt="" height="30px" width="30px">
+                                            <img src="/Imagenes/<%= locals.prode.eliminatorias.semis.partidos[i].visitante  %>_tipografia.png" alt=""  width="45px">
+                                            <h2><%= locals.isLogged ? locals.userLogged.eliminatorias.semis.partidos[i].resultado[1] : locals.prode.eliminatorias.semis.partidos[i].resultado[1]  %></h2>
+                                        </div>                       
+                                </div>
+                            <% } %>
                         </div>
                         <% } %>
                     </div>
