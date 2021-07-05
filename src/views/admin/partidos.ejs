@@ -139,54 +139,9 @@
 
                                         
                                     </div>
-                                    <% for( let i = 0; i < prode.eliminatorias.semis.partidos.length; i++ ) { %>
-                                        <div id  ="partido">
-                                            <% if (prode.eliminatorias.semis.partidos[i].resultado[0] == "x") { %>
-                                                <form action="/prode/insertarsemis?prodeID=<%=prode.id%>&partidoId=<%=i%>" method="POST">
-                                                    <h2><%= prode.eliminatorias.semis.partidos[i].local %></h2>
-                                                    <img src="/Imagenes/<%= prode.eliminatorias.semis.partidos[i].local  %>.png" alt="" height="40px" width="40px">
-                                                    <input type="number" name="local">
-                                                    <h1>vs</h1>
-                                                    <img src="/Imagenes/<%= prode.eliminatorias.semis.partidos[i].visitante  %>.png" alt="" height="40px" width="40px">
-                                                    <input type="number" name="visitante">
-                                                    <h2><%= prode.eliminatorias.semis.partidos[i].visitante %></h2>
-                                                    <h1>penales?</h1>
-                                                    <h2>Local</h2>
-                                                    <input type="number" name="penalesLocal">
-                                                    <h2>Visitante</h2>
-                                                    <input type="number" name="penalesVisitante">
-                                                    <br>
-                                                    <button type="submit">Insertar</button>
-                                                </form>
-                                            <% } else { %>
-                                                <h2><%= prode.eliminatorias.semis.partidos[i].local %></h2>
-                                                    <img src="/Imagenes/<%= prode.eliminatorias.semis.partidos[i].local  %>.png" alt="" height="40px" width="40px">
-                                                    <h2><%= prode.eliminatorias.semis.partidos[i].resultado[0] %></h2>
-
-                                                    <h1>vs</h1>
-                                                    <img src="/Imagenes/<%= prode.eliminatorias.semis.partidos[i].visitante  %>.png" alt="" height="40px" width="40px">
-                                                    <h2><%= prode.eliminatorias.semis.partidos[i].resultado[1] %></h2>
-                                                    <h2><%= prode.eliminatorias.semis.partidos[i].visitante %></h2>
-
-                                                <% } %>
-
-
-                                        
-                                    </div>
-
-                                    <% } %>
-
-
-                            
                             </div>
-                        
-                    
-                    
-                    
-                    
-                    </div>
-
-            </div>
+                        </div>
+    
 
             
         
