@@ -124,7 +124,7 @@
             <h2 style="color:white">ELIMINATORIAS</h2>
             <% for( let i = 0; i < 2; i++ ) { %>
                 <% if (participante.eliminatorias.semis.partidos[i].resultado[0] == "x" && (locals.isLogged && locals.userLogged.rol == "admin")) { %>
-                    <form class  ="partidoResult" method = "POST" action="/user/guardar/resultadosUserElim?userId=<%=participante.id%>&partidoId=<%=i%>">
+                    <form class  ="partidoResult" method = "POST" action="">
                         <div class="partido">
                             <p class="descripcion_partido">
                                 <%=participante.eliminatorias.semis.partidos[i].fecha%> 
