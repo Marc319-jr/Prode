@@ -190,7 +190,7 @@
                                                 <img src="/Imagenes/Brasil.png" alt="">
                                             </div>
                                         </div>
-                                        <div class="resultado_cuadros"> - </div>
+                                        <div class="resultado_cuadros"> 0 - 1 </div>
                                         <div class="border_cuadros_semi">
                                             <div class="palito_cuadro_semi">
 
@@ -246,7 +246,7 @@
                                                 <img src="/Imagenes/Argentina.png" alt="">
                                             </div>
                                         </div>
-                                        <div class="resultado_cuadros"> - </div>
+                                        <div class="resultado_cuadros">1(2) - 1(3) </div>
                                     </div>
                                     
                                 </div>
@@ -255,12 +255,12 @@
                                         <p class="descripcion_final">GRAN FINAL:</p>
                                         <div class="equipos_cuadros">
                                             <div class="pais">
-                                                <p>Semis 1</p>
-                                                <img src="/Imagenes/a-jugar.png" alt="" height="60px"> 
+                                                <img src="/Imagenes/Brasil_tipografia.png" alt="" width="45px" class="tipografia">
+                                                <img src="/Imagenes/Brasil.png"  width="45px" alt="">
                                             </div>
                                             <div>
-                                                <p>Semis 2</p>
-                                                <img src="/Imagenes/a-jugar.png" alt="" height="60px">
+                                                <img src="/Imagenes/Argentina_tipografia.png" alt="" width="45px" class="tipografia">
+                                                <img src="/Imagenes/Argentina.png"  width="45px" alt="">
                                             </div>
                                         </div>
                                         <div class="resultado_cuadros"> - </div>
@@ -273,7 +273,9 @@
                         <div class="grupo_final">
                             <p class="titulo_grupo">TU PRODE DE LOS CUADROS:</p>
                             <% for( let i = 0; i < locals.prode.eliminatorias.cuartos.partidos.length; i++ ) { %>
-                                <div class="partido border">
+                                <% if (locals.userLogged.eliminatorias.cuartos.partidos[i].resultado[0] != "x") { %>
+                                 
+                                    <div class="partido border">
                                         <div class="equipo_1">
                                             <img src="/Imagenes/<%= locals.prode.eliminatorias.cuartos.partidos[i].local  %>.png" alt="" height="30px" width="30px">
                                             <img src="/Imagenes/<%= locals.prode.eliminatorias.cuartos.partidos[i].local  %>_tipografia.png" alt=""  width="45px">
@@ -285,23 +287,9 @@
                                             <img src="/Imagenes/<%= locals.prode.eliminatorias.cuartos.partidos[i].visitante  %>_tipografia.png" alt=""  width="45px">
                                             <h2><%= locals.isLogged ? locals.userLogged.eliminatorias.cuartos.partidos[i].resultado[1] : locals.prode.eliminatorias.cuartos.partidos[i].resultado[1]  %></h2>
                                         </div>                       
-                                </div>
-                            <% } %>
-                            <% for( let i = 0; i < locals.prode.eliminatorias.semis.partidos.length; i++ ) { %>
-                                <div class="partido border">
-                                        <div class="equipo_1">
-                                            <img src="/Imagenes/<%= locals.prode.eliminatorias.semis.partidos[i].local  %>.png" alt="" height="30px" width="30px">
-                                            <img src="/Imagenes/<%= locals.prode.eliminatorias.semis.partidos[i].local  %>_tipografia.png" alt=""  width="45px">
-                                            <h2><%= locals.isLogged ? locals.userLogged.eliminatorias.semis.partidos[i].resultado[0] : locals.prode.eliminatorias.semis.partidos[i].resultado[0]  %></h2>
-                                        </div>
-                                        <p class="font_32">-</p>
-                                        <div class="equipo_2">
-                                            <img src="/Imagenes/<%= locals.prode.eliminatorias.semis.partidos[i].visitante  %>.png" alt="" height="30px" width="30px">
-                                            <img src="/Imagenes/<%= locals.prode.eliminatorias.semis.partidos[i].visitante  %>_tipografia.png" alt=""  width="45px">
-                                            <h2><%= locals.isLogged ? locals.userLogged.eliminatorias.semis.partidos[i].resultado[1] : locals.prode.eliminatorias.semis.partidos[i].resultado[1]  %></h2>
-                                        </div>                       
-                                </div>
-                            <% } %>
+                                    </div>
+                                    <% } %>
+                                    <% } %>
                         </div>
                         <% } %>
                     </div>
