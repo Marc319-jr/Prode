@@ -72,7 +72,7 @@
         </div>
         <div class = "eliminatoriasUser">
             <h2 style="color:white">ELIMINATORIAS</h2>
-            <% for( let i = 0; i < 4; i++ ) { %>
+            <% for( let i = 0; i < 6; i++ ) { %>
                 <% if (participante.eliminatorias.cuartos.partidos[i].resultado[0] == "x" && (locals.isLogged && locals.userLogged.rol == "admin")) { %>
                     <form class  ="partidoResult" method = "POST" action="/user/guardar/resultadosUserElim?userId=<%=participante.id%>&partidoId=<%=i%>">
                         <div class="partido">
@@ -114,56 +114,6 @@
                             <img src="/Imagenes/<%= locals.prode.eliminatorias.cuartos.partidos[i].visitante  %>.png" alt="" height="20px" width="20px">
                             <p><%=participante.eliminatorias.cuartos.partidos[i].visitante%></p>
                             <h2><%=participante.eliminatorias.cuartos.partidos[i].resultado[1]%> </h2>
-                        </div>
-
-                    </div>
-                    
-
-            <% } %>
-            <% } %>
-            <h2 style="color:white">ELIMINATORIAS</h2>
-            <% for( let i = 0; i < 2; i++ ) { %>
-                <% if (participante.eliminatorias.semis.partidos[i].resultado[0] == "x" && (locals.isLogged && locals.userLogged.rol == "admin")) { %>
-                    <form class  ="partidoResult" method = "POST" action="">
-                        <div class="partido">
-                            <p class="descripcion_partido">
-                                <%=participante.eliminatorias.semis.partidos[i].fecha%> 
-                            </p>
-
-                         <div class="equipo_1">
-                            <img src="/Imagenes/<%= locals.prode.eliminatorias.semis.partidos[i].local  %>.png" alt="" height="20px" width="20px">
-                            <p><%=participante.eliminatorias.semis.partidos[i].local%></p>
-                            <input type = "number" placeholder="0" name= "local">
-                        </div>
-                            <p>-</p>
-
-                             <div class="equipo_2">
-                                <img src="/Imagenes/<%= locals.prode.eliminatorias.semis.partidos[i].visitante  %>.png" alt="" height="20px" width="20px">
-                                <p><%=participante.eliminatorias.semis.partidos[i].visitante%></p>
-                                <input type = "number" placeholder="0" name = "visitante">
-                            </div>
-                            <button type="submit">Ageregar</button>
- 
-                        </div>
-                    </form>
-                 
-                <% } else { %>
-                    <div class="partido">
-                        <p class="descripcion_partido">
-                            <%=participante.eliminatorias.semis.partidos[i].fecha%> 
-                        </p>
-
-                     <div class="equipo_1">
-                        <img src="/Imagenes/<%= locals.prode.eliminatorias.semis.partidos[i].local  %>.png" alt="" height="20px" width="20px">
-                        <p><%=participante.eliminatorias.semis.partidos[i].local%></p>
-                        <h2><%=participante.eliminatorias.semis.partidos[i].resultado[0]%> </h2>
-                    </div>
-                        <p>-</p>
-
-                         <div class="equipo_2">
-                            <img src="/Imagenes/<%= locals.prode.eliminatorias.semis.partidos[i].visitante  %>.png" alt="" height="20px" width="20px">
-                            <p><%=participante.eliminatorias.semis.partidos[i].visitante%></p>
-                            <h2><%=participante.eliminatorias.semis.partidos[i].resultado[1]%> </h2>
                         </div>
 
                     </div>
