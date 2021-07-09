@@ -360,7 +360,7 @@ tr{
     font-size: 32px;
 }
 .border:first-child{
-    border-bottom: 1px solid #000000;
+    border-top: 1px solid #000000;
 }
 @media (max-width: 1200px) {
      .titulo_proximo_partido{
