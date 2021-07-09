@@ -129,6 +129,18 @@ const controller = {
         let prode = Prode.resutladoEliminatorias(info);
         User.puntosYposicionesEliminatorias(prode);
         res.redirect("/")
+    },
+    resultadoFinal: (req,res) =>{
+        let info = {
+                prodeId: (req.query.prodeID),
+                fase: "final",
+                partidoId: req.query.partidoId,
+                resultado: [req.body.local,req.body.visitante],
+                penales: [req.body.penalesLocal , req.body.penalesVisitante]
+            }
+            let prode = Prode.resultadoFinal(info);
+            User.puntosYposicionesFinal(prode);
+            res.redirect("/")
     }
 
 

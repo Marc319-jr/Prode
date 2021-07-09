@@ -105,6 +105,23 @@ const Prode = {
         allProdes[idProde] = prode
         fs.writeFileSync(this.filename ,JSON.stringify(allProdes, null,' '))
         return prode
+    },
+
+    resultadoFinal: function(info){
+        let idProde = (info.prodeId - (1))
+        let resultado = info.resultado;
+        let penales = info.penales;
+        let allProdes = this.findAll();
+        let prode = allProdes[idProde];
+        prode.eliminatorias.final.partido[0].resultado = resultado
+        if(penales[0] >= 0)
+        {
+            prode.eliminatorias.final.partido[0].resultado.penales = penales
+        }
+        allProdes[idProde] = prode
+        fs.writeFileSync(this.filename ,JSON.stringify(allProdes, null,' '))
+        return prode
+
     }
 }
 

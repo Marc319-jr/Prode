@@ -29,6 +29,7 @@ router.post('/crearPartido' , controller.crearPartido);
 router.post('/eliminatorias' , controller.eliminatorias)
 router.post('/:grupoId/:partidoId/:prodeId' , controller.resultado);
 router.post('/insertarCuartos' , controller.resutltadoEliminatorias);
+router.post('/insertarFinal' , controller.resultadoFinal);
 
 
 

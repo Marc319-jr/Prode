@@ -415,8 +415,12 @@
       "fecha": "02/07/2021",
       "estadio": "",
       "resultado": [
-       "x",
-       "x"
+       "3",
+       "3"
+      ],
+      "penales": [
+       "",
+       ""
       ]
      },
      {
@@ -427,8 +431,12 @@
       "fecha": "02/07/2021",
       "estadio": "",
       "resultado": [
-       "x",
-       "x"
+       "1",
+       "0"
+      ],
+      "penales": [
+       "0",
+       "0"
       ]
      },
      {
@@ -439,8 +447,12 @@
       "fecha": "03/07/2021",
       "estadio": "",
       "resultado": [
-       "x",
-       "x"
+       "0",
+       "0"
+      ],
+      "penales": [
+       "2",
+       "4"
       ]
      },
      {
@@ -451,56 +463,77 @@
       "fecha": "03/07/2021",
       "estadio": "",
       "resultado": [
+       "3",
+       "0"
+      ],
+      "penales": [
+       "",
+       ""
+      ]
+     },
+     {
+      "local": "Brasil",
+      "apodolocal": "Bra",
+      "visitante": "Peru",
+      "apodovisitante": "Per",
+      "fecha": "05/07/2021",
+      "estadio": "",
+      "resultado": [
+       "1",
+       "0"
+      ]
+     },
+     {
+      "local": "Argentina",
+      "apodolocal": "Arg",
+      "visitante": "Colombia",
+      "apodovisitante": "Col",
+      "fecha": "05/07/2021",
+      "estadio": "",
+      "resultado": [
+       "1",
+       "1"
+      ]
+     },
+     {
+      "local": "Peru",
+      "apodolocal": "Per",
+      "visitante": "Colombia",
+      "apodovisitante": "Col",
+      "fecha": "05/07/2021",
+      "estadio": "",
+      "resultado": [
+       "x",
+       "x"
+      ],
+      "penales": [
+       "",
+       ""
+      ]
+     }
+    ]
+   },
+   "final": {
+    "equipos": [
+     {
+      "final1Local": "Brasil",
+      "final1Visitante": "Argentina"
+     }
+    ],
+    "partido": [
+     {
+      "local": "Brasil",
+      "apodolocal": "Bra",
+      "visitante": "Argentina",
+      "apodovisitante": "Arg",
+      "fecha": "10/07/2021",
+      "estadio": "",
+      "resultado": [
        "x",
        "x"
       ]
      }
     ]
-   },
-      "semis": {
-    "equipos": [
-    {
-        "semis1Local": "Brasil",
-        "semis1Visitante": "Peru",
-        "semis2Local": "Argentina",
-        "semis2Visitante": "Colombia"
-    }
-    ],
-    "partidos": [
-        {
-            "local": "Brasil",
-            "apodolocal": "Bra",
-            "visitante": "Peru",
-            "apodovisitante": "Per",
-            "fecha": "05/07/2021",
-            "estadio": "",
-            "resultado": [
-             "x",
-             "x"
-            ]
-           },
-           {
-            "local": "Argentina",
-            "apodolocal": "Arg",
-            "visitante": "Colombia",
-            "apodovisitante": "Col",
-            "fecha": "05/07/2021",
-            "estadio": "",
-            "resultado": [
-             "x",
-             "x"
-            ]
-        }
-    ]
-   },
-   },
-   "final": {
-    "equipos": [],
-    "partido": {}
-   },
-   "tercerPuesto": {
-    "equipos": [],
-    "partido": {}
    }
   }
  }

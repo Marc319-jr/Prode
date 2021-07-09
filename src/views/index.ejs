@@ -315,8 +315,8 @@
                                 <td translate="no">
                                     <%= users[i].username%>
                                 </td translate="no">
-                                <td translate="no"><%= (users[i].puntos + users[i].puntosEliminatorias)%></td translate="no">
-                                <td translate="no"> <%= (users[i].plenos) + users[i].plenosEliminatorias %></td="no">
+                                <td translate="no"><%= (users[i].puntos + users[i].puntosEliminatorias + users[i].puntosFinal)%></td translate="no">
+                                <td translate="no"> <%= (users[i].plenos) + users[i].plenosEliminatorias + users[i].plenosFinal %></td="no">
                             </tr>
                         
                         <% } else {%>
@@ -325,8 +325,8 @@
                                 <td translate="no">
                                     <%= users[i].username%>
                                 </td translate="no">
-                                <td translate="no"><%= (users[i].puntos + users[i].puntosEliminatorias)%></td translate="no">
-                                <td translate="no"> <%= (users[i].plenos) + users[i].plenosEliminatorias %></td="no">
+                                <td translate="no"><%= (users[i].puntos + users[i].puntosEliminatorias + users[i].puntosFinal)%></td translate="no">
+                                    <td translate="no"> <%= (users[i].plenos) + users[i].plenosEliminatorias + users[i].plenosFinal %></td="no">
                             </tr>
                 
                             <% } %>

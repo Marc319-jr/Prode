@@ -472,62 +472,69 @@
       ]
      },
      {
-        "local": "Brasil",
-        "apodolocal": "Bra",
-        "visitante": "Peru",
-        "apodovisitante": "Per",
-        "fecha": "05/07/2021",
-        "estadio": "",
-        "resultado": [
-         "1",
-         "0"
-        ]
-       },
-       {
-        "local": "Argentina",
-        "apodolocal": "Arg",
-        "visitante": "Colombia",
-        "apodovisitante": "Col",
-        "fecha": "05/07/2021",
-        "estadio": "",
-        "resultado": [
-         "1",
-         "1"
-        ]
-       },
-       {
-        "local": "Peru",
-        "apodolocal": "Per",
-        "visitante": "Colombia",
-        "apodovisitante": "Col",
-        "fecha": "05/07/2021",
-        "estadio": "",
-        "resultado": [
-         "x",
-         "x"
-        ]
-       }
+      "local": "Brasil",
+      "apodolocal": "Bra",
+      "visitante": "Peru",
+      "apodovisitante": "Per",
+      "fecha": "05/07/2021",
+      "estadio": "",
+      "resultado": [
+       "1",
+       "0"
+      ]
+     },
+     {
+      "local": "Argentina",
+      "apodolocal": "Arg",
+      "visitante": "Colombia",
+      "apodovisitante": "Col",
+      "fecha": "05/07/2021",
+      "estadio": "",
+      "resultado": [
+       "1",
+       "1"
+      ]
+     },
+     {
+      "local": "Peru",
+      "apodolocal": "Per",
+      "visitante": "Colombia",
+      "apodovisitante": "Col",
+      "fecha": "05/07/2021",
+      "estadio": "",
+      "resultado": [
+       "x",
+       "x"
+      ],
+      "penales": [
+       "",
+       ""
+      ]
+     }
     ]
    },
    "final": {
-    "equipos": [{
-        "final1Local": "Brasil",
-        "final1Visitante": "Argentina"
-       }],
-    "partido": [{
-        "local": "Brasil",
-        "apodolocal": "Bra",
-        "visitante": "Argentina",
-        "apodovisitante": "Arg",
-        "fecha": "10/07/2021",
-        "estadio": "",
-        "resultado": [
-         "x",
-         "x"
-        ]
-    }
+    "equipos": [
+     {
+      "final1Local": "Brasil",
+      "final1Visitante": "Argentina"
+     }
+    ],
+    "partido": [
+     {
+      "local": "Brasil",
+      "apodolocal": "Bra",
+      "visitante": "Argentina",
+      "apodovisitante": "Arg",
+      "fecha": "10/07/2021",
+      "estadio": "",
+      "resultado": [
+       "x",
+       "x"
+      ]
+     }
     ]
-   } 
+   }
   }
  }
 ]

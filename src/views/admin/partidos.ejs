@@ -91,7 +91,7 @@
             <h1 id = "titulo">Eliminatorias del prode:  <%= prode.id  %> </h1>
                     <div class="grupo" style="flex-direction: column;">
                             <div class  ="partidoElim">
-                                <h1 id = "titulo">Cuartos</h1>
+                                <h1 id = "titulo">Cuartos Semis y 3er puesto</h1>
                                     <% for( let i = 0; i < prode.eliminatorias.cuartos.partidos.length; i++ ) { %>
                                         <div id  ="partido">
                                             <% if (prode.eliminatorias.cuartos.partidos[i].resultado[0] == "x") { %>
@@ -125,7 +125,36 @@
                                     <% } %> 
                             </div>
                         </div>
-                    </div>
+
+            <h1 id = "titulo">LA GRAN FINAL</h1>    
+            <div class="grupo" style="flex-direction: column;">
+                <div id="partido">
+                    <% if (prode.eliminatorias.final.partido[0].resultado[0] == "x") { %>
+                        <form action="/prode/insertarFinal?prodeID=<%=prode.id%>&partidoId=<%0%>" method="POST">
+                            <h2><%= prode.eliminatorias.final.partido[0].local %></h2>
+                            <img src="/Imagenes/<%= prode.eliminatorias.final.partido[0].local  %>.png" alt="" height="40px" width="40px">
+                            <input type="number" name="local">
+                            <h1>vs</h1>
+                            <img src="/Imagenes/<%= prode.eliminatorias.final.partido[0].visitante  %>.png" alt="" height="40px" width="40px">
+                            <input type="number" name="visitante">
+                            <h2><%= prode.eliminatorias.final.partido[0].visitante %></h2>
+                      
+                            <button type="submit">Insertar</button>
+                        </form>
+                    <% } else { %>
+                        <h2><%= prode.eliminatorias.final.partido[0].local %></h2>
+                            <img src="/Imagenes/<%= prode.eliminatorias.final.partido[0].local  %>.png" alt="" height="40px" width="40px">
+                            <h2><%= prode.eliminatorias.final.partido[0].resultado[0] %></h2>
+                            <h1>vs</h1>
+                            <img src="/Imagenes/<%= prode.eliminatorias.final.partido[0].visitante  %>.png" alt="" height="40px" width="40px">
+                            <h2><%= prode.eliminatorias.final.partido[0].resultado[1] %></h2>
+                            <h2><%= prode.eliminatorias.final.partido[0].visitante %></h2>
+                        <% } %>
+
+
+                </div>
+
+            </div>
 
             
             

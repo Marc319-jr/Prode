@@ -387,7 +387,150 @@ const User ={
          
             fs.writeFileSync(this.filename ,JSON.stringify(usersProde, null,' '))
 
+    },
+
+
+    calculaPuntosFinal: function(resultadoUser , resultadoProde){
+
+        console.log(" ----------");
+        console.log(resultadoUser);
+        console.log("vs");
+        console.log(resultadoProde);
+        console.log(" ----------");
+        let sumaUser = resultadoUser[0] - resultadoUser[1];
+        let sumaProde = (resultadoProde[0]) - (resultadoProde[1]);
+        console.log("Suma user:" + sumaUser);
+        console.log("Suma prode:" + sumaProde);
+        let info = {
+            puntos : 0,
+            pleno: false
+        }
+        if(sumaUser == 0 && sumaProde ==0) 
+        {
+            console.log("empate acertado");
+            info.puntos = 1
+            if(this.esPleno(resultadoUser,resultadoProde)){
+                console.log("es pleno");
+                info.puntos=5;
+                info.pleno = true
+            }
+            console.log(info);
+            return info
+        }
+        else if(sumaUser >0 && sumaProde >0)
+        {
+            console.log("victoria local asertda");
+            info.puntos = 1
+            if(this.esPleno(resultadoUser,resultadoProde)){
+                console.log("es pleno");
+                info.puntos=5;
+                info.pleno = true
+            }
+            console.log(info);
+            return info
+        }
+        else if(sumaUser <0 && sumaProde <0)
+        {
+            console.log("victoria visitante acertada");
+            info.puntos = 1
+            if(this.esPleno(resultadoUser,resultadoProde)){
+                console.log("es pleno");
+                info.puntos=5;
+                info.pleno = true
+            }
+            console.log(info);
+            return info
+        }
+        else
+        {
+            console.log("no acerto");
+            info.puntos = 0
+            console.log(info);
+            return info
+        }
+    },
+
+
+    sumaPuntosFinal: function(user, prode)
+    {
+        console.log("************************");
+        console.log("Estoy en suma puntos gran final");
+        console.log("***********************");
+        console.log("Nombre: " + user.username);
+        console.log("Puntos:" +user.puntos);
+        user.puntosFinal =0;
+        user.plenosFinal = 0;
+    
+               let info =  this.calculaPuntosFinal(user.eliminatorias.final.partido[0].resultado , prode.eliminatorias.final.partido[0].resultado)
+               user.puntosFinal += info.puntos
+               if(info.pleno){
+                   user.plenosEliminatorias ++;
+               }
+           
+        console.log("Nombre: " + user.username);
+        console.log("Puntos Final:" +user.puntosFinal);
+        console.log("plenos Final:" + user.plenosFinal);
+        console.log("Me fui de suma puntos");
+        console.log("*********************");
+
+    },
+
+
+
+    puntosYposicionesFinal: function(prode){
+        console.log("************************");
+        console.log("Estoy en calcula puntosYposiciones de la gran final");
+        console.log("***********************");
+        console.log("vine desde Prode a User");
+        console.log(prode);
+        console.log("prode: " + (prode.id-1));
+        let allUsers = this.findAll();
+        let usersProde = []
+        allUsers.forEach(element => {
+            if(element.prode == (prode.id-1))
+            {
+             usersProde.push(element)
+            }
+            
+        });
+        console.log(usersProde);
+        usersProde.forEach(element =>
+            {
+                this.sumaPuntosFinal(element, prode)
+            });
+            usersProde.sort((a,b) => {
+                if((a.puntosFinal + a.puntos) < (b.puntosFinal + b.puntos))
+                {
+                    return 1;
+                }
+                else if( (a.puntosFinal + a.puntos) >(b.puntosFinal + b.puntos))
+                {
+                    return -1
+                }
+                else if((a.plenosFinal + a.plenos) < (b.plenosFinal + b.plenos))
+                {
+                    return 1;
+                }
+                else if( (a.plenosFinal + a.plenos) > (b.plenosFinal + b.plenos))
+                {
+                    return -1
+                }
+                else{
+                    return 0
+                }
+            });
+            console.log(usersProde);
+            for(let i = 0;i<usersProde.length;i++)
+            {
+                usersProde[i].posicion = (i+1);
+            }
+         
+            fs.writeFileSync(this.filename ,JSON.stringify(usersProde, null,' '))
+
     }
+
+
+
 }
 
 
