@@ -10,19 +10,19 @@
         <div class="main_1" id="#main_1">
            <div class="encabezado_main">
                 <div class="proximo_partido">
-                    <p class="titulo_proximo_partido">PROXIMO PARTIDO:</p>
+                    <p class="titulo_proximo_partido">PROXIMO PARTIDO LA GRAN FINAL:</p>
                     <div class="partido_proximo">
                         <div class="equipo_1">
-                            <img src="/Imagenes/Peru.png" alt="" height="30px" width="30px" class="bandera_prox">
-                            <img src="/Imagenes/Peru_tipografia.png" alt=""  width="45px">
+                            <img src="/Imagenes/Brasil.png" alt="" height="30px" width="30px" class="bandera_prox">
+                            <img src="/Imagenes/Brasil_tipografia.png" alt=""  width="45px">
                             
                         </div>
                         <a href="#prode">
                             <input class="boton_prode" type="submit" value="Ir al Prode">
                         </a>
                         <div class="equipo_2">
-                            <img src="/Imagenes/Brasil.png" alt="" height="30px" width="30px" class="bandera_prox">
-                            <img src="/Imagenes/Brasil_tipografia.png" alt=""  width="45px" >
+                            <img src="/Imagenes/Argentina.png" alt="" height="30px" width="30px" class="bandera_prox">
+                            <img src="/Imagenes/Argentina_tipografia.png" alt=""  width="45px" >
                         </div>
                     </div>
 
@@ -315,8 +315,8 @@
                                 <td translate="no">
                                     <%= users[i].username%>
                                 </td translate="no">
-                                <td translate="no"><%= (users[i].puntos + users[i].puntosEliminatorias + users[i].puntosFinal)%></td translate="no">
-                                <td translate="no"> <%= (users[i].plenos) + users[i].plenosEliminatorias + users[i].plenosFinal %></td="no">
+                                <td translate="no"><%= (users[i].puntos + users[i].puntosEliminatorias )%></td translate="no">
+                                <td translate="no"> <%= (users[i].plenos) + users[i].plenosEliminatorias  %></td="no">
                             </tr>
                         
                         <% } else {%>
@@ -325,8 +325,8 @@
                                 <td translate="no">
                                     <%= users[i].username%>
                                 </td translate="no">
-                                <td translate="no"><%= (users[i].puntos + users[i].puntosEliminatorias + users[i].puntosFinal)%></td translate="no">
-                                    <td translate="no"> <%= (users[i].plenos) + users[i].plenosEliminatorias + users[i].plenosFinal %></td="no">
+                                <td translate="no"><%= (users[i].puntos + users[i].puntosEliminatorias )%></td translate="no">
+                                    <td translate="no"> <%= (users[i].plenos) + users[i].plenosEliminatorias  %></td="no">
                             </tr>
                 
                             <% } %>
